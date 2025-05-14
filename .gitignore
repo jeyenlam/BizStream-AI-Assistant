@@ -1,0 +1,68 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio folder
+.vs/
+
+# ASP.NET temporary files
+*_i.c
+*_p.c
+*.cache
+*.bak
+*.log
+*.vspscc
+*.vssscc
+
+# Resharper files
+*.DotSettings.user
+_ReSharper*/
+*.sln.DotSettings
+
+# Rider
+.idea/
+
+# Azure
+.publish/
+
+# NPM and Node modules
+node_modules/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Dotnet CLI
+.vscode/
+*.dbmdl
+
+# Web output
+wwwroot/lib/
+
+# Logs
+*.log
+
+# Entity Framework Migrations snapshot (optional)
+**/Migrations/*Snapshot.cs
+
+# Other
+*.vsdx
+*.tmp
+*.swp
+*.sln.cache
