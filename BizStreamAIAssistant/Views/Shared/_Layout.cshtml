@@ -12,40 +12,54 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BizStreamAIAssistant</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav class="w-screen bg-[#003D78] h-28 flex items-center justify-between text-medium">
+            <div class="w-full flex flex-row justify-between items-center px-10 text-white font-semibold">
+                
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="https://www.bizstream.com/wp-content/uploads/2022/04/BizStream-Logo-rev.svg" alt="BizStreamAIAssistant Logo" class="h-10" />
+                </a>
+                <ul class="flex flex-row">
+                    @{
+                        var navItems = new[]
+                        {
+                            new { Title = "Project", Controller="Home", Action = "Index" },
+                            new { Title = "Services", Controller="Home", Action = "Privacy" },
+                            new { Title = "Technology", Controller="Home", Action = "Index" },
+                            new { Title = "About", Controller="Home", Action = "Privacy" },
+                            new { Title = "Careers", Controller="Home", Action = "Index" },
+                            new { Title = "Blog", Controller="Home", Action = "Privacy" },
+                        };
+                    
+                        @foreach (var item in navItems)
+                        {
+                            <li class="ml-4">
+                                <a class="" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">@item.Title.ToUpper()</a>
+                            </li>
+                        }
+                    }  
+                </ul>
+                <button class="border-2 rounded-full  border-[#00C4E9]  text-white px-4 py-2">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">CONTACT</a>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+    
+
+    <div>
+        <main role="main" class="w-screen bg-blue-200 relative ">
             @RenderBody()
+            
+            <!-- Chatbot injected globally -->
+            <partial name="_Chatbot" />
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - BizStreamAIAssistant - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @* asp-append-version: prevent browser from using old cache, automatically changes version when file changes, ideal for prod *@
+    <script src="~/js/chatbot.js" asp-append-version="true"></script>
 </body>
 </html>

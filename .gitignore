@@ -66,3 +66,6 @@ wwwroot/lib/
 *.tmp
 *.swp
 *.sln.cache
+
+#Training Data
+Training/

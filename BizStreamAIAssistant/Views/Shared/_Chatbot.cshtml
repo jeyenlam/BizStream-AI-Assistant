@@ -1,0 +1,39 @@
+<div class="fixed bottom-0 right-0 z-10 w-96">
+    <form id="chatForm" class="bg-white shadow-lg rounded-lg p-4 m-5">
+        <h2 class="text-lg font-semibold">BizStream AI :-)</h2>
+        <p>Ask me anything about BZS!</p>
+        <div id="chatFrame" class="flex flex-col overflow-y-auto h-48">
+            <div id="messageContainer"></div>
+        </div>
+        <input id="queryInput" type="text" placeholder="Type your message..." class="border rounded w-full p-2 mt-2" />
+        <button type="submit" class="bg-[#003D78] text-white rounded px-4 py-2 mt-2">Send</button>
+    </form>
+</div>
+
+
+
+
+
+@* @{
+    var messages = new[]
+    {
+        new { role = "user", text = "Hello!" },
+        new { role = "bot", text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!" },
+        new { role = "user", text = "Hello!" },
+        new { role = "bot", text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!" },
+        new { role = "user", text = "Hello!" },
+        new { role = "bot", text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!" },
+        new { role = "user", text = "Hello!" },
+        new { role = "bot", text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!" },
+    };
+
+
+    foreach (var message in messages)
+    {
+        var cssClass = message.role == "user" 
+        ? "flex justify-end bg-slate-100" 
+        : "flex justify-start";
+
+        <div class="@cssClass" id="messageContainer">@message.text</div>
+    };
+} *@
