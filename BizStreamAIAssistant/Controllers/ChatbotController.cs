@@ -6,11 +6,11 @@ using BizStreamAIAssistant.Services;
 namespace BizStreamAIAssistant.Controllers
 {
     [ApiController]
-    [Route("chatbot")]
+    [Route("api/chatbot")]
     public class ChatbotController : Controller
     {
 
-        //  Dependency Injection
+        // Dependency Injection
         // The constructor takes an IChatbotService instance, which is injected by the ASP.NET Core framework. 
         // ASP.NET needs a way to inject chatbot logic into the controller
         private readonly IChatbotService _chatbotService; // A private field to store the service instance.

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             addMessageToUI({ role: "bot", text: botResponse });
         }, 1000);
 
-        fetch("/api/chat", {
+        fetch("/api/chatbot", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
