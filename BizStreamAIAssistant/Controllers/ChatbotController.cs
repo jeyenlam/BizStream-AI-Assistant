@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-// using System.Threading.Tasks;
+using System.Threading.Tasks;
 using BizStreamAIAssistant.Models;
 using BizStreamAIAssistant.Services;
 
@@ -30,13 +30,14 @@ namespace BizStreamAIAssistant.Controllers
         [HttpPost]
         public async Task<IActionResult> SendMessage([FromBody] ChatRequestModel request)
         {
-            if (request == null || string.IsNullOrEmpty(request.Message))
+            Console.WriteLine($"Request: {request}");
+            if (request?.Messages == null || !request.Messages.Any())
             {
-                return BadRequest("Invalid request");
+                return BadRequest("No messages provided");
             }
 
-            var response = await _chatbotService.GetResponseAsync(request.Message);
-            return Ok(response);
+            var response = await _chatbotService.GetResponseAsync(request.Messages);
+            return Ok(new {text = response});
         }
     }
 }

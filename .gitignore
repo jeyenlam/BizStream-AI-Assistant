@@ -69,3 +69,6 @@ wwwroot/lib/
 
 #Training Data
 Training/
+
+# Secret Keys
+appsettings.Development.json

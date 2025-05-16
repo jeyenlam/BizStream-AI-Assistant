@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("chatForm");
     const queryInput = document.getElementById("queryInput");
     const messageContainer = document.getElementById("messageContainer");
+    const messages = [];
 
     form.addEventListener("submit", function (event) {
         event.preventDefault(); 
@@ -20,31 +21,34 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!userMessage) return;
 
         addMessageToUI({ role: "user", text: userMessage });
-        queryInput.value = "";
+        messages.push({ role: "user", content: userMessage });
+        console.log("Message history:", messages);
+        console.log(JSON.stringify({ messages }, null, 2));
 
-        // Simulate bot response
-        setTimeout(() => {
-            const botResponse = "This is a simulated response to: " + userMessage;
-            addMessageToUI({ role: "bot", text: botResponse });
-        }, 1000);
+        queryInput.value = "";
 
         fetch("/api/chatbot", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ message: userMessage })
-        }).then(response => {   
+            // body: JSON.stringify({ message: userMessage })
+            body: JSON.stringify({ messages })
+
+        }).then(async response => {   
             if (!response.ok) {
+                const errorText = await response.text(); // <— reveal real exception message
+
                 throw new Error("Network response was not ok");
             }
             return response.json();
         }).then(data => {       
-            const botResponse = data.response || "No response from server";
+            const botResponse = data.text || "No response from server";
             addMessageToUI({ role: "bot", text: botResponse });
+            messages.push({ role: "assistant", content: botResponse });
+            console.log("Message history:", messages);
         }).catch(error => {
             console.error("Error:", error);
-            addMessageToUI({ role: "bot", text: "Error: " + error.message });
         }); 
     }
 

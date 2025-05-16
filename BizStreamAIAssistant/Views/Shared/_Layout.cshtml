@@ -16,7 +16,7 @@
             <div class="w-full flex flex-row justify-between items-center px-10 text-white font-semibold">
                 
                 <a asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="https://www.bizstream.com/wp-content/uploads/2022/04/BizStream-Logo-rev.svg" alt="BizStreamAIAssistant Logo" class="h-10" />
+                    <img src="https://www.bizstream.com/wp-content/uploads/2022/04/BizStream-Logo-rev.svg" alt="BizStreamAIAssistantLogo" class="h-10" />
                 </a>
                 <ul class="flex flex-row">
                     @{
@@ -37,9 +37,12 @@
                             </li>
                         }
                         <li class="ml-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                            </svg>
+                            <a class="" asp-area="" asp-controller="" asp-action="">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                </svg>
+                            </a>
+                            
                         </li>
                         
                     }  
@@ -54,7 +57,7 @@
     
 
     <div>
-        <main role="main" class="w-screen bg-blue-200 relative ">
+        <main role="main" class="w-screen bg-blue-200 relative overflow-hidden">
             @RenderBody()
             
             <!-- Chatbot injected globally -->
