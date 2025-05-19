@@ -8,7 +8,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IChatbotService, ChatbotService>(); //added to register the ChatbotService as a service that can be injected into controllers
 builder.Services.Configure<AzureOpenAISettingsModel>( //added to register the AzureOpenAISettingsModel with the dependency injection container
     builder.Configuration.GetSection("AzureOpenAI"));
-// builder.Services.AddSession(); //added to register the session service with the dependency injection container
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
@@ -27,11 +26,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-// app.UseSession(); //added to enable session state in the application
 app.UseAuthorization();
-
+app.UseStaticFiles();
 app.MapStaticAssets();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")

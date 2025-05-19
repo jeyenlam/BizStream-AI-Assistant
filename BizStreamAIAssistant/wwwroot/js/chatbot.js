@@ -3,6 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const queryInput = document.getElementById("queryInput");
     const messageContainer = document.getElementById("messageContainer");
     const messages = [];
+    const chatbotButton = document.getElementById("chatbotButton");
+    const spinner = document.querySelector('.spinner');
+
+    chatbotButton.addEventListener("click", function () {
+        form.classList.contains("hidden") ? form.classList.remove("hidden") : form.classList.add("hidden");
+        chatbotButton.classList.contains("spin-once") ? chatbotButton.classList.remove("spin-once") : chatbotButton.classList.add("spin-once");
+    });
 
     form.addEventListener("submit", function (event) {
         event.preventDefault(); 
@@ -32,17 +39,19 @@ document.addEventListener("DOMContentLoaded", function () {
             headers: {
                 "Content-Type": "application/json"
             },
-            // body: JSON.stringify({ message: userMessage })
             body: JSON.stringify({ messages })
 
         }).then(async response => {   
             if (!response.ok) {
-                const errorText = await response.text(); // <— reveal real exception message
-
+                const errorText = await response.text();
+                console.error("Error response:", errorText);
                 throw new Error("Network response was not ok");
             }
             return response.json();
-        }).then(data => {       
+        }).then(data => {  
+
+            
+            
             const botResponse = data.text || "No response from server";
             addMessageToUI({ role: "bot", text: botResponse });
             messages.push({ role: "assistant", content: botResponse });
@@ -53,9 +62,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function addMessageToUI({ role, text }) {
+
         const messageElement = document.createElement("div");
-        messageElement.className = role === "user" ? "flex justify-end bg-slate-100" : "flex justify-start";
-        messageElement.textContent = text;
+
+        role == "user" ? messageElement.className = "justify-end rounded-xl p-1 px-2 bg-[#003D78] text-white" : messageElement.className = "justify-start p-1 px-2 bg-gray-100 rounded-xl";
+        if (role == "bot") {
+
+            const botProfile = document.createElement("div");
+            botProfile.className = "flex items-center gap-2 justify-start";
+        
+            const botImage = document.createElement("img");            
+            botImage.src = "/images/robot (1).png";
+            botImage.className = "w-8 h-8 rounded-full bg-[#00C4E9] border-2 p-1 border";
+
+            const botName = document.createElement("span");
+            botName.textContent = "BZAI";  
+
+            const messageBubble = document.createElement("div");
+            messageBubble.textContent = text;
+
+            botProfile.appendChild(botImage);
+            botProfile.appendChild(botName);
+            messageElement.appendChild(botProfile);
+            messageElement.appendChild(messageBubble);
+        } else {
+            messageElement.textContent = text;
+        }
+
         messageContainer.appendChild(messageElement);
         messageContainer.scrollTop = messageContainer.scrollHeight;
     }

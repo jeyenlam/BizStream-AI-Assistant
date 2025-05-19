@@ -40,10 +40,6 @@ namespace BizStreamAIAssistant.Services
             var endpointPath = $"/openai/deployments/{_azureOpenAISettings.DeploymentName}/chat/completions?api-version={_azureOpenAISettings.ApiVersion}-preview";
             var response = await _httpClient.PostAsync(endpointPath, content);
 
-            // Console.WriteLine($"Request URL: {_httpClient.BaseAddress}{endpointPath}");
-            Console.WriteLine($"Request Body: {content}");
-
-
             if (!response.IsSuccessStatusCode)
             {
                 var errorResponse = await response.Content.ReadAsStringAsync();
@@ -64,7 +60,6 @@ namespace BizStreamAIAssistant.Services
                 throw new Exception("Received empty response from OpenAI API");
             }
 
-            Console.WriteLine($"Chatbot response: {textResponse}");
             return textResponse;
         }
     }
