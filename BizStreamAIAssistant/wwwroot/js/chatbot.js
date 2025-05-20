@@ -7,7 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const spinner = document.querySelector('.spinner');
 
     chatbotButton.addEventListener("click", function () {
-        form.classList.contains("hidden") ? form.classList.remove("hidden") : form.classList.add("hidden");
+        if (form.classList.contains("hidden"))
+        {
+            form.classList.remove("hidden");
+            form.classList.add("slide-up-animation");
+        }
+        else
+        {
+            form.classList.add("hidden");
+            form.classList.remove("slide-up-animation");
+        }
         chatbotButton.classList.contains("spin-once") ? chatbotButton.classList.remove("spin-once") : chatbotButton.classList.add("spin-once");
     });
 
@@ -65,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const messageElement = document.createElement("div");
 
-        role == "user" ? messageElement.className = "justify-end rounded-xl p-1 px-2 bg-[#003D78] text-white" : messageElement.className = "justify-start p-1 px-2 bg-gray-100 rounded-xl";
+        role == "user" ? messageElement.className = "justify-end rounded-xl p-1 px-2 bg-[#003D78] text-white" : messageElement.className = "justify-start p-1 px-2 bg-[#00C4E9] rounded-xl";
         if (role == "bot") {
 
             const botProfile = document.createElement("div");

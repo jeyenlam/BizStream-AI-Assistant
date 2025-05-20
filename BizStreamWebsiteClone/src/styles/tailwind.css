@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    @apply bg-[#003D78];
+}
+
+.shown-on-xl {
+    @apply hidden xl:flex;
+}
+
+.hidden-on-xl {
+    @apply flex xl:hidden;
+}
+
+.text-button {
+    @apply border-2 rounded-full border-[#00C4E9] text-white px-6 hover:border-white font-semibold shadow-lg ;
+}
+
+.text-button-filled {
+    @apply rounded-full bg-white text-[#003D78] px-6 font-semibold border-2 border-white shadow-lg;
+}
+
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-down-animation {
+    animation: slide-down 1s ease;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.slide-up-animation {
+    animation: slide-up 1s ease;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-left-animation {
+    animation: slide-left 1s ease;
+}

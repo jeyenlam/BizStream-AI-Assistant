@@ -2,3 +2,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    font-size: small;
+}
+
+.spin-once {
+    display: inline-block;
+    animation: spin .3s linear forwards; /* 1s duration, run once */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(5%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-up-animation {
+    animation: slide-up .5s ease-in-out;
+}

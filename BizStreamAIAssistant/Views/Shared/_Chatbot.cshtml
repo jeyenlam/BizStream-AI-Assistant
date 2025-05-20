@@ -1,16 +1,17 @@
-<div class="fixed bottom-0 right-0 z-10 w-96 flex flex-col items-end">
-
-    <form id="chatForm" class="bg-white shadow-lg rounded-lg p-4 m-5 flex-col "> @*added hidden when done*@
+<div class="fixed bottom-0 right-0 z-10 w-80 flex flex-col items-end m-5">
+    
+    <form id="chatForm" class="w-full mb-5 bg-red-00 shadow-[0_0_10px_#00000008] rounded-xl flex-col border border-gray-100"> @*added hidden when done*@
         @* Bot Profile *@
-        <div class="flex items-center gap-2 text-[#003D78] pb-2 ">
+        <div class="p-3 flex items-center gap-2 text-white pb-2 bg-green-30">
             <img src="~/images/robot (1).png" alt="bot" class="bg-[#00C4E9] rounded-full w-10 border-2 p-1" />
-            <h2 class="text-lg font-semibold">BZAI</h2>
+            <h2 class="text-lg font-semibold text-[#003D78]">BZAI - AI Agent</h2>
         </div>
+        
         <hr/>
 
         @* Message Big Container *@
-        <div id="chatFrame" class="flex flex-col items-end gap-2 overflow-y-auto h-48 p-3 text-sm">
-            <div id="messageContainer" class="flex flex-col items-end gap-2"></div>
+        <div id="chatFrame" class="bg-teal-00 p-3 flex flex-col items-end gap-2 overflow-y-auto h-60 text-xs">
+            <div id="messageContainer" class="flex flex-col items-end gap-2 bg-white"></div>
 
             @* @{
                 var messages = new[]
@@ -46,19 +47,21 @@
         </div>
 
         @* Input & Send Button *@
-        <div class=" flex p-2 border rounded-full items-center">
-            <input id="queryInput" type="text" placeholder="Type your message..." class="border rounded w-full p-2" />
-            <button type="submit" class="bg-[#003D78] text-white rounded-full w-10 h-9 flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="w-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
-
-            </button>
+        <div class="p-4">
+            <div class="bg-yellow-00 flex my-1 p-1 border-2 rounded-2xl items-center">
+                <textarea id="queryInput" type="text" rows="1" placeholder="Type your message..." class="border rounded-xl w-full p-1 overflow-hidden"></textarea>
+                <button type="submit" class="bg-[#00C4E9] text-white rounded-full w-10 h-8 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                    </svg>
+                </button>
+            </div>
         </div>
+        
         
     </form>
 
-    <button id="chatbotButton" class="bg-[#00C4E9] text-white rounded-full p-3 m-5 shadow-lg hover:scale-110 duration-200">
+    <button id="chatbotButton" class="bg-[#00C4E9] text-white rounded-full p-3 shadow-lg hover:scale-110 duration-200 ">
         <img src="~/images/robot (1).png" alt="bot" class="w-8" />
     </button>
 </div>

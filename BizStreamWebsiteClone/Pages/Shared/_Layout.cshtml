@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using BizStreamWebsiteClone.Models
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -9,105 +12,104 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BizStreamWebsiteClone.styles.css" asp-append-version="true" />
 </head>
-@* <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">BizStreamWebsiteClone</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - BizStreamWebsiteClone - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @await RenderSectionAsync("Scripts", required: false)
-</body> *@
 <body>
     <header>
-        <nav class="w-screen relative bg-[#003D78] h-28 flex items-center justify-between text-medium">
-            <div class="w-screen h-20 absolute top-0 bg-gradient-to-b to-black"></div>
-
-            <div class="w-full flex flex-row justify-between items-center px-10 text-white font-semibold">
-                <a asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="https://www.bizstream.com/wp-content/uploads/2022/04/BizStream-Logo-rev.svg" alt="BizStreamAIAssistantLogo" class="h-10" />
-                </a>
-                <ul class="flex flex-row items-center gap-6">
-                    @{
-                        var navItems = new[]
-                        {
-                            new { Title = "Projects", Controller="Home", Action = "Index", Collapsable = false },
-                            new { Title = "Services", Controller="Home", Action = "Privacy", Collapsable = true },
-                            new { Title = "Technology", Controller="Home", Action = "Index", Collapsable = true },
-                            new { Title = "About", Controller="Home", Action = "Privacy", Collapsable = true },
-                            new { Title = "Careers", Controller="Home", Action = "Index", Collapsable = true },
-                            new { Title = "Blog", Controller="Home", Action = "Privacy", Collapsable = false },
-                        };
-                    
-                        @foreach (var item in navItems)
-                        {
-                            <li class="ml-4">
-                                <a class="" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">@item.Title.ToUpper()</a>
-                            </li>
-
-                            if (item.Collapsable)
+        <nav class="slide-down-animation relative h-24 z-10 bg-[#003D78] flex items-center justify-evenly text-medium font-semibold text-white px-6 ">
+            <div class="absolute top-0 w-full h-full bg-gradient-to-b from-[#002b3c7c] to-transparent -z-0"></div>
+            @* BizStream Logo *@
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="z-0">
+                <img src="https://www.bizstream.com/wp-content/uploads/2022/04/BizStream-Logo-rev.svg" alt="BizStreamAIAssistantLogo" class="h-10" />
+            </a>
+            <div class="w-2/3 flex justify-end xl:justify-center items-center z-0">
+                <div class="flex bg-pink-00 h-full ">
+                    <ul class="shown-on-xl gap-10 items-center">
+                        @{
+                            var navItems = new NavItems[]
                             {
-                                <span class="w-2 fill-white">
-                                    @* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                    </svg> *@
-                                    <svg class="e-font-icon-svg e-fas-caret-down" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+                                new NavItems { Name = "Home", Url = "/Index", Collapsable = false },
+                                new NavItems { Name = "About", Url = "/Privacy", Collapsable = true, SubItems = new NavSubItem[]
+                                    {
+                                        new NavSubItem { Name = "Item 1", Url = "/" },
+                                        new NavSubItem { Name = "Item 2", Url = "/" },
+                                        new NavSubItem { Name = "Item 3", Url = "/" }
+                                    }
+                                },
+                                new NavItems { Name = "Services", Url = "/Index", Collapsable = true, SubItems = new NavSubItem[]
+                                    {
+                                        new NavSubItem { Name = "Item 1", Url = "/" },
+                                        new NavSubItem { Name = "Item 2", Url = "/" },
+                                        new NavSubItem { Name = "Item 3", Url = "/" }
+                                    }
+                                },
+                                new NavItems { Name = "Work", Url = "/Index", Collapsable = true, SubItems = new NavSubItem[]
+                                    {
+                                        new NavSubItem { Name = "Item 1", Url = "/" },
+                                        new NavSubItem { Name = "Item 2", Url = "/" },
+                                        new NavSubItem { Name = "Item 3", Url = "/" }
+                                    }
+                                },
+                                new NavItems { Name = "Blog", Url = "/Index", Collapsable = true, SubItems = new NavSubItem[]
+                                    {
+                                        new NavSubItem { Name = "Item 1", Url = "/About/OurStory" },
+                                        new NavSubItem { Name = "Item 2", Url = "/About/OurTeam" },
+                                        new NavSubItem { Name = "Item 3", Url = "/About/Careers" }
+                                    }
+                                },
+                                new NavItems { Name = "Contact", Url = "/Index", Collapsable = false }
+                            };
+                        
+                            @foreach (var item in navItems)
+                            {
+                                <li class="border-b-[2.5px] border-transparent xl:border-bg-[#00C4E9] hover:border-b-[#00C4E9] duration-300 group">
+                                    <a asp-page="@item.Url" class="flex items-center gap-3">
+                                        <span>@item.Name.ToUpper()</span>
+                                        @if (item.Collapsable)
+                                        {
+                                            <span class="w-2 fill-white">
+                                                <svg class="e-font-icon-svg e-fas-caret-down" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+                                            </span>
+                                            <div class="mt-4 absolute invisible group-hover:visible flex rounded-lg bg-[#00C4E9] text-[#003D78] flex-col duration-300 ease-out">
+                                                @{
+                                                    foreach (var subItem in item.SubItems)
+                                                    {
+                                                        <a asp-page="@subItem.Url" class="px-4 py-2  hover:text-white duration-300">
+                                                            <span>@subItem.Name</span> 
+                                                        </a>
+                                                    }
+                                                }
 
-                                </span>
+                                            </div>
+                                        }
+
+                                    </a>
+                                </li>
                             }
-                        }
-                        <li class="ml-4">
-                            <a class="" asp-area="" asp-controller="" asp-action="">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                                </svg>
-                            </a>
-                            
-                        </li>
-                    }  
-                </ul>
-                <button class="border-2 rounded-full  border-[#00C4E9]  text-white px-6 py-1 hover:border-white">
-                    <a asp-area="" asp-controller="Home" asp-action="Index">CONTACT</a>
+                        }                        
+                    </ul>
+                    @* Search Icon *@
+                    <button class="mx-10 w-6 right-0 fill-white hover:scale-110 duration-300">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+                    </button>
+                </div>
+
+                @* Hidden - Hamburger Menu Button *@
+                <button class="hidden-on-xl w-6 fill-white hover:fill-[#00C4E9]">
+                    <svg aria-hidden="true" class="e-font-icon-svg e-fas-bars" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
                 </button>
+                
             </div>
+            @* Contact Button *@
+            <button class="shown-on-xl text-button py-1 z-0">
+                <a asp-area="" asp-controller="Home" asp-action="Index">CONTACT</a>
+            </button>
         </nav>
     </header>
 
     <div>
-        <main role="main" class="overflow-hidden relative z-0 w-screen">
+        <main role="main" class="overflow-hidden z-0">
             @RenderBody()
             
-            @* <iframe src="http://localhost:5034/" alt="laptop" class="absolute bottom-0 right-0 z-10 w-full h-full" /> *@
+            <iframe src="http://localhost:5034/" alt="laptop" class="absolute bottom-0 right-0 z-10 w-full h-full" />
 
         </main>
     </div>
