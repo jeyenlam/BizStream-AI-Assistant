@@ -1,9 +1,7 @@
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using BizStreamAIAssistant.Models;
 using Microsoft.Extensions.Options;
-using Microsoft.VisualBasic;
 
 namespace BizStreamAIAssistant.Services
 {
@@ -15,6 +13,13 @@ namespace BizStreamAIAssistant.Services
         public ChatbotService(IOptions<AzureOpenAISettingsModel> options)
         {
             _azureOpenAISettings = options.Value;
+
+            if (string.IsNullOrWhiteSpace(_azureOpenAISettings.Endpoint))
+                throw new InvalidOperationException("AzureOpenAI.Endpoint is missing or empty.");
+
+            if (string.IsNullOrWhiteSpace(_azureOpenAISettings.ApiKey))
+                throw new InvalidOperationException("AzureOpenAI.ApiKey is missing or empty.");
+
             _httpClient = new HttpClient
             {
                 BaseAddress = new Uri(_azureOpenAISettings.Endpoint)
@@ -24,6 +29,8 @@ namespace BizStreamAIAssistant.Services
 
         public async Task<string> GetResponseAsync(List<Message> messages)
         {
+            // Add system prompt to the beginning of the messages list
+            // This is the system prompt that will guide the AI's behavior
             var systemPrompt = new Message
             {
                 Role = "system",
@@ -31,30 +38,29 @@ namespace BizStreamAIAssistant.Services
             };
             messages.Insert(0, systemPrompt);
 
-            var payload = new
-            {
-                messages = messages,
-            };
-
+            // Construct the request payload
+            var payload = new { messages = messages,};
             var content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
             var endpointPath = $"/openai/deployments/{_azureOpenAISettings.DeploymentName}/chat/completions?api-version={_azureOpenAISettings.ApiVersion}-preview";
-            var response = await _httpClient.PostAsync(endpointPath, content);
 
+            // Call the OpenAI API
+            var response = await _httpClient.PostAsync(endpointPath, content);
             if (!response.IsSuccessStatusCode)
             {
                 var errorResponse = await response.Content.ReadAsStringAsync();
                 throw new Exception($"Error calling OpenAI API: {errorResponse}");
             }
+
+            // Parse the response
             var jsonResponse = await response.Content.ReadAsStringAsync();
             var jsonDocument = JsonDocument.Parse(jsonResponse);
-
             var textResponse = jsonDocument.RootElement
                 .GetProperty("choices")[0]
                 .GetProperty("message")
                 .GetProperty("content")
                 .GetString();
 
-            // Check if textResponse is null or empty
+            // Check if respponse is null or empty before returning
             if (string.IsNullOrEmpty(textResponse))
             {
                 throw new Exception("Received empty response from OpenAI API");

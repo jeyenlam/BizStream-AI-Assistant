@@ -67,8 +67,4 @@ wwwroot/lib/
 *.swp
 *.sln.cache
 
-#Training Data
-Training/
-
-# Secret Keys
-appsettings.Development.json
+.env

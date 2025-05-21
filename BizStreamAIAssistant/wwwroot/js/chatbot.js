@@ -4,16 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageContainer = document.getElementById("messageContainer");
     const messages = [];
     const chatbotButton = document.getElementById("chatbotButton");
-    const spinner = document.querySelector('.spinner');
 
     chatbotButton.addEventListener("click", function () {
-        if (form.classList.contains("hidden"))
-        {
+        if (form.classList.contains("hidden")){
             form.classList.remove("hidden");
             form.classList.add("slide-up-animation");
         }
-        else
-        {
+        else {
             form.classList.add("hidden");
             form.classList.remove("slide-up-animation");
         }
@@ -38,10 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         addMessageToUI({ role: "user", text: userMessage });
         messages.push({ role: "user", content: userMessage });
-        console.log("Message history:", messages);
-        console.log(JSON.stringify({ messages }, null, 2));
+        queryInput.value = ""; // Clear input field
 
-        queryInput.value = "";
+        setTimeout(() => {
+            renderTextLoading();
+        }, 1000);
 
         fetch("/api/chatbot", {
             method: "POST",
@@ -58,9 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             return response.json();
         }).then(data => {  
-
-            
-            
+            removeTextLoading();
             const botResponse = data.text || "No response from server";
             addMessageToUI({ role: "bot", text: botResponse });
             messages.push({ role: "assistant", content: botResponse });
@@ -71,34 +67,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function addMessageToUI({ role, text }) {
+        let clone;
 
-        const messageElement = document.createElement("div");
-
-        role == "user" ? messageElement.className = "justify-end rounded-xl p-1 px-2 bg-[#003D78] text-white" : messageElement.className = "justify-start p-1 px-2 bg-[#00C4E9] rounded-xl";
-        if (role == "bot") {
-
-            const botProfile = document.createElement("div");
-            botProfile.className = "flex items-center gap-2 justify-start";
-        
-            const botImage = document.createElement("img");            
-            botImage.src = "/images/robot (1).png";
-            botImage.className = "w-8 h-8 rounded-full bg-[#00C4E9] border-2 p-1 border";
-
-            const botName = document.createElement("span");
-            botName.textContent = "BZAI";  
-
-            const messageBubble = document.createElement("div");
-            messageBubble.textContent = text;
-
-            botProfile.appendChild(botImage);
-            botProfile.appendChild(botName);
-            messageElement.appendChild(botProfile);
-            messageElement.appendChild(messageBubble);
+        if (role == "user") {
+            clone = document.getElementById("userMessageTemplate").cloneNode(true);
+            clone.classList.remove("hidden");
+            clone.removeAttribute("id");
+            clone.classList.add("clonedUserMessage");
+            clone.querySelector(".userMessageText").textContent = text;
         } else {
-            messageElement.textContent = text;
+            clone = document.getElementById("botMessageTemplate").cloneNode(true);
+            clone.classList.remove("hidden");
+            clone.removeAttribute("id");
+            clone.classList.add("clonedBotMessage");
+            clone.querySelector(".botMessageText").textContent = text;
         }
 
-        messageContainer.appendChild(messageElement);
+        if (clone) messageContainer.appendChild(clone); else console.error("Clone not found");
         messageContainer.scrollTop = messageContainer.scrollHeight;
+    }
+
+    function renderTextLoading(){
+        const clone = document.getElementById("textLoadingTemplate").cloneNode(true);
+        clone.classList.remove("hidden");
+        clone.removeAttribute("id");
+        clone.classList.add("clonedTextLoading")
+        messageContainer.appendChild(clone);
+    }
+
+    function removeTextLoading(){
+        const loadingText = document.querySelector(".clonedTextLoading");
+        if (loadingText) loadingText.remove();
     }
 });
