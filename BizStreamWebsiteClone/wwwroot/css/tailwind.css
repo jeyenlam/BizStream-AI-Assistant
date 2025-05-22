@@ -687,16 +687,12 @@ video {
   height: 6rem;
 }
 
-.h-\[30rem\] {
-  height: 30rem;
+.h-\[32rem\] {
+  height: 32rem;
 }
 
 .h-full {
   height: 100%;
-}
-
-.h-\[32rem\] {
-  height: 32rem;
 }
 
 .w-1\/4 {
@@ -834,14 +830,6 @@ video {
 
 .p-12 {
   padding: 3rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
 }
 
 .px-4 {

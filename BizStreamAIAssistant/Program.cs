@@ -2,9 +2,12 @@ using System.Text.Json;
 using BizStreamAIAssistant.Services;
 using DotNetEnv;
 
-DotNetEnv.Env.Load();
-
 var builder = WebApplication.CreateBuilder(args);
+
+if (builder.Environment.IsDevelopment())
+{
+    DotNetEnv.Env.Load();
+}
 
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
