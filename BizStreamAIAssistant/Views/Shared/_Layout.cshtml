@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="~/css/tailwind.css" asp-append-version="true" />
 </head>
 <body>
-    <div class="">
-        <main role="main" class="">
-            @RenderBody()
-            <!-- Chatbot injected globally -->
-            <partial name="_Chatbot" />
-        </main>
-    </div>
+    <main role="main">
+        @RenderBody()
+        <!-- Chatbot injected globally -->
+        <partial name="_Chatbot" />
+    </main>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/chatbot.js" asp-append-version="true"></script>
 </body>
