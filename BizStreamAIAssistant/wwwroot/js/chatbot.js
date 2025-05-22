@@ -18,7 +18,7 @@ function init() {
         userClone: "clonedUserMessage",
         botClone: "clonedBotMessage",
         loadingClone: "clonedTextLoading",
-        spinOnce: "spin-once",
+        spinOnce: "spin-once-animation",
         slideUp: "slide-up-animation"
     };
 
@@ -68,7 +68,7 @@ function init() {
             removeTextLoading();
             addBotMessage(data.text || "No response from server");
         } catch (error) {
-            console.error("Error:", error);
+            console.error("Error calling server:", error);
             removeTextLoading();
             addBotMessage("Sorry, something went wrong.");
         }
@@ -76,7 +76,6 @@ function init() {
 
     function addUserMessage(message) {
         addMessageToUI({
-            role: "user",
             text: message,
             templateId: TEMPLATE_IDS.user,
             cloneClass: CLASSES.userClone,
@@ -87,7 +86,6 @@ function init() {
 
     function addBotMessage(message) {
         addMessageToUI({
-            role: "bot",
             text: message,
             templateId: TEMPLATE_IDS.bot,
             cloneClass: CLASSES.botClone,
@@ -112,7 +110,7 @@ function init() {
 
     function renderTextLoading() {
         const template = document.getElementById(TEMPLATE_IDS.loading);
-        if (!template) return;
+        if (!template) return console.error(`Missingtemplate: ${TEMPLATE_IDS.loading}`);
         const clone = template.cloneNode(true);
         clone.classList.remove(CLASSES.hidden);
         clone.removeAttribute("id");
