@@ -1,4 +1,5 @@
 ﻿@using BizStreamWebsiteClone.Models
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,6 @@
     <title>BizStream Clone</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/css/tailwind.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/BizStreamWebsiteClone.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -19,13 +18,13 @@
                 <img src="https://www.bizstream.com/wp-content/uploads/2022/04/BizStream-Logo-rev.svg" alt="BizStreamAIAssistantLogo" class="h-10" />
             </a>
             <div class="w-2/3 flex justify-end xl:justify-center items-center z-0">
-                <div class="flex bg-pink-00 h-full ">
+                <div class="flex h-full ">
                     <ul class="shown-on-xl gap-10 items-center">
                         @{
                             var navItems = new NavItems[]
                             {
                                 new NavItems { Name = "Home", Url = "/Index", Collapsable = false },
-                                new NavItems { Name = "About", Url = "/Privacy", Collapsable = true, SubItems = new NavSubItem[]
+                                new NavItems { Name = "About", Url = "/Index", Collapsable = true, SubItems = new NavSubItem[]
                                     {
                                         new NavSubItem { Name = "Item 1", Url = "/" },
                                         new NavSubItem { Name = "Item 2", Url = "/" },
@@ -75,10 +74,8 @@
                                                         </a>
                                                     }
                                                 }
-
                                             </div>
                                         }
-
                                     </a>
                                 </li>
                             }
@@ -103,10 +100,10 @@
         </nav>
     </header>
 
-    <div>
+    <div class="relative">
         <main role="main" class="overflow-hidden z-0">
             @RenderBody()
-            <iframe src="http://localhost:5034/" class="absolute w-full h-full right-0 bottom-0 z-50 bg-purple-600"></iframe>
+            <iframe src="http://localhost:5034/" class="fixed flex justify-end items-center right-0 bottom-0 w-80 h-[30rem] z-50"></iframe>
         </main>
     </div>
 
