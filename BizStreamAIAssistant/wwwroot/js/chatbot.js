@@ -1,104 +1,134 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", init);
+
+function init() {
     const form = document.getElementById("chatForm");
     const queryInput = document.getElementById("queryInput");
     const messageContainer = document.getElementById("messageContainer");
-    const messages = [];
     const chatbotButton = document.getElementById("chatbotButton");
-    const spinner = document.querySelector('.spinner');
+    const messages = [];
 
-    chatbotButton.addEventListener("click", function () {
-        if (form.classList.contains("hidden"))
-        {
-            form.classList.remove("hidden");
-            form.classList.add("slide-up-animation");
-        }
-        else
-        {
-            form.classList.add("hidden");
-            form.classList.remove("slide-up-animation");
-        }
-        chatbotButton.classList.contains("spin-once") ? chatbotButton.classList.remove("spin-once") : chatbotButton.classList.add("spin-once");
-    });
+    const TEMPLATE_IDS = {
+        user: "userMessageTemplate",
+        bot: "botMessageTemplate",
+        loading: "textLoadingTemplate"
+    };
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); 
+    const CLASSES = {
+        hidden: "hidden",
+        userClone: "clonedUserMessage",
+        botClone: "clonedBotMessage",
+        loadingClone: "clonedTextLoading",
+        spinOnce: "spin-once",
+        slideUp: "slide-up-animation"
+    };
+
+    chatbotButton.addEventListener("click", toggleChatbot);
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
         handleMessageSubmit();
     });
 
-    queryInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter" && queryInput.value.trim() !== "") {
-            event.preventDefault();
+    queryInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && queryInput.value.trim()) {
+            e.preventDefault();
             handleMessageSubmit();
         }
     });
 
-    function handleMessageSubmit() {
+    function toggleChatbot() {
+        form.classList.toggle(CLASSES.hidden);
+        form.classList.toggle(CLASSES.slideUp);
+        chatbotButton.classList.toggle(CLASSES.spinOnce);
+    }
+
+    async function handleMessageSubmit() {
         const userMessage = queryInput.value.trim();
         if (!userMessage) return;
 
-        addMessageToUI({ role: "user", text: userMessage });
-        messages.push({ role: "user", content: userMessage });
-        console.log("Message history:", messages);
-        console.log(JSON.stringify({ messages }, null, 2));
-
+        addUserMessage(userMessage);
         queryInput.value = "";
 
-        fetch("/api/chatbot", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ messages })
+        setTimeout(() => {
+            renderTextLoading();
+        }, 1000);
 
-        }).then(async response => {   
+        try {
+            const response = await fetch("/api/chatbot", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ messages })
+            });
+    
             if (!response.ok) {
                 const errorText = await response.text();
-                console.error("Error response:", errorText);
-                throw new Error("Network response was not ok");
+                throw new Error(errorText);
             }
-            return response.json();
-        }).then(data => {  
-
-            
-            
-            const botResponse = data.text || "No response from server";
-            addMessageToUI({ role: "bot", text: botResponse });
-            messages.push({ role: "assistant", content: botResponse });
-            console.log("Message history:", messages);
-        }).catch(error => {
+    
+            const data = await response.json();
+            removeTextLoading();
+            addBotMessage(data.text || "No response from server");
+        } catch (error) {
             console.error("Error:", error);
-        }); 
-    }
-
-    function addMessageToUI({ role, text }) {
-
-        const messageElement = document.createElement("div");
-
-        role == "user" ? messageElement.className = "justify-end rounded-xl p-1 px-2 bg-[#003D78] text-white" : messageElement.className = "justify-start p-1 px-2 bg-[#00C4E9] rounded-xl";
-        if (role == "bot") {
-
-            const botProfile = document.createElement("div");
-            botProfile.className = "flex items-center gap-2 justify-start";
-        
-            const botImage = document.createElement("img");            
-            botImage.src = "/images/robot (1).png";
-            botImage.className = "w-8 h-8 rounded-full bg-[#00C4E9] border-2 p-1 border";
-
-            const botName = document.createElement("span");
-            botName.textContent = "BZAI";  
-
-            const messageBubble = document.createElement("div");
-            messageBubble.textContent = text;
-
-            botProfile.appendChild(botImage);
-            botProfile.appendChild(botName);
-            messageElement.appendChild(botProfile);
-            messageElement.appendChild(messageBubble);
-        } else {
-            messageElement.textContent = text;
+            removeTextLoading();
+            addBotMessage("Sorry, something went wrong.");
         }
-
-        messageContainer.appendChild(messageElement);
-        messageContainer.scrollTop = messageContainer.scrollHeight;
     }
-});
+
+    function addUserMessage(message) {
+        addMessageToUI({
+            role: "user",
+            text: message,
+            templateId: TEMPLATE_IDS.user,
+            cloneClass: CLASSES.userClone,
+            textSelector: ".userMessageText"
+        });
+        messages.push({ role: "user", content: message });
+    }
+
+    function addBotMessage(message) {
+        addMessageToUI({
+            role: "bot",
+            text: message,
+            templateId: TEMPLATE_IDS.bot,
+            cloneClass: CLASSES.botClone,
+            textSelector: ".botMessageText"
+        });
+        messages.push({ role: "assistant", content: message });
+    }
+
+    function addMessageToUI({ text, templateId, cloneClass, textSelector }) {
+        const template = document.getElementById(templateId);
+        if (!template) return console.error(`Missing template: ${templateId}`);
+
+        const clone = template.cloneNode(true);
+        clone.classList.remove(CLASSES.hidden);
+        clone.removeAttribute("id");
+        clone.classList.add(cloneClass);
+        clone.querySelector(textSelector).textContent = text;
+
+        messageContainer.appendChild(clone);
+        scrollToBottom();
+    }
+
+    function renderTextLoading() {
+        const template = document.getElementById(TEMPLATE_IDS.loading);
+        if (!template) return;
+        const clone = template.cloneNode(true);
+        clone.classList.remove(CLASSES.hidden);
+        clone.removeAttribute("id");
+        clone.classList.add(CLASSES.loadingClone);
+        messageContainer.appendChild(clone);
+        scrollToBottom();
+    }
+
+    function removeTextLoading() {
+        const loading = document.querySelector(`.${CLASSES.loadingClone}`);
+        if (loading) loading.remove();
+    }
+
+    function scrollToBottom() {
+        requestAnimationFrame(() => {
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+        });
+    }
+}

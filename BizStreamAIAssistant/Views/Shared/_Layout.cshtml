@@ -5,70 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BizStreamAIAssistant</title>
     <script type="importmap"></script>
-    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     <link rel="stylesheet" href="~/css/tailwind.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/BizStreamAIAssistant.styles.css" asp-append-version="true" />
 </head>
 <body>
-    @* <header>
-        <nav class="w-screen relative bg-[#003D78] h-28 flex items-center justify-between text-medium">
-            <div class="w-screen h-20 absolute top-0 bg-gradient-to-b to-black"></div>
-            <div class="w-full flex flex-row justify-between items-center px-10 text-white font-semibold">
-                
-                <a asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="https://www.bizstream.com/wp-content/uploads/2022/04/BizStream-Logo-rev.svg" alt="BizStreamAIAssistantLogo" class="h-10" />
-                </a>
-                <ul class="flex flex-row">
-                    @{
-                        var navItems = new[]
-                        {
-                            new { Title = "Project", Controller="Home", Action = "Index" },
-                            new { Title = "Services", Controller="Home", Action = "Privacy" },
-                            new { Title = "Technology", Controller="Home", Action = "Index" },
-                            new { Title = "About", Controller="Home", Action = "Privacy" },
-                            new { Title = "Careers", Controller="Home", Action = "Index" },
-                            new { Title = "Blog", Controller="Home", Action = "Privacy" },
-                        };
-                    
-                        @foreach (var item in navItems)
-                        {
-                            <li class="ml-4">
-                                <a class="" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">@item.Title.ToUpper()</a>
-                            </li>
-                        }
-                        <li class="ml-4">
-                            <a class="" asp-area="" asp-controller="" asp-action="">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                                </svg>
-                            </a>
-                            
-                        </li>
-                    }  
-                </ul>
-                <button class="border-2 rounded-full  border-[#00C4E9]  text-white px-6 py-1 hover:border-white">
-                    <a asp-area="" asp-controller="Home" asp-action="Index">CONTACT</a>
-                </button>
-            </div>
-        </nav>
-    </header> *@
-
-    
-
-    <div>
+    <div class="">
         <main role="main" class="">
             @RenderBody()
-            
             <!-- Chatbot injected globally -->
             <partial name="_Chatbot" />
         </main>
     </div>
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @* asp-append-version: prevent browser from using old cache, automatically changes version when file changes, ideal for prod *@
     <script src="~/js/chatbot.js" asp-append-version="true"></script>
 </body>
 </html>
