@@ -14,15 +14,19 @@ builder.Configuration
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
     .AddEnvironmentVariables();
 
-// Add services to the container.
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IChatbotService, ChatbotService>(); //added to register the ChatbotService as a service that can be injected into controllers
-builder.Services.Configure<AzureOpenAISettingsModel>( //added to register the AzureOpenAISettingsModel with the dependency injection container
+builder.Services.AddScoped<IChatbotService, ChatbotService>(); 
+builder.Services.Configure<AzureOpenAISettingsModel>(
     builder.Configuration.GetSection("AzureOpenAI"));
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
 });
+
+var indexer = new WebIndexingService();
+string result = await indexer.CrawlAndExtractAsync("https://bizstream.com", 2);
+Console.WriteLine(result);
 
 
 var app = builder.Build();
