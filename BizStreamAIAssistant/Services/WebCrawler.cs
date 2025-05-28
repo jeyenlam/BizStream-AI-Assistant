@@ -8,12 +8,12 @@ namespace BizStreamAIAssistant.Services
         private readonly HttpClient _httpClient = new();
         private readonly HashSet<string> _visitedUrls = new();
 
-        public async Task<List<string>> CrawlAsync(string rootUrl, int depth)
+        public async Task<List<(string, string)>> CrawlAsync(string rootUrl, int depth)
         {
             var toVisit = new Queue<(string Url, int level)>();
             toVisit.Enqueue((rootUrl, 0));
 
-            var pages = new List<string>();
+            var pages = new List<(string Html, string Url)>();
             var count = 0;
 
             while (toVisit.Count > 0)
@@ -28,7 +28,7 @@ namespace BizStreamAIAssistant.Services
                 try
                 {
                     var html = await _httpClient.GetStringAsync(url);
-                    pages.Add(html);
+                    pages.Add((html, url));
 
                     var doc = new HtmlDocument();
                     doc.LoadHtml(html);
@@ -45,7 +45,7 @@ namespace BizStreamAIAssistant.Services
 
                     if (links == null)
                     {
-                        throw new Exception("Links is null");
+                        throw new Exception("No link found.");
                     }
 
                     foreach (var link in links)
@@ -59,7 +59,7 @@ namespace BizStreamAIAssistant.Services
                     continue;
                 }
             }
-            // File.WriteAllText($"Pages.txt", pages.Count > 0 ? string.Join(Environment.NewLine, pages) : "No pages crawled.");
+            File.WriteAllText($"Pages.txt", pages.Count > 0 ? string.Join(Environment.NewLine, pages) : "No pages crawled.");
             return pages;
         }
     }
