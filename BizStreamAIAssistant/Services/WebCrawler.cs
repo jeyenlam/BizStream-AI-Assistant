@@ -19,7 +19,6 @@ namespace BizStreamAIAssistant.Services
             while (toVisit.Count > 0)
             {
                 var (url, level) = toVisit.Dequeue();
-                // url = url.Replace("www.", "");
                 if (level > depth || _visitedUrls.Contains(url))
                 {
                     continue;
@@ -36,14 +35,13 @@ namespace BizStreamAIAssistant.Services
 
                     var links = doc.DocumentNode.SelectNodes("//a[@href]")
                         ?.Select(node => node.GetAttributeValue("href", "").Trim())
-                        .Where(href => href.StartsWith(rootUrl) || href.StartsWith("https://www.bizstream.com") || href.StartsWith('/'))
+                        .Where(href => href.StartsWith(rootUrl) || href.StartsWith(rootUrl.Insert(8, "www.")) || href.StartsWith('/'))
                         .Select(href => href.Replace("www.", ""))
                         .Select(href => href.StartsWith("/") ? rootUrl.TrimEnd('/') + href : href)
                         .Distinct()
                         .ToList();
 
                     Console.WriteLine($"{++count} Crawling: {url} at level {level}, found {links?.Count ?? 0} links.");
-                    // Console.WriteLine(links);
 
                     if (links == null)
                     {
@@ -61,7 +59,7 @@ namespace BizStreamAIAssistant.Services
                     continue;
                 }
             }
-            File.WriteAllText($"Pages.txt", pages.Count > 0 ? string.Join(Environment.NewLine, pages) : "No pages crawled.");
+            // File.WriteAllText($"Pages.txt", pages.Count > 0 ? string.Join(Environment.NewLine, pages) : "No pages crawled.");
             return pages;
         }
     }

@@ -17,7 +17,11 @@
 [2025-05-27 14:18:29] - Crawled 51 pages, 117888 total characters
 [2025-05-27 14:30:48] - Crawled 51 pages, 349142 total characters
 [2025-05-27 14:34:23] - Crawled 43 pages, 295822 total characters
-[2025-05-27 14:35:53] - Crawled 43 pages, 103477 total characters <<<<<
+[2025-05-27 14:35:53] - Crawled 43 pages, 103477 total characters <<<<< no duplicates
 [2025-05-27 14:43:38] - Crawled 43 pages, 103477 total characters
 [2025-05-27 14:44:14] - Crawled 43 pages, 103477 total characters
-[2025-05-27 15:19:28] - Crawled 206 pages, 550569 total characters
+[2025-05-27 15:19:28] - Crawled 206 pages, 550569 total characters <<<<< more relevant links
+[2025-05-28 08:28:30] - Crawled 4 pages, 4670 total characters
+[2025-05-28 08:29:03] - Crawled 4 pages, 4670 total characters
+[2025-05-28 09:09:11] - Crawled 436 pages, 1488580 total characters
+[2025-05-28 09:17:30] - Depth: 1, Crawled 44 pages, 103464 total characters

@@ -25,7 +25,7 @@ namespace BizStreamAIAssistant.Services
 
             var totalChars = allText.ToString().Length;
             File.WriteAllText(extractedDataFileName, allText.ToString());
-            File.AppendAllText("CrawlLog.txt", $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] - Crawled {pageCount} pages, {totalChars} total characters\n");
+            File.AppendAllText("CrawlLog.txt", $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] - Depth: {depth}, Crawled {pageCount} pages, {totalChars} total characters\n");
 
             return $"Finished Indexing: Extracted Data Stored at {extractedDataFileName}";       
         }
