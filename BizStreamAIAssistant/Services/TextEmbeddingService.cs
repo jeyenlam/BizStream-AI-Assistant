@@ -6,6 +6,7 @@ using Azure.Search.Documents.Models;
 using BizStreamAIAssistant.Services.Helpers;
 using System.Text;
 using BizStreamAIAssistant.Helpers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BizStreamAIAssistant.Services
 {
@@ -49,7 +50,9 @@ namespace BizStreamAIAssistant.Services
 
         public async Task UploadEmbeddingsAsync()
         {
-            string jsonlFilePath = PathConfig.JsonlFilePath;
+            string jsonlFilePath = TempDataPathConfig.JsonlFilePath;
+            Console.WriteLine($"[UploadEmbeddingsAsync] jsonlFilePath: {jsonlFilePath}");
+
             var lines = await File.ReadAllLinesAsync(jsonlFilePath);
             var vectors = await this.GenerateEmbeddingsAsync(jsonlFilePath);
 

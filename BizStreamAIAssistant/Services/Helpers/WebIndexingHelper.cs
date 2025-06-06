@@ -11,23 +11,23 @@ namespace BizStreamAIAssistant.Services.Helpers
     public class WebIndexingHelper
     {
         private static readonly HttpClient _httpClient = new();
-        private static readonly HashSet<string> _visitedUrls = new();
 
         public static async Task<List<(string, string)>> CrawlAsync(string rootUrl, int depth)
         {
             var pages = new List<(string Html, string Url)>();
             var toVisit = new Queue<(string Url, int level)>();
+            var visitedUrls = new HashSet<string>();  // Create new HashSet for each crawl
             toVisit.Enqueue((rootUrl, 0));
 
             var count = 0;
             while (toVisit.Count > 0)
             {
                 var (url, level) = toVisit.Dequeue();
-                if (level > depth || _visitedUrls.Contains(url))
+                if (level > depth || visitedUrls.Contains(url))
                 {
                     continue;
                 }
-                _visitedUrls.Add(url);
+                visitedUrls.Add(url);
 
                 try
                 {

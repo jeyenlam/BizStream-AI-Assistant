@@ -34,7 +34,7 @@ public class WebIndexingSchedulerFunction
 
     [Function("BizStreamWebIndexingFunction")]
     public async Task Run(
-        [TimerTrigger("0 */5 * * * *")] TimerInfo myTimer, // Run every 5 minute for testing
+        [TimerTrigger("0 */2 * * * *")] TimerInfo myTimer, // Run every 3 minute for testing
         // [TimerTrigger("0 * * * * *")] TimerInfo myTimer, // Run every minute for testing
         // [TimerTrigger("0 0 0 * * 1")] TimerInfo myTimer, // Run every Monday at midnight
         FunctionContext context)

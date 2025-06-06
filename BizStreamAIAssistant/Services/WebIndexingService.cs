@@ -31,8 +31,8 @@ namespace BizStreamAIAssistant.Services
             string rootUrl = _webIndexingSettings.RootUrl;
             int depth = _webIndexingSettings.Depth;
 
-            string jsonlFilePath = PathConfig.JsonlFilePath;
-            string crawlLogFilePath = PathConfig.CrawlLogFilePath;
+            string jsonlFilePath = TempDataPathConfig.JsonlFilePath;
+            string crawlLogFilePath = TempDataPathConfig.CrawlLogFilePath;
             var pages = await WebIndexingHelper.CrawlAsync(rootUrl, depth);
 
             // 2. Empty out data.jsonl before writing data to it
