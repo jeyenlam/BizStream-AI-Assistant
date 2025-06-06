@@ -7,4 +7,5 @@ public class AzureOpenAISettingsModel
     public required string ApiVersion { get; set; }
     public required string ResourceName { get; set; }
     public required string MaxTokens { get; set; }
+    public required string IndexName { get; set; }
 }

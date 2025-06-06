@@ -68,3 +68,6 @@ wwwroot/lib/
 *.sln.cache
 
 .env
+
+# Data for RAG
+Data

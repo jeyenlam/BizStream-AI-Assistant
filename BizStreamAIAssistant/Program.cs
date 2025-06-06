@@ -1,50 +1,34 @@
 
 using System.Text.Json;
-using AngleSharp;
+// using AngleSharp;
 using BizStreamAIAssistant.Services;
-using DotNetEnv;
+// using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 if (builder.Environment.IsDevelopment())
 {
     DotNetEnv.Env.Load();
 }
-
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
     .AddEnvironmentVariables();
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IChatbotService, ChatbotService>(); 
-builder.Services.Configure<AzureOpenAISettingsModel>(
-    builder.Configuration.GetSection("AzureOpenAI"));
-builder.Services.AddControllers().AddJsonOptions(options =>
-    {
-        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-    });
-
-var webIndexingSettings = builder.Configuration
-    .GetSection("WebIndexingSettings")
-    .Get<WebIndexingSettingsModel>();
-
-if (webIndexingSettings == null)
-{
-    throw new InvalidOperationException("WebIndexingSettings not configured.");
-}
-    
-var rootUrl = webIndexingSettings.RootUrl;
-var depth = webIndexingSettings.Depth;
-var indexer = new WebIndexingService();
-await indexer.CrawlAndExtractAsync(rootUrl, depth);
-
-
+builder.Services.AddScoped<ChatService>();
+builder.Services.AddScoped<TextEmbeddingService>();
+builder.Services.AddScoped<SearchService>();
+builder.Services.AddScoped<WebIndexingService>();
+builder.Services.Configure<AzureOpenAISettingsModel>("Chat", builder.Configuration.GetSection("AzureOpenAIChatSettings"));
+builder.Services.Configure<AzureOpenAISettingsModel>("TextEmbedding", builder.Configuration.GetSection("AzureOpenAITextEmbeddingSettings"));
+builder.Services.Configure<AzureAISearchSettingsModel>(builder.Configuration.GetSection("AzureAISearchSettings"));
+builder.Services.Configure<WebIndexingSettingsModel>(builder.Configuration.GetSection("WebIndexingSettings"));
+builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase);
 
 var app = builder.Build();
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -57,5 +41,27 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+// 1. Crawling and extracting data from websites, saving that jsonl file to ./Data/Chunks/data.jsonl
+// using var scope = app.Services.CreateScope();
+// var webIndexingService = scope.ServiceProvider.GetRequiredService<WebIndexingService>();
+// string jsonlFilePath = await webIndexingService.CrawlAndExtractAsync();
+// Console.WriteLine($"Crawling completed. Data saved to: {jsonlFilePath}");
+
+
+// string jsonlFilePath = @"C:\Users\ylam\source\repos\BizStream-AI-Assistant\BizStreamAIAssistant\Data\Chunks\data.jsonl";
+// using (var scope = app.Services.CreateScope())
+// {
+//     var textEmbeddingService = scope.ServiceProvider.GetRequiredService<TextEmbeddingService>();
+//     var vectors = await textEmbeddingService.GenerateEmbeddingsAsync(jsonlFilePath);
+//     Console.WriteLine($"Generated {vectors.Count} embeddings.");
+// }
+
+// 2. Generating embeddings from the jsonl file and uploading them to Azure AI Search
+// using (var scope = app.Services.CreateScope())
+// {
+//     var textEmbeddingService = scope.ServiceProvider.GetRequiredService<TextEmbeddingService>();
+//     await textEmbeddingService.UploadEmbeddingsAsync();
+// }
 
 app.Run();
