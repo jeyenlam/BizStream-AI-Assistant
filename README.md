@@ -6,9 +6,9 @@ BZSAI is a personal project developed during my internship at BizStream. It’s 
 - [Demo](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#demo)
 - [Features](https://github.com/jeyenlam/Readsify?tab=readme-ov-file#features)
 - [Project Structure](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#project-structure)
+- [Architecture](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#architecture)
 - [Built With](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#built-with)
 - [Prerequisites](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#prerequisites)  
-- [Architecture](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#architecture)
 - [How to Run](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#how-to-run)
 - [License](https://github.com/jeyenlam/Readsify?tab=readme-ov-file#license)
   
@@ -36,6 +36,9 @@ BizStream-AI-Assistant/
 ├─ WebIndexingScheduler/
 │  ├─ WebIndexingSchedulerFunction.cs
 ```
+## Architecture
+![bzsai-architecture](https://github.com/user-attachments/assets/43cd7c48-b4d3-4c6c-8de2-07d5a5fc7961)
+
 
 ## Build With
 - [ASP.NET MVC](https://dotnet.microsoft.com/en-us/apps/aspnet/mvc)
