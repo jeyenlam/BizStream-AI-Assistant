@@ -26,6 +26,7 @@ BizStream-AI-Assistant/
 ├─ BizStreamAIAssistant/
 │  ├─ Controllers/
 │  │  ├─ ChatController.cs
+│  ├─ Models/
 │  ├─ Services/
 │  │  ├─ ChatService.cs
 │  │  ├─ SearchService.cs
