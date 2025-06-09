@@ -16,7 +16,7 @@ namespace BizStreamAIAssistant.Services
         private readonly SearchClient _searchClient;
         private readonly AzureOpenAISettingsModel _azureOpenAITextEmbeddingSettings;
         private readonly HttpClient _httpClient;
-        private const int BatchSize = 10;
+        private const int BatchSize = 5;
 
         public TextEmbeddingService(
             IOptions<AzureAISearchSettingsModel> searchOptions,
@@ -56,7 +56,7 @@ namespace BizStreamAIAssistant.Services
             var lines = await File.ReadAllLinesAsync(jsonlFilePath);
             var vectors = await this.GenerateEmbeddingsAsync(jsonlFilePath);
 
-            const int batchSize = 100;
+            const int batchSize = 1;
             int total = vectors.Count;
 
             for (int i = 0; i < total; i += batchSize)
@@ -97,10 +97,12 @@ namespace BizStreamAIAssistant.Services
             var vectors = new List<float[]>();
             var lines = await File.ReadAllLinesAsync(jsonlFilePath);
             var inputs = lines.Select(TextEmbeddingHelper.ExtractTextFromJsonLine).ToList();
+            var totalBatches = (int)Math.Ceiling(inputs.Count / (double)BatchSize);
 
             for (int i = 0; i < inputs.Count; i += BatchSize)
             {
                 var batch = inputs.Skip(i).Take(BatchSize).ToList();
+                Console.WriteLine($"Processing batch {(i / BatchSize) + 1} of {totalBatches} ({batch.Count} items)...");
 
                 var payload = new
                 {
@@ -147,30 +149,60 @@ namespace BizStreamAIAssistant.Services
                 .FirstOrDefault() ?? throw new InvalidOperationException("No embedding found in the response.");
         }
 
-        private async Task<HttpResponseMessage> PostWithRetryAsync(HttpContent content, string url, int maxRetries = 5)
+        private async Task<HttpResponseMessage> PostWithRetryAsync(HttpContent content, string url, int maxRetries = 10)
         {
-            int delay = 2000;
-
             for (int attempt = 1; attempt <= maxRetries; attempt++)
             {
-                var response = await _httpClient.PostAsync(url, content);
-
-                if (response.IsSuccessStatusCode)
-                    return response;
-
-                if ((int)response.StatusCode == 429)
+                try 
                 {
-                    Console.WriteLine($"⚠️ Rate limited (429). Retry {attempt}/{maxRetries} in {delay}ms...");
-                    await Task.Delay(delay);
-                    delay *= 2; // exponential backoff
-                }
-                else
-                {
+                    var response = await _httpClient.PostAsync(url, content);
+
+                    if (response.IsSuccessStatusCode)
+                        return response;
+
+                    if ((int)response.StatusCode == 429)
+                    {
+                        var delay = CalculateBackoffDelay(attempt);
+                        Console.WriteLine($"⚠️ Rate limited (429). Retry {attempt}/{maxRetries} in {delay}ms...");
+                        await Task.Delay(delay);
+                        continue;
+                    }
+
+                    // For other error status codes, get the error message
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"❌ Request failed with status {response.StatusCode}: {errorContent}");
                     response.EnsureSuccessStatusCode(); // fail fast on other errors
+                }
+                catch (HttpRequestException ex)
+                {
+                    if (attempt == maxRetries)
+                        throw new HttpRequestException($"❌ Failed after {maxRetries} retries. Last error: {ex.Message}", ex);
+                    
+                    var delay = CalculateBackoffDelay(attempt);
+                    Console.WriteLine($"⚠️ Request failed. Retry {attempt}/{maxRetries} in {delay}ms. Error: {ex.Message}");
+                    await Task.Delay(delay);
                 }
             }
 
-            throw new HttpRequestException("❌ Exceeded retry limit due to 429 Too Many Requests.");
+            throw new HttpRequestException($"❌ Exceeded retry limit of {maxRetries} attempts.");
+        }
+
+        private static int CalculateBackoffDelay(int attempt)
+        {
+            // Base delay of 2 seconds
+            const int baseDelay = 2000;
+            
+            // Add jitter to avoid thundering herd problem
+            var random = new Random();
+            var jitter = random.Next(-500, 500);
+            
+            // Calculate delay with exponential backoff: baseDelay * 2^(attempt-1)
+            // Cap maximum delay at 2 minutes
+            var delay = Math.Min(baseDelay * Math.Pow(2, attempt - 1) + jitter, 120000);
+            
+            return (int)delay;
         }
     }
 }
+
+

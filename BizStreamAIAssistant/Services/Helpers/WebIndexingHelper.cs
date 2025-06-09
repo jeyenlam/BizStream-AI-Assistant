@@ -3,6 +3,7 @@ using HtmlAgilityPack;
 using System.Text.Json;
 // using BizStreamAIAssistant.Helpers;
 using BizStreamAIAssistant.Models;
+using BizStreamAIAssistant.Helpers;
 // using System.Net.Http;
 // using System.Threading.Tasks;
 
@@ -14,6 +15,7 @@ namespace BizStreamAIAssistant.Services.Helpers
 
         public static async Task<List<(string, string)>> CrawlAsync(string rootUrl, int depth)
         {
+            string htmlPageContentFilePath = TempDataPathConfig.htmlPageContentFilePath;
             var pages = new List<(string Html, string Url)>();
             var toVisit = new Queue<(string Url, int level)>();
             var visitedUrls = new HashSet<string>();  // Create new HashSet for each crawl
@@ -84,7 +86,9 @@ namespace BizStreamAIAssistant.Services.Helpers
                     continue;
                 }
             }
-            // File.WriteAllText($"Pages.txt", pages.Count > 0 ? string.Join(Environment.NewLine, pages) : "No pages crawled.");
+
+            FileHelper.EmptyFile(htmlPageContentFilePath); // Comment out when not testing
+            File.WriteAllText(htmlPageContentFilePath, string.Join(Environment.NewLine, pages)); // Comment out when not testing
             return pages;
         }
 
@@ -94,11 +98,11 @@ namespace BizStreamAIAssistant.Services.Helpers
             doc.LoadHtml(html);
 
             var content = doc.DocumentNode
-                .SelectNodes("//p | //h1 | //h2 | //h3 | //h4 | //h5 | //h6")
+                .SelectNodes("//p | //h1 ") //| //h2 | //h3 | //h4 | //h5 | //h6
                 ?.Select(n => WebUtility.HtmlDecode(n.InnerText.Trim()))
                 .Where(text => !string.IsNullOrWhiteSpace(text))
                 ?? Enumerable.Empty<string>();
-
+            
             return string.Join($"\n", content);
         }
 
@@ -108,24 +112,34 @@ namespace BizStreamAIAssistant.Services.Helpers
             var (id, pageTitle, content, url) = pageContent;
 
             // Convert each line of content into a JSON object and write to the file
-            int i = 1;
-            foreach (var textChunk in content.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries))
+            // int i = 1;
+            // foreach (var textChunk in content.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries))
+            // {
+            //     if (textChunk.ToString().Length < 100)
+            //     {
+            //         continue;
+            //     }
+
+            //     var jsonObject = new
+            //     {
+            //         id = $"p{id}_l{i++}",
+            //         pageTitle,
+            //         url,
+            //         text = textChunk,
+            //     };
+
+            //     writer.WriteLine(JsonSerializer.Serialize(jsonObject));
+            // }
+
+            var jsonObject = new
             {
-                if (textChunk.ToString().Length < 100)
-                {
-                    continue;
-                }
+                id,
+                pageTitle,
+                url,
+                text = content,
+            };
 
-                var jsonObject = new
-                {
-                    id = $"p{id}_l{i++}",
-                    pageTitle,
-                    url,
-                    text = textChunk,
-                };
-
-                writer.WriteLine(JsonSerializer.Serialize(jsonObject));
-            }
+            writer.WriteLine(JsonSerializer.Serialize(jsonObject));
         }
     }
 }

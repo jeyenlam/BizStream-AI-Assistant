@@ -1,8 +1,5 @@
-
 using System.Text.Json;
-// using AngleSharp;
 using BizStreamAIAssistant.Services;
-// using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 if (builder.Environment.IsDevelopment())
@@ -42,26 +39,18 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+
 // 1. Crawling and extracting data from websites, saving that jsonl file to ./Data/Chunks/data.jsonl
 // using var scope = app.Services.CreateScope();
 // var webIndexingService = scope.ServiceProvider.GetRequiredService<WebIndexingService>();
 // string jsonlFilePath = await webIndexingService.CrawlAndExtractAsync();
 // Console.WriteLine($"Crawling completed. Data saved to: {jsonlFilePath}");
 
-
-// string jsonlFilePath = @"C:\Users\ylam\source\repos\BizStream-AI-Assistant\BizStreamAIAssistant\Data\Chunks\data.jsonl";
-// using (var scope = app.Services.CreateScope())
-// {
-//     var textEmbeddingService = scope.ServiceProvider.GetRequiredService<TextEmbeddingService>();
-//     var vectors = await textEmbeddingService.GenerateEmbeddingsAsync(jsonlFilePath);
-//     Console.WriteLine($"Generated {vectors.Count} embeddings.");
-// }
-
 // 2. Generating embeddings from the jsonl file and uploading them to Azure AI Search
-// using (var scope = app.Services.CreateScope())
-// {
-//     var textEmbeddingService = scope.ServiceProvider.GetRequiredService<TextEmbeddingService>();
-//     await textEmbeddingService.UploadEmbeddingsAsync();
-// }
+using (var scope = app.Services.CreateScope())
+{
+    var textEmbeddingService = scope.ServiceProvider.GetRequiredService<TextEmbeddingService>();
+    await textEmbeddingService.UploadEmbeddingsAsync();
+}
 
 app.Run();

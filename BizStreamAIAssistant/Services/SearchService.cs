@@ -30,12 +30,12 @@ namespace BizStreamAIAssistant.Services
             var vectorQuery = new VectorizedQuery(userQueryEmbedding)
             {
                 Fields = { "embedding" }, // Must match the vector field in your index
-                KNearestNeighborsCount = 5
+                KNearestNeighborsCount = 1
             };
 
             var searchOptions = new SearchOptions
             {
-                Size = 5,
+                Size = 1,
                 QueryType = SearchQueryType.Semantic,
                 VectorSearch = new VectorSearchOptions
                 {

@@ -37,6 +37,8 @@ namespace BizStreamAIAssistant.Services
 
             // 2. Empty out data.jsonl before writing data to it
             FileHelper.EmptyFile(jsonlFilePath);
+            FileHelper.EmptyFile(TempDataPathConfig.cleanedPageContentFilePath);
+
 
             // 3. Start writing extracted data to data.jsonl
             var totalChars = 0;
@@ -57,6 +59,8 @@ namespace BizStreamAIAssistant.Services
                     ? string.Concat(pageTitle.Split(' ', StringSplitOptions.RemoveEmptyEntries)
                                             .Select(word => char.ToUpper(word[0])))
                     : pageTitle;
+
+                File.AppendAllText(TempDataPathConfig.cleanedPageContentFilePath, content + Environment.NewLine +  url + Environment.NewLine + Environment.NewLine);
 
                 var pageContent = new PageContentModel
                 {

@@ -68,3 +68,16 @@
 [2025-06-05 10:05:33] - Depth: 5, Crawled 19 pages, 15925 total characters
 [2025-06-05 10:10:32] - Depth: 5, Crawled 459 pages, 774425 total characters
 [2025-06-05 10:29:07] - Depth: 5, Crawled 459 pages, 774402 total characters
+[2025-06-06 14:23:43] - Depth: 1, Crawled 43 pages, 102623 total characters
+[2025-06-06 14:30:22] - Depth: 1, Crawled 43 pages, 102623 total characters
+[2025-06-06 15:15:51] - Depth: 1, Crawled 43 pages, 77669 total characters
+[2025-06-06 15:22:24] - Depth: 1, Crawled 43 pages, 103349 total characters
+[2025-06-06 15:31:18] - Depth: 1, Crawled 43 pages, 105501 total characters
+[2025-06-06 15:33:01] - Depth: 1, Crawled 43 pages, 105501 total characters
+[2025-06-06 15:35:06] - Depth: 1, Crawled 43 pages, 105501 total characters
+[2025-06-06 15:36:33] - Depth: 1, Crawled 43 pages, 105501 total characters
+[2025-06-06 15:37:34] - Depth: 1, Crawled 43 pages, 105501 total characters
+[2025-06-06 15:38:50] - Depth: 1, Crawled 43 pages, 105501 total characters
+[2025-06-06 15:40:47] - Depth: 1, Crawled 43 pages, 80784 total characters
+[2025-06-06 15:47:50] - Depth: 1, Crawled 43 pages, 80784 total characters
+[2025-06-09 10:00:48] - Depth: 5, Crawled 460 pages, 1389176 total characters
