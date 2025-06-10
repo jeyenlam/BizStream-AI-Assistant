@@ -40,6 +40,7 @@ app.MapControllerRoute(
     .WithStaticAssets();
 
 
+// In-app Testing (uncomment each chunk at a time)
 // 1. Crawling and extracting data from websites, saving that jsonl file to ./Data/Chunks/data.jsonl
 // using var scope = app.Services.CreateScope();
 // var webIndexingService = scope.ServiceProvider.GetRequiredService<WebIndexingService>();
@@ -47,10 +48,10 @@ app.MapControllerRoute(
 // Console.WriteLine($"Crawling completed. Data saved to: {jsonlFilePath}");
 
 // 2. Generating embeddings from the jsonl file and uploading them to Azure AI Search
-using (var scope = app.Services.CreateScope())
-{
-    var textEmbeddingService = scope.ServiceProvider.GetRequiredService<TextEmbeddingService>();
-    await textEmbeddingService.UploadEmbeddingsAsync();
-}
+// using (var scope = app.Services.CreateScope())
+// {
+//     var textEmbeddingService = scope.ServiceProvider.GetRequiredService<TextEmbeddingService>();
+//     await textEmbeddingService.UploadEmbeddingsAsync();
+// }
 
 app.Run();

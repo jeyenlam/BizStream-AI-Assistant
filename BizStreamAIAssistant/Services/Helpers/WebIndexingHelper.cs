@@ -1,11 +1,8 @@
 using System.Net;
 using HtmlAgilityPack;
 using System.Text.Json;
-// using BizStreamAIAssistant.Helpers;
 using BizStreamAIAssistant.Models;
 using BizStreamAIAssistant.Helpers;
-// using System.Net.Http;
-// using System.Threading.Tasks;
 
 namespace BizStreamAIAssistant.Services.Helpers
 {
@@ -87,49 +84,34 @@ namespace BizStreamAIAssistant.Services.Helpers
                 }
             }
 
-            FileHelper.EmptyFile(htmlPageContentFilePath); // Comment out when not testing
-            File.WriteAllText(htmlPageContentFilePath, string.Join(Environment.NewLine, pages)); // Comment out when not testing
+            // FileHelper.EmptyFile(htmlPageContentFilePath);
+            // File.WriteAllText(htmlPageContentFilePath, string.Join(Environment.NewLine, pages));
             return pages;
         }
 
-        public static string ExtractPageContent(string html, string url)
+        public static (string, string) ExtractPageTitleAndContent(string html)
         {
             var doc = new HtmlDocument();
             doc.LoadHtml(html);
 
-            var content = doc.DocumentNode
-                .SelectNodes("//p | //h1 ") //| //h2 | //h3 | //h4 | //h5 | //h6
+            var raw = doc.DocumentNode
+                .SelectNodes("//p | //h1")
                 ?.Select(n => WebUtility.HtmlDecode(n.InnerText.Trim()))
                 .Where(text => !string.IsNullOrWhiteSpace(text))
-                ?? Enumerable.Empty<string>();
-            
-            return string.Join($"\n", content);
+                .ToList()
+                ?? new List<string>();
+
+            string pageTitle = raw.FirstOrDefault() ?? "NaN";
+            string pageContent = string.Join("\n", raw.Skip(1).SkipLast(2)); // skip first line (title), last two lines (call to action that appears on every page)
+
+            return (pageTitle, pageContent);
         }
+
 
         public static void WritePageContentToFile(string jsonlFilePath, PageContentModel pageContent)
         {
             using var writer = new StreamWriter(jsonlFilePath, append: true);
             var (id, pageTitle, content, url) = pageContent;
-
-            // Convert each line of content into a JSON object and write to the file
-            // int i = 1;
-            // foreach (var textChunk in content.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries))
-            // {
-            //     if (textChunk.ToString().Length < 100)
-            //     {
-            //         continue;
-            //     }
-
-            //     var jsonObject = new
-            //     {
-            //         id = $"p{id}_l{i++}",
-            //         pageTitle,
-            //         url,
-            //         text = textChunk,
-            //     };
-
-            //     writer.WriteLine(JsonSerializer.Serialize(jsonObject));
-            // }
 
             var jsonObject = new
             {

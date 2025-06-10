@@ -23,13 +23,12 @@ namespace BizStreamAIAssistant.Controllers
         [HttpPost]
         public async Task<IActionResult> SendMessage([FromBody] ChatRequestModel request)
         {
-            Console.WriteLine($"Request: {request.Messages.Last().Content}");
             if (request?.Messages == null || !request.Messages.Any())
             {
                 return BadRequest("No messages provided");
             }
 
-            var response = await _chatService.GetResponseTestAsync(request.Messages);
+            var response = await _chatService.GetResponseAsync(request.Messages);
             return Ok(new {text = response});
         }
     }

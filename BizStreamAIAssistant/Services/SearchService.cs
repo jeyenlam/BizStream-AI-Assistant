@@ -29,7 +29,7 @@ namespace BizStreamAIAssistant.Services
         {
             var vectorQuery = new VectorizedQuery(userQueryEmbedding)
             {
-                Fields = { "embedding" }, // Must match the vector field in your index
+                Fields = {"embedding"}, // Must match the vector field in index
                 KNearestNeighborsCount = 1
             };
 
@@ -45,7 +45,7 @@ namespace BizStreamAIAssistant.Services
                 {
                     SemanticConfigurationName = _azureAISearchSettings.SemanticConfigurationName
                 },
-                Select = { "text" }
+                Select = {"text"}
             };
             var response = await _searchClient.SearchAsync<SearchDocument>(userQuery, searchOptions);
 

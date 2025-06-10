@@ -1,5 +1,3 @@
-// using System.Text;
-// using System.Text.Json;
 using BizStreamAIAssistant.Helpers;
 using BizStreamAIAssistant.Models;
 using BizStreamAIAssistant.Services.Helpers;
@@ -10,6 +8,9 @@ namespace BizStreamAIAssistant.Services
     public class WebIndexingService
     {
         private readonly WebIndexingSettingsModel _webIndexingSettings;
+        private const int MaxChunkSize = 8000; // OpenAI's text-embedding-ada-002 has an 8k token limit
+        private readonly string jsonlFilePath = TempDataPathConfig.JsonlFilePath;
+        private readonly string crawlLogFilePath = TempDataPathConfig.CrawlLogFilePath;
 
         public WebIndexingService(IOptions<WebIndexingSettingsModel> options)
         {
@@ -27,57 +28,110 @@ namespace BizStreamAIAssistant.Services
         
         public async Task<string> CrawlAndExtractAsync()
         {
-            // 1. Crawl the websites, return html doc of pages
             string rootUrl = _webIndexingSettings.RootUrl;
             int depth = _webIndexingSettings.Depth;
-
-            string jsonlFilePath = TempDataPathConfig.JsonlFilePath;
-            string crawlLogFilePath = TempDataPathConfig.CrawlLogFilePath;
             var pages = await WebIndexingHelper.CrawlAsync(rootUrl, depth);
 
-            // 2. Empty out data.jsonl before writing data to it
             FileHelper.EmptyFile(jsonlFilePath);
             FileHelper.EmptyFile(TempDataPathConfig.cleanedPageContentFilePath);
 
-
-            // 3. Start writing extracted data to data.jsonl
             var totalChars = 0;
+            var chunkId = 1;
             for (int i = 0; i < pages.Count; i++)
             {
                 var page = pages[i];
                 var html = page.Item1;
                 var url = page.Item2;
-                var content = WebIndexingHelper.ExtractPageContent(html, url);
-                var pageTitle = content.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault() ?? $"NaN_{i}";
+                var pageTitleAndContent = WebIndexingHelper.ExtractPageTitleAndContent(html);
+                string pageTitle = pageTitleAndContent.Item1;
+                string content = pageTitleAndContent.Item2;
 
-                pageTitle = new string(pageTitle
-                    .Where(c => !Path.GetInvalidFileNameChars().Contains(c))
-                    .ToArray())
-                    .Trim();
+                File.AppendAllText(
+                    TempDataPathConfig.cleanedPageContentFilePath,
+                    pageTitle + Environment.NewLine
+                    + content + Environment.NewLine
+                    + url + Environment.NewLine
+                    + Environment.NewLine);
 
-                pageTitle = pageTitle.Length > 30
-                    ? string.Concat(pageTitle.Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                                            .Select(word => char.ToUpper(word[0])))
-                    : pageTitle;
-
-                File.AppendAllText(TempDataPathConfig.cleanedPageContentFilePath, content + Environment.NewLine +  url + Environment.NewLine + Environment.NewLine);
-
-                var pageContent = new PageContentModel
+                var chunks = ChunkContent(content);
+                foreach (var chunk in chunks)
                 {
-                    Id = (i + 1).ToString(),
-                    PageTitle = pageTitle,
-                    Content = content,
-                    Url = url
-                };
+                    if (string.IsNullOrWhiteSpace(chunk)) continue;
 
-                WebIndexingHelper.WritePageContentToFile(jsonlFilePath, pageContent);
-                totalChars += content.ToString().Length;
+                    var pageContent = new PageContentModel
+                    {
+                        Id = chunkId.ToString(),
+                        PageTitle = pageTitle,
+                        Content = chunk,
+                        Url = url
+                    };
+
+                    WebIndexingHelper.WritePageContentToFile(jsonlFilePath, pageContent);
+                    totalChars += chunk.Length;
+                    chunkId++;
+                }
             }
 
-            // 4. Keep track of crawling
             string logMessage = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] - Depth: {depth}, Crawled {pages.Count} pages, {totalChars} total characters\n";
             File.AppendAllText(crawlLogFilePath, logMessage);
             return jsonlFilePath;
+        }
+
+        private List<string> ChunkContent(string content)
+        {
+            var chunks = new List<string>();
+            if (string.IsNullOrWhiteSpace(content)) return chunks;
+
+            // Split into paragraphs first
+            var paragraphs = content.Split(new[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries)
+                .Where(p => !string.IsNullOrWhiteSpace(p))
+                .ToList();
+
+            var currentChunk = new List<string>();
+            var currentLength = 0;
+
+            foreach (var paragraph in paragraphs)
+            {
+                // If adding this paragraph would exceed the limit, save current chunk and start new one
+                if (currentLength + paragraph.Length > MaxChunkSize && currentChunk.Any())
+                {
+                    chunks.Add(string.Join("\n", currentChunk));
+                    currentChunk.Clear();
+                    currentLength = 0;
+                }
+
+                // If a single paragraph is longer than the limit, split it into sentences
+                if (paragraph.Length > MaxChunkSize)
+                {
+                    var sentences = paragraph.Split(new[] { ". ", "! ", "? " }, StringSplitOptions.RemoveEmptyEntries)
+                        .Select(s => s.Trim() + ".");
+
+                    foreach (var sentence in sentences)
+                    {
+                        if (currentLength + sentence.Length > MaxChunkSize && currentChunk.Any())
+                        {
+                            chunks.Add(string.Join("\n", currentChunk));
+                            currentChunk.Clear();
+                            currentLength = 0;
+                        }
+                        currentChunk.Add(sentence);
+                        currentLength += sentence.Length + 1; // +1 for newline
+                    }
+                }
+                else
+                {
+                    currentChunk.Add(paragraph);
+                    currentLength += paragraph.Length + 1; // +1 for newline
+                }
+            }
+
+            // Add any remaining content
+            if (currentChunk.Any())
+            {
+                chunks.Add(string.Join("\n", currentChunk));
+            }
+
+            return chunks;
         }
     }
 }

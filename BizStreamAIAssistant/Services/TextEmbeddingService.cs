@@ -6,7 +6,6 @@ using Azure.Search.Documents.Models;
 using BizStreamAIAssistant.Services.Helpers;
 using System.Text;
 using BizStreamAIAssistant.Helpers;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BizStreamAIAssistant.Services
 {
@@ -104,25 +103,21 @@ namespace BizStreamAIAssistant.Services
                 var batch = inputs.Skip(i).Take(BatchSize).ToList();
                 Console.WriteLine($"Processing batch {(i / BatchSize) + 1} of {totalBatches} ({batch.Count} items)...");
 
-                var payload = new
+                foreach (var text in batch)
                 {
-                    input = batch,
-                    model = _azureOpenAITextEmbeddingSettings.Model
-                };
+                    if (string.IsNullOrWhiteSpace(text)) continue;
 
-                var content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
-                var url = $"/openai/deployments/{_azureOpenAITextEmbeddingSettings.DeploymentName}/embeddings?api-version={_azureOpenAITextEmbeddingSettings.ApiVersion}";
-
-                var response = await PostWithRetryAsync(content, url);
-                var json = await response.Content.ReadAsStringAsync();
-                var root = JsonDocument.Parse(json).RootElement;
-
-                var batchVectors = root.GetProperty("data")
-                    .EnumerateArray()
-                    .Select(d => d.GetProperty("embedding").EnumerateArray().Select(e => e.GetSingle()).ToArray())
-                    .ToList();
-
-                vectors.AddRange(batchVectors);
+                    try
+                    {
+                        var embedding = await GenerateEmbeddingAsync(text);
+                        vectors.Add(embedding);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Failed to generate embedding for text: {ex.Message}");
+                        continue;
+                    }
+                }
             }
 
             return vectors;
@@ -148,8 +143,8 @@ namespace BizStreamAIAssistant.Services
                 .Select(d => d.GetProperty("embedding").EnumerateArray().Select(e => e.GetSingle()).ToArray())
                 .FirstOrDefault() ?? throw new InvalidOperationException("No embedding found in the response.");
         }
-
-        private async Task<HttpResponseMessage> PostWithRetryAsync(HttpContent content, string url, int maxRetries = 10)
+        
+                private async Task<HttpResponseMessage> PostWithRetryAsync(HttpContent content, string url, int maxRetries = 10)
         {
             for (int attempt = 1; attempt <= maxRetries; attempt++)
             {
@@ -162,7 +157,7 @@ namespace BizStreamAIAssistant.Services
 
                     if ((int)response.StatusCode == 429)
                     {
-                        var delay = CalculateBackoffDelay(attempt);
+                        var delay = TextEmbeddingHelper.CalculateBackoffDelay(attempt);
                         Console.WriteLine($"⚠️ Rate limited (429). Retry {attempt}/{maxRetries} in {delay}ms...");
                         await Task.Delay(delay);
                         continue;
@@ -178,29 +173,13 @@ namespace BizStreamAIAssistant.Services
                     if (attempt == maxRetries)
                         throw new HttpRequestException($"❌ Failed after {maxRetries} retries. Last error: {ex.Message}", ex);
                     
-                    var delay = CalculateBackoffDelay(attempt);
+                    var delay = TextEmbeddingHelper.CalculateBackoffDelay(attempt);
                     Console.WriteLine($"⚠️ Request failed. Retry {attempt}/{maxRetries} in {delay}ms. Error: {ex.Message}");
                     await Task.Delay(delay);
                 }
             }
 
             throw new HttpRequestException($"❌ Exceeded retry limit of {maxRetries} attempts.");
-        }
-
-        private static int CalculateBackoffDelay(int attempt)
-        {
-            // Base delay of 2 seconds
-            const int baseDelay = 2000;
-            
-            // Add jitter to avoid thundering herd problem
-            var random = new Random();
-            var jitter = random.Next(-500, 500);
-            
-            // Calculate delay with exponential backoff: baseDelay * 2^(attempt-1)
-            // Cap maximum delay at 2 minutes
-            var delay = Math.Min(baseDelay * Math.Pow(2, attempt - 1) + jitter, 120000);
-            
-            return (int)delay;
         }
     }
 }

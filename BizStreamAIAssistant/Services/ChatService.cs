@@ -2,7 +2,6 @@ using System.Text;
 using System.Text.Json;
 using BizStreamAIAssistant.Models;
 using Microsoft.Extensions.Options;
-using BizStreamAIAssistant.Services;
 
 namespace BizStreamAIAssistant.Services
 {
@@ -38,34 +37,33 @@ namespace BizStreamAIAssistant.Services
             }
         }
 
-        public async Task<string> GetResponseTestAsync(List<Message> messages)
+        public async Task<string> GetResponseAsync(List<Message> messages)
         {
             string userQuery = messages.LastOrDefault()?.Content ?? string.Empty;
-            // Console.WriteLine($"User Query: {userQuery}");
             var userQueryEmbedding = await _textEmbeddingService.GenerateEmbeddingAsync(userQuery);
             var topChunks = await _searchService.SearchAsync(userQuery, userQueryEmbedding);
-            // Console.WriteLine($"Top Chunks: {string.Join("\n---\n", topChunks)}");
 
-            // Add system prompt to the beginning of the messages list
+            Console.WriteLine($"\nUser Query: {userQuery}");
+
             var systemPrompt = new Message
             {
                 Role = "system",
                 Content = $""" 
                         You are BZSAI, the friendly and energetic AI assistant for BizStream, a technology consulting company based in Allendale, MI.
                         You’re not a dry bot—you’re chill, upbeat, and eager to help 😄.
-                        Keep your answers concise (ideally 3 sentences).
+                        Keep your answers concise.
                         Sprinkle in emojis to keep the vibe fun and friendly 🎉.
                         Politely decline to answer legal, political, or sensitive topics.
                         If unsure, ask for more context.
 
-                        Please answer the user's query based on the following context:
+                        Please answer the user's query based on the following information:
                         {string.Join("\n", topChunks)}
                         """
             };
-            Console.WriteLine($"Top chunks: \n{string.Join("\n", topChunks)}");
+            Console.WriteLine($"Top chunks of {topChunks.Count}: \n{string.Join("\n-", topChunks)}");
             messages.Insert(0, systemPrompt);
 
-            var payload = new { messages = messages, };
+            var payload = new { messages };
             var content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
             var endpointPath = $"/openai/deployments/{_azureOpenAIChatSettings.DeploymentName}/chat/completions?api-version={_azureOpenAIChatSettings.ApiVersion}-preview";
 
