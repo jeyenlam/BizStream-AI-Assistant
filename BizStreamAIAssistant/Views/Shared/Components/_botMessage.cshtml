@@ -1,9 +1,24 @@
-<div id="botMessageTemplate" class="w-full flex justify-start hidden">
+<div id="botMessageTemplate" class="w-full flex flex-col justify-start hidden"> @**@
     <div class="w-[75%] bg-[#00C4E9] rounded-xl p-2">
         <div class="flex justify-start gap-2 items-center">
-            <img src="~/images/botProfile.png" alt="bot" class="bg-[#00C4E9] rounded-full w-8 border-2 p-1" />
-            <p class="text-white font-semibold">BZSAI</p>
+            <img src="~/images/botProfile.png" alt="bot" class="bg-white rounded-lg w-8 border-2 p-1" />
+            <p class="text-[#003D78] font-semibold">BZSAI</p>
         </div>
-        <div class="botMessageText text-[#003D78]"></div>
+        @* <div class="botMessageText py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div> *@
+        <div class="botMessageText py-2"></div>
+    </div>
+    <div class="botMessageOptions w-[75%] h-8 justify-end top-full flex items-center my-1 gap-1">
+        <button class="retryButton flex group hover:bg-slate-200 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#003D78" class="group-hover:hidden w-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+            <div class="hidden group-hover:block bg-gray-200 border rounded-lg items-center px-2 justify-center">Retry</div>
+        </button>
+        <button class="flex group hover:bg-slate-200 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3.5" stroke="#003D78" class="group-hover:hidden w-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+            </svg>
+            <div class="hidden group-hover:block bg-gray-200 border rounded-lg items-center px-2 justify-center">Copy</div>
+        </button>
     </div>
 </div>

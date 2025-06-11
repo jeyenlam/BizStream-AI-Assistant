@@ -5,8 +5,11 @@
 
 * {
     box-sizing: border-box;
+    overflow-wrap: break-word;
     margin: 0;
     padding: 0;
+    color: #003D78;
+    font-size: small;
 }
 
 textarea {
@@ -14,8 +17,8 @@ textarea {
     border-radius: 0;
     box-shadow: none;
     outline: none;
-    font-size: small;
 }
+
 .dot-style {
     @apply w-1 h-1 rounded-full bg-white
 }

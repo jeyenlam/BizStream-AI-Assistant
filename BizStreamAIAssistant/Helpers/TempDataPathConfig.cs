@@ -27,7 +27,5 @@ namespace BizStreamAIAssistant.Helpers
         public static readonly string JsonlFilePath = Path.Combine(TempDataDirectory, "data.jsonl");
         public static readonly string CrawlLogFilePath = Path.Combine(TempDataDirectory, "CrawlLog.txt");
         public static readonly string cleanedPageContentFilePath = Path.Combine(TempDataDirectory, "cleanedPageContent.txt");
-
-
     }
 }

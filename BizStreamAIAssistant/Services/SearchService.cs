@@ -30,12 +30,12 @@ namespace BizStreamAIAssistant.Services
             var vectorQuery = new VectorizedQuery(userQueryEmbedding)
             {
                 Fields = {"embedding"}, // Must match the vector field in index
-                KNearestNeighborsCount = 1
+                KNearestNeighborsCount = 5
             };
 
             var searchOptions = new SearchOptions
             {
-                Size = 1,
+                Size = 5,
                 QueryType = SearchQueryType.Semantic,
                 VectorSearch = new VectorSearchOptions
                 {
@@ -54,6 +54,7 @@ namespace BizStreamAIAssistant.Services
                 .Where(text => !string.IsNullOrWhiteSpace(text))
                 .Cast<string>()
                 .ToList();
+                
 
             if (topChunks.Count == 0)
             {

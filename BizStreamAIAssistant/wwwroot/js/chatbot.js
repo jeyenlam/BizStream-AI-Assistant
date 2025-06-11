@@ -5,7 +5,10 @@ function init() {
     const queryInput = document.getElementById("queryInput");
     const messageContainer = document.getElementById("messageContainer");
     const chatbotButton = document.getElementById("chatbotButton");
+    const retryButtons = document.getElementsByClassName("retryButton");
     const messages = [];
+    var botMessageId = 0;
+    var userMessageId = 0;
 
     const TEMPLATE_IDS = {
         user: "userMessageTemplate",
@@ -21,6 +24,31 @@ function init() {
         spinOnce: "spin-once-animation",
         slideUp: "slide-up-animation"
     };
+
+    welcomeMessage();
+
+    // Array.from(retryButtons).forEach(button => {
+    //     button.addEventListener("click", (e) => {
+    //         const retryMessageId = Array.from(button.classList).find(cls => cls.startsWith("botMessage"));
+    //         if (!retryMessageId) throw new Error("Retry button does not have a valid message ID class");
+
+    //         const retryUserQuery = document.querySelector(`.userMessage${retryMessageId} .userMessageText`).textContent;
+    //         handleMessageSubmit(retryUserQuery);
+    //     });
+    // });
+    document.addEventListener("click", (e) => {
+        const button = e.target.closest(".retryButton");
+        if (!button) return;
+
+        const retryMessageId = Array.from(button.classList).find(cls => cls.startsWith("botMessage"))?.replace("botMessage", "");
+        if (!retryMessageId) return;
+
+        const retryUserQuery = document.querySelector(`.userMessage${retryMessageId} .userMessageText`)?.textContent;
+        if (!retryUserQuery) return;
+
+        handleMessageSubmit(retryUserQuery);
+    });
+
 
     chatbotButton.addEventListener("click", toggleChatbot);
     form.addEventListener("submit", (e) => {
@@ -41,9 +69,12 @@ function init() {
         chatbotButton.classList.toggle(CLASSES.spinOnce);
     }
 
-    async function handleMessageSubmit() {
-        const userMessage = queryInput.value.trim();
-        if (!userMessage) return;
+    async function handleMessageSubmit(userMessage) {
+
+        if (!userMessage){
+            userMessage = queryInput.value.trim();
+            if (!userMessage) return;
+        }
 
         addUserMessage(userMessage);
         queryInput.value = "";
@@ -79,22 +110,27 @@ function init() {
             text: message,
             templateId: TEMPLATE_IDS.user,
             cloneClass: CLASSES.userClone,
-            textSelector: ".userMessageText"
+            textSelector: ".userMessageText",
+            messageId: `userMessage${userMessageId++}`
         });
         messages.push({ role: "user", content: message });
     }
 
-    function addBotMessage(message) {
+    function addBotMessage(message, optionsDisabled = false) {
         addMessageToUI({
             text: message,
             templateId: TEMPLATE_IDS.bot,
             cloneClass: CLASSES.botClone,
-            textSelector: ".botMessageText"
+            textSelector: ".botMessageText",
+            messageId: optionsDisabled ? ``: `botMessage${botMessageId++}`,
+            optionsDisabled
         });
+
+        if (optionsDisabled) return;
         messages.push({ role: "assistant", content: message });
     }
 
-    function addMessageToUI({ text, templateId, cloneClass, textSelector }) {
+    function addMessageToUI({ text, templateId, cloneClass, textSelector, messageId, optionsDisabled }) {
         const template = document.getElementById(templateId);
         if (!template) return console.error(`Missing template: ${templateId}`);
 
@@ -102,9 +138,28 @@ function init() {
         clone.classList.remove(CLASSES.hidden);
         clone.removeAttribute("id");
         clone.classList.add(cloneClass);
-        clone.querySelector(textSelector).textContent = text;
 
+        const hasLink = extractLinks(text).length > 0;
+        const finalText = hasLink ? linkifyText(text) : text;
+
+        clone.querySelector(textSelector).innerHTML = finalText;
         messageContainer.appendChild(clone);
+
+        if (optionsDisabled) {
+            const options = clone.querySelector(".botMessageOptions");
+            options.classList.add(CLASSES.hidden);
+            return;
+        }
+
+        // Add messageID to elements of each message container for later reference (used for retry/copy functions)
+        clone.classList.add(messageId);
+        clone.querySelectorAll("*").forEach(node => {
+            if (node.classList) {
+                node.classList.add(messageId);
+            }
+        });
+
+
         scrollToBottom();
     }
 
@@ -128,5 +183,22 @@ function init() {
         requestAnimationFrame(() => {
             messageContainer.scrollTop = messageContainer.scrollHeight;
         });
+    }
+
+    function extractLinks(text) {
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        return text.match(urlRegex) || [];
+    }
+
+    function linkifyText(text) {
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        return text.replace(urlRegex, (url) =>
+            `<a href="${url}" target="_blank" rel="noopener noreferrer" class="font-semibold">${url}</a>`
+        );
+    }
+
+    function welcomeMessage() {
+        const welcomeText = "Hi there👋 I'm BZSAI, an AI assistant of the BizStream website 😁. You can ask me anything about BizStream!";
+        addBotMessage(welcomeText, true);
     }
 }
