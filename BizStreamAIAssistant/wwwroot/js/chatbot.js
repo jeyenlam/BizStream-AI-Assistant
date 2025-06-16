@@ -253,8 +253,8 @@ function init() {
         let formattedText = text;
 
         formattedText = linkifyText(formattedText);
-        console.log(`After linkify: ${formattedText}`);
-        
+        // console.log(`After linkify: ${formattedText}`);
+
         // Replace page titles and raw URLs from references first
         references.forEach(ref => {
             const { pageTitle, url } = ref;
@@ -264,7 +264,7 @@ function init() {
                 const linkedTitle = `<a href="${url}" target="_blank" rel="noopener noreferrer" class="font-semibold">${pageTitle}</a>`;
                 formattedText = formattedText.replaceAll(pageTitle, linkedTitle);
             }
-            console.log(`After linking page title: ${formattedText}`);
+            // console.log(`After linking page title: ${formattedText}`);
         });
 
         // Replace newlines with <br/>
@@ -275,8 +275,6 @@ function init() {
 
         return formattedText;
     }
-
-
 
     function welcomeMessage() {
         const welcomeText = "Hi there👋 I'm BZSAI, an AI assistant of the BizStream website 😁. You can ask me anything about BizStream!";

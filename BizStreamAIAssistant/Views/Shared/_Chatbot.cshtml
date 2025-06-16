@@ -1,6 +1,6 @@
 <div class="fixed right-0 bottom-0 w-[26rem] flex flex-col items-end p-5">
     @* Chatbot Frame *@
-    <form id="chatForm" class="w-full mb-5 bg-white shadow-[0_0_10px_#00000008] rounded-xl flex-col border ">@*hidden*@
+    <form id="chatForm" class="w-full mb-5 bg-white shadow-[0_0_10px_#00000008] rounded-xl flex flex-col border ">@*hidden*@
         @* Bot Profile *@
         <div class="p-3 flex items-center gap-2 pb-2">
             <img src="~/images/botProfile.png" alt="bot" class="bg-[#00C4E9] rounded-xl w-10 border-2 p-1" />
@@ -18,13 +18,14 @@
         </div>
 
         @* Textarea & Send Message Button *@
-        <div class="p-4">
-            <div class="flex my-1 p-1 border-2 rounded-2xl items-center">
+        <div class="p-4 pb-2 flex flex-col justify-center">
+            <div class="flex m-1 p-1 border-2 rounded-2xl items-center">
                 <textarea id="queryInput" type="text" rows="1" placeholder="Type your message..." class="border rounded-xl w-full p-1 overflow-hidden"></textarea>
                 <button type="submit" class="bg-[#00C4E9] rounded-full w-10 h-8 flex justify-center items-center border-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#003D78" class="w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" /></svg>
                 </button>
             </div>
+            <p class="self-center text-xs text-gray-400 "> AI assistant can make mistakes. Check important info.</p>
         </div>
     </form>
 

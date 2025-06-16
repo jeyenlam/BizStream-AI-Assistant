@@ -37,137 +37,176 @@ namespace BizStreamAIAssistant.Services
                 _httpClient.DefaultRequestHeaders.Add("api-key", _azureOpenAIChatSettings.ApiKey);
             }
         }
+        
         public async Task<string> GetResponseAsync(List<Message> messages)
-        // public async Task<Message> GetResponseAsync(List<Message> messages)
         {
             string userQuery = messages.LastOrDefault()?.Content ?? string.Empty;
-            var userQueryEmbedding = await _textEmbeddingService.GenerateEmbeddingAsync(userQuery);
-            var topChunks = await _searchService.SearchAsync(userQuery, userQueryEmbedding);
 
-            // Console.WriteLine($"\nUser Query: {userQuery}");
+            // Step 1: First call with no chunks
+            var initialSystemPrompt = GenerateSystemPrompt(userQuery, "");
+            messages.Insert(0, initialSystemPrompt);
 
-            var systemPrompt = new Message
+            var textResponse = await CallAzureOpenAI(messages);
+            Console.WriteLine($"\ntextResponse: {textResponse}");
+
+            // Step 2: Detect fallback trigger
+            var ragMatch = Regex.Match(textResponse, @"^RetrieveDataUsingRAG\(""(?<query>[^""]+)""\)$");
+
+            if (ragMatch.Success)
             {
-                Role = "system",
-                Content = $$$""" 
-                        You are BZSAI, the friendly and energetic AI assistant for BizStream, a technology consulting company based in Allendale, MI.
-                        You’re chill, upbeat, and eager to help 😄.
-                        Sprinkle in emojis to keep the vibe fun and friendly 🎉.
-                        Try your best to keep your answers concise.
+                string fallbackQuery = ragMatch.Groups["query"].Value;
 
-                        Answer the user's query based on the following information:
-                        {{{string.Join("\n", topChunks)}}}
+                // Step 3: Fetch chunks
+                var embedding = await _textEmbeddingService.GenerateEmbeddingAsync(fallbackQuery);
+                var topChunks = await _searchService.SearchAsync(fallbackQuery, embedding);
+                var topChunksText = string.Join("\n\n", topChunks);
 
-                        When responding, if you extract data from any provided chunks above, please add the according pageTitles and urls you references to the bottom of the message in this format:
-                            References:
-                            [
-                                {"pageTitle": "Example Title", "url":"http://example.com"},
-                                {"pageTitle":"Another Page", "url":"http://another.com"}
-                            ]
-                        If a query is asking for urls/links/sources/references that were used in the previous response, please check the the latest "assistant" response and return all the urls/links/references or page titles. ONLY use urls seen in the prompt history, do not generate new urls.
-                        
-                        For example:
-                        If the user asks:
-                            Where you get those info from?
-                        
-                        This is a snippet of the prompt history that you will be provided with:
-                            [
-                                {
-                                    "role": "user",
-                                    "content": "What are the company\u0027s core values?\nAnd link to where you get the info from?",
-                                    "references": null
-                                },
-                                {
-                                    "role": "assistant",
-                                    "content": "Here are BizStream\u2019s seven core values that guide everything we do \uD83C\uDFAF:\n\n\u2022 Whatever It Takes  \n\u2022 Work Hard, Play Hard  \n\u2022 We Are a Team  \n\u2022 Be Fearless  \n\u2022 Foster Growth in Others  \n\u2022 Care  \n\u2022 Be Positive",
-                                    "references": [
-                                    {
-                                        "pageTitle": "How I Learned to Foster Growth in a Company of Brilliant Minds",
-                                        "url": "https://bizstream.com/blog/how-i-learned-to-foster-growth-in-a-company-of-brilliant-minds/"
-                                    },
-                                    {
-                                        "pageTitle": "BizStream Is a GREAT Place to Work, but It\u0027s NOT for Everyone",
-                                        "url": "https://bizstream.com/blog/bizstream-is-a-great-place-to-work-but-its-not-for-everyone/"
-                                    }
-                                    ]
-                                },
-                                {
-                                    "role": "user",
-                                    "content": "Where you get those info from?",
-                                    "references": null
-                                }
-                            ]
+                // Step 4: Replace system prompt and re-call
+                messages.RemoveAt(0); // remove old system prompt
+                                      // var newSystemPrompt = new Message { Role = "system", Content=$"Answer this: \"{userQuery}\", using the following provided information: \n {topChunksText}"};
+                var newSystemPrompt = GenerateSystemPrompt(fallbackQuery, topChunksText, true);
+                messages.Insert(0, newSystemPrompt);
 
-                        Then, you will trace the prompt history, look for the latest "assistant" response, and return all the urls/links/references or page titles in the format below:
-                            I got the informatiom from How I Learned to Foster Growth in a Company of Brilliant Minds and BizStream Is a GREAT Place to Work, but It\u0027s NOT for Everyone.
-                            
-                            References:
-                            [
-                                {"pageTitle": "How I Learned to Foster Growth in a Company of Brilliant Minds", "url": "https://bizstream.com/blog/how-i-learned-to-foster-growth-in-a-company-of-brilliant-minds/"},
-                                {"pageTitle": "BizStream Is a GREAT Place to Work, but It\u0027s NOT for Everyone", "url": "https://bizstream.com/blog/bizstream-is-a-great-place-to-work-but-its-not-for-everyone/"}
-                            ]
+                // Remove the fallback response so it doesn't confuse the new prompt
+                messages.RemoveAll(m => m.Role == "assistant" && m.Content?.StartsWith("RetrieveDataUsingRAG") == true);
 
-                        When responding, NEVER make guesses. If you are unsure about a topic, say you are unsure. Do not make stuff up about BizStream. Politely decline to answer legal, political, or sensitive topics.
-                        """
-            };
+                textResponse = await CallAzureOpenAI(messages);
+                Console.WriteLine($"textResponse after RAG: {textResponse}");
+            }
 
-            // messages.Insert(0, systemPrompt);
-            messages.Add(systemPrompt);
+            Console.WriteLine($"{JsonSerializer.Serialize(messages, new JsonSerializerOptions { WriteIndented = true })}");
+            return textResponse;
+        }
 
-            // Console.WriteLine($"{JsonSerializer.Serialize(messages, new JsonSerializerOptions { WriteIndented = true })}");
-
+        private async Task<string> CallAzureOpenAI(List<Message> messages)
+        {
             var payload = new { messages };
             var content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
             var endpointPath = $"/openai/deployments/{_azureOpenAIChatSettings.DeploymentName}/chat/completions?api-version={_azureOpenAIChatSettings.ApiVersion}-preview";
 
-            try
+            var response = await _httpClient.PostAsync(endpointPath, content);
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            var jsonDocument = JsonDocument.Parse(jsonResponse);
+            var textResponse = jsonDocument.RootElement
+                .GetProperty("choices")[0]
+                .GetProperty("message")
+                .GetProperty("content")
+                .GetString() ?? string.Empty;
+
+            messages.Add(new Message { Role = "assistant", Content = textResponse });
+
+            return textResponse;
+        }
+
+        private static Message GenerateSystemPrompt(string userQuery, string topChunks = "", bool dataRetrieved = false)
+        {
+            string InjectOrNull(string str) => string.IsNullOrWhiteSpace(str) ? "null" : str;
+
+            string systemPrompt = $$"""
+                You are BZSAI, the friendly, energetic AI assistant for **BizStream**, a technology consulting company in Allendale, MI.
+
+                🎨 Tone: upbeat, concise, helpful — sprinkle emojis when appropriate (😄, 🎉, 👋, etc.)
+
+                🔒 IMPORTANT BEHAVIOR RULES:
+
+                ✅ You are allowed to respond freely to greetings and small talk.  
+                For example, if the user says:
+                - "Hi"
+                - "Hello"
+                - "How are you?"
+                - "What's up?"
+                - "Who are you?"
+                - "What can you do?"
+
+                ...you should respond naturally and in a friendly tone.  
+                You do **not** need to use or reference BizStream-specific content in these cases.
+
+                ✅ Only use the EXACT `RetrieveDataUsingRAG("{{userQuery}}")` when the user asks an **informational** or **knowledge-seeking** question and no relevant context is available.
+
+                ❌ Do NOT make up facts, URLs, services, or content.  
+                ❌ Do NOT reference other companies (e.g., OpenAI, Microsoft, Google).  
+                🎯 Stay focused on BizStream.
+
+                -- User Query --
+                {{userQuery}}
+
+                -- Retrieved Context (if available) --
+                {{InjectOrNull(topChunks)}}
+
+                ───────────────────────────────────────────────
+                🧠 EXAMPLES:
+
+                User: "Hi"  
+                Assistant: "Hi there! 😄 I'm BZSAI, BizStream’s friendly AI assistant. How can I help you today? 🎉"
+
+                User: "What are your services?"  
+                Assistant: RetrieveDataUsingRAG("What are your services?")
+
+                User: "Give me the link to your career page"  
+                Assistant: RetrieveDataUsingRAG("Give me the link to your career page")
+
+                📎 SOURCE ATTRIBUTION:  
+                If your answer includes information from context or prompt history, append a references block like this:
+
+                References:
+                [
+                    { "pageTitle": "BizStream Careers", "url": "https://bizstream.com/careers" },
+                    { "pageTitle": "Team Page", "url": "https://bizstream.com/about/team" }
+                ]
+
+                🔍 If the user asks for source info later:
+                • Look at the latest assistant message with references.
+                • Reuse those exact links and titles.
+                • You MUST cite only the urls that appear in the provided chat history.
+                • If you need a source that is not on the list, say “I’m not sure.”
+                • Never invent, shorten, or alter a link.
+
+                🚫 If unsure, say so politely — do not guess.
+            """;
+
+            if (dataRetrieved)
             {
-                var response = await _httpClient.PostAsync(endpointPath, content);
-                var jsonResponse = await response.Content.ReadAsStringAsync();
-                var jsonDocument = JsonDocument.Parse(jsonResponse);
-                var textResponse = jsonDocument.RootElement
-                    .GetProperty("choices")[0]
-                    .GetProperty("message")
-                    .GetProperty("content")
-                    .GetString() ?? string.Empty;
+                systemPrompt = $$"""
+                You are BZSAI, the friendly, energetic AI assistant for **BizStream**, a technology consulting company in Allendale, MI.
 
-                // var referencesMatch = Regex.Match(
-                //     textResponse,
-                //     @"References:\s*\n(?<json>\[\s*[\s\S]+?\])",
-                //     RegexOptions.Singleline | RegexOptions.IgnoreCase
-                // );
+                🎨 Tone: upbeat, concise, helpful — sprinkle emojis when appropriate (😄, 🎉, 👋, etc.)
 
-                // string? referencesJson = null;
-                // if (referencesMatch.Success)
-                // {
-                //     referencesJson = referencesMatch.Groups["json"].Value;
-                //     textResponse = textResponse.Replace(referencesJson, "").Replace("References:", "").Trim();
-                //     Console.WriteLine($"References found: {referencesJson}");
-                // }
+                🔒 IMPORTANT BEHAVIOR RULES:
+                ❌ Do NOT make up facts, URLs, services, or content.  
+                ❌ Do NOT reference other companies (e.g., OpenAI, Microsoft, Google).  
+                🎯 Stay focused on BizStream.
 
-                messages.Add(new Message
+                -- User Query --
+                {{userQuery}}
+
+                -- Retrieved Context (Use this to answer the user's query) --
+                {{InjectOrNull(topChunks)}}
+                ───────────────────────────────────────────────
+
+                📎 SOURCE ATTRIBUTION:  
+                If your answer includes information from context or prompt history, append a references block like this:
+
+                References:
+                [
+                { "pageTitle": "BizStream Careers", "url": "https://bizstream.com/careers" },
+                { "pageTitle": "Team Page", "url": "https://bizstream.com/about/team" }
+                ]
+
+                🔍 If the user asks for source info later:
+                • Look at the latest assistant message with references.
+                • Reuse those exact links and titles.
+                • DO NOT fabricate new links.
+
+                🚫 If unsure, say so politely — do not guess.
+                """;
+            }
+
+            return new Message
                 {
-                    Role = "assistant",
-                    Content = textResponse,
-                    // References = referencesJson != null
-                    //     ? JsonSerializer.Deserialize<List<Reference>>(referencesJson)
-                    //     : null
-                });
-
-                Console.WriteLine($"{JsonSerializer.Serialize(messages, new JsonSerializerOptions { WriteIndented = true })}");
-
-                return textResponse ?? "Response is null or empty";
-                // return messages.LastOrDefault(m => m.Role == "assistant") ?? new Message
-                // {
-                //     Role = "assistant",
-                //     Content = "No response generated."
-                // };
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Error calling Azure OpenAI Chat: {e.Message}");
-                throw;
-            }
+                    Role = "system",
+                    Content = systemPrompt
+                };
         }
     }
 }
