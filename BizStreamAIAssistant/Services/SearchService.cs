@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Azure;
 using Azure.Search.Documents;
 using Azure.Search.Documents.Models;
@@ -45,16 +46,23 @@ namespace BizStreamAIAssistant.Services
                 {
                     SemanticConfigurationName = _azureAISearchSettings.SemanticConfigurationName
                 },
-                Select = {"text"}
+                Select = {"*"}
             };
             var response = await _searchClient.SearchAsync<SearchDocument>(userQuery, searchOptions);
 
-            var topChunks = response.Value.GetResults()
-                .Select(r => r.Document["text"]?.ToString())
-                .Where(text => !string.IsNullOrWhiteSpace(text))
-                .Cast<string>()
-                .ToList();
-                
+            var topChunks = new List<string>();
+            await foreach (var result in response.Value.GetResultsAsync())
+            {
+                var doc = result.Document;
+
+                string json = JsonSerializer.Serialize(doc, new JsonSerializerOptions
+                {
+                    WriteIndented = true,
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                });
+
+                topChunks.Add(json);
+            }
 
             if (topChunks.Count == 0)
             {

@@ -5,7 +5,6 @@ function init() {
     const queryInput = document.getElementById("queryInput");
     const messageContainer = document.getElementById("messageContainer");
     const chatbotButton = document.getElementById("chatbotButton");
-    const retryButtons = document.getElementsByClassName("retryButton");
     const messages = [];
     var botMessageId = 0;
     var userMessageId = 0;
@@ -27,26 +26,45 @@ function init() {
 
     welcomeMessage();
 
-    // Array.from(retryButtons).forEach(button => {
-    //     button.addEventListener("click", (e) => {
-    //         const retryMessageId = Array.from(button.classList).find(cls => cls.startsWith("botMessage"));
-    //         if (!retryMessageId) throw new Error("Retry button does not have a valid message ID class");
-
-    //         const retryUserQuery = document.querySelector(`.userMessage${retryMessageId} .userMessageText`).textContent;
-    //         handleMessageSubmit(retryUserQuery);
-    //     });
-    // });
     document.addEventListener("click", (e) => {
         const button = e.target.closest(".retryButton");
         if (!button) return;
 
-        const retryMessageId = Array.from(button.classList).find(cls => cls.startsWith("botMessage"))?.replace("botMessage", "");
-        if (!retryMessageId) return;
+        const messageId = Array.from(button.classList).find(cls => cls.startsWith("botMessage"))?.replace("botMessage", "");
+        if (!messageId) return;
 
-        const retryUserQuery = document.querySelector(`.userMessage${retryMessageId} .userMessageText`)?.textContent;
+        const retryUserQuery = document.querySelector(`.userMessage${messageId} .userMessageText`)?.textContent;
         if (!retryUserQuery) return;
 
         handleMessageSubmit(retryUserQuery);
+    });
+
+    document.addEventListener("click", (e) => {
+        const copyButton = e.target.closest(".copyButton");
+        
+        if (!copyButton) return;
+
+        const botMessageId = Array.from(copyButton.classList).find(cls => cls.startsWith("botMessage"));
+        if (!botMessageId) return;
+
+        const messageText = document.querySelector(`.${botMessageId} .botMessageText`).textContent;
+
+        navigator.clipboard.writeText(messageText)
+            .then(() => {
+                console.log("Message copied to clipboard");
+
+                const copyElement = copyButton.querySelector(".copy");
+                if (!copyElement) return;
+
+                copyElement.textContent = "Copied";
+
+                setTimeout(() => {
+                    copyElement.textContent = "Copy";
+                }, 1000);
+            })
+            .catch(err => {
+                console.error("Failed to copy message: ", err);
+            });
     });
 
 
@@ -70,7 +88,6 @@ function init() {
     }
 
     async function handleMessageSubmit(userMessage) {
-
         if (!userMessage){
             userMessage = queryInput.value.trim();
             if (!userMessage) return;
@@ -96,6 +113,8 @@ function init() {
             }
     
             const data = await response.json();
+
+            // console.log("Response from server:", data);
             removeTextLoading();
             addBotMessage(data.text || "No response from server");
         } catch (error) {
@@ -116,21 +135,57 @@ function init() {
         messages.push({ role: "user", content: message });
     }
 
+    function sanitizeJson(str) {
+        return str
+            .replace(/[“”]/g, '"')   // curly double → straight
+            .replace(/[‘’]/g, "'")   // curly single → straight
+            .replace(/{{/g, '{')     // double braces → single
+            .replace(/}}/g, '}');
+    }
+
     function addBotMessage(message, optionsDisabled = false) {
+        const referencesTextMatch =
+            /References:\s*\n(?<json>\[\s*[\s\S]+?\])/;   // named capture "json"
+
+        const match = message.match(referencesTextMatch);
+
+        // Strip the reference block out of the visible message
+        message = message.replace(referencesTextMatch, "").trim();
+
+        let parsedReferences = [];
+        if (match?.groups?.json) {
+            try {
+            const rawJson = sanitizeJson(match.groups.json);
+            parsedReferences = JSON.parse(rawJson);
+            } catch (err) {
+            console.error("Failed to parse references JSON:", err, match.groups.json);
+            // Optional: keep a note in the message so users know refs exist
+            // message += "\n\n(⚠️ References present but couldn’t be parsed.)";
+            }
+        }
+
         addMessageToUI({
             text: message,
+            references: parsedReferences,
             templateId: TEMPLATE_IDS.bot,
             cloneClass: CLASSES.botClone,
             textSelector: ".botMessageText",
-            messageId: optionsDisabled ? ``: `botMessage${botMessageId++}`,
+            messageId: optionsDisabled ? "" : `botMessage${botMessageId++}`,
             optionsDisabled
         });
 
         if (optionsDisabled) return;
-        messages.push({ role: "assistant", content: message });
+        messages.push({
+            role: "assistant",
+            content: message,
+            references: parsedReferences
+        });
+
+        console.log(parsedReferences);
+        console.log(messages);
     }
 
-    function addMessageToUI({ text, templateId, cloneClass, textSelector, messageId, optionsDisabled }) {
+    function addMessageToUI({ text, references, templateId, cloneClass, textSelector, messageId, optionsDisabled }) {
         const template = document.getElementById(templateId);
         if (!template) return console.error(`Missing template: ${templateId}`);
 
@@ -139,19 +194,17 @@ function init() {
         clone.removeAttribute("id");
         clone.classList.add(cloneClass);
 
-        const hasLink = extractLinks(text).length > 0;
-        const finalText = hasLink ? linkifyText(text) : text;
-
+        const finalText = formatText(text, references);
         clone.querySelector(textSelector).innerHTML = finalText;
         messageContainer.appendChild(clone);
 
         if (optionsDisabled) {
             const options = clone.querySelector(".botMessageOptions");
-            options.classList.add(CLASSES.hidden);
+            options?.classList.add(CLASSES.hidden);
             return;
         }
 
-        // Add messageID to elements of each message container for later reference (used for retry/copy functions)
+        // Add messageID to all elements for tracking
         clone.classList.add(messageId);
         clone.querySelectorAll("*").forEach(node => {
             if (node.classList) {
@@ -159,9 +212,9 @@ function init() {
             }
         });
 
-
         scrollToBottom();
     }
+
 
     function renderTextLoading() {
         const template = document.getElementById(TEMPLATE_IDS.loading);
@@ -185,17 +238,45 @@ function init() {
         });
     }
 
-    function extractLinks(text) {
-        const urlRegex = /(https?:\/\/[^\s]+)/g;
-        return text.match(urlRegex) || [];
-    }
-
     function linkifyText(text) {
         const urlRegex = /(https?:\/\/[^\s]+)/g;
         return text.replace(urlRegex, (url) =>
             `<a href="${url}" target="_blank" rel="noopener noreferrer" class="font-semibold">${url}</a>`
         );
     }
+
+    function formatText(text, references) {
+        if (!Array.isArray(references)) {
+            references = [];
+        }
+
+        let formattedText = text;
+
+        formattedText = linkifyText(formattedText);
+        console.log(`After linkify: ${formattedText}`);
+        
+        // Replace page titles and raw URLs from references first
+        references.forEach(ref => {
+            const { pageTitle, url } = ref;
+
+            if (pageTitle && formattedText.includes(pageTitle)) {
+                console.log(`Linking page title: ${pageTitle} to URL: ${url}`);
+                const linkedTitle = `<a href="${url}" target="_blank" rel="noopener noreferrer" class="font-semibold">${pageTitle}</a>`;
+                formattedText = formattedText.replaceAll(pageTitle, linkedTitle);
+            }
+            console.log(`After linking page title: ${formattedText}`);
+        });
+
+        // Replace newlines with <br/>
+        formattedText = formattedText.replace(/\n/g, "<br/>");
+
+        // Linkify any *other* plain URLs that weren’t part of references
+
+
+        return formattedText;
+    }
+
+
 
     function welcomeMessage() {
         const welcomeText = "Hi there👋 I'm BZSAI, an AI assistant of the BizStream website 😁. You can ask me anything about BizStream!";
