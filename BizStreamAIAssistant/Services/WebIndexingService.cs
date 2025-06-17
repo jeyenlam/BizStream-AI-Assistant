@@ -8,7 +8,7 @@ namespace BizStreamAIAssistant.Services
     public class WebIndexingService
     {
         private readonly WebIndexingSettingsModel _webIndexingSettings;
-        private const int MaxChunkSize = 8000; // OpenAI's text-embedding-ada-002 has an 8k token limit
+        private const int MaxChunkSize = 8000; // OpenAI's text-embedding-ada-002 has an 8k (8192) token limit
         private readonly string jsonlFilePath = TempDataPathConfig.JsonlFilePath;
         private readonly string crawlLogFilePath = TempDataPathConfig.CrawlLogFilePath;
 
@@ -31,6 +31,7 @@ namespace BizStreamAIAssistant.Services
             string rootUrl = _webIndexingSettings.RootUrl;
             int depth = _webIndexingSettings.Depth;
             var pages = await WebIndexingHelper.CrawlAsync(rootUrl, depth);
+            string pageTitlesAndUrls = "";
 
             FileHelper.EmptyFile(jsonlFilePath);
             FileHelper.EmptyFile(TempDataPathConfig.cleanedPageContentFilePath);
@@ -45,6 +46,15 @@ namespace BizStreamAIAssistant.Services
                 var pageTitleAndContent = WebIndexingHelper.ExtractPageTitleAndContent(html);
                 string pageTitle = pageTitleAndContent.Item1;
                 string content = pageTitleAndContent.Item2;
+
+                pageTitlesAndUrls += $"[{pageTitle}]({url})\n";
+
+                if (i == pages.Count - 1) // the last to be added - a list of pages and urls
+                {
+                    pageTitle = "Pages and Urls";
+                    url = "https://bizstream.com";
+                    content = pageTitlesAndUrls;
+                }
 
                 File.AppendAllText(
                     TempDataPathConfig.cleanedPageContentFilePath,

@@ -1,7 +1,7 @@
 We’re a digital agency focused on elevating brands, websites, and products. Our expertise and track record of award-winning work helps us accelerate growth for our clients.
 BizStream has been our partner on multiple projects for years now. They have truly become that: a partner. We collaborate to create the best sites possible.
-As audiences engage across more devices and formats, delivering a seamless experience is key. A headless CMS offers marketers and developers the flexibility to create and manage content efficiently—enhancing user experiences at every touchpoint.
-Discover how BizStream helps associations turn insights into action at the 2025 CSAE Annual Conference. Join our session on leveraging Discovery to drive digital growth and member engagement.
+Discover how six talented interns are gaining hands-on experience, mentorship, and career-shaping skills through BizStream’s Summer 2025 Internship Program.
+BizStream Co-Owner Brian McKeiver earns the Xperience by Kentico Marketer Certification, showcasing his continued leadership and deep expertise in digital marketing strategy and implementation on the Kentico platform.
 https://bizstream.com
 
 Projects
@@ -9,18 +9,31 @@ Projects
 https://bizstream.com/projects/
 
 Our Services
-Our solution architects, designers, and developers have a wide range of experience solving complex issues across many industries. Our team will leverage our collective knowledge to build an efficient solution to solve your pain points.
+Our strategists, architects, and designers bring cross-industry expertise to every engagement. Whether you’re launching a new initiative or evolving an existing project, we’ll guide your team through a proven Discovery & Roadmap process that creates clarity, aligns stakeholders, and sets your project up for success.
 Whether it’s refreshing your existing brand or creating your brand from scratch, we do it all. Our creative team will help bring your brand to life and tell your story through your visual identity, typography, color, animation, messaging, and everything in between.
 Our creative team will elevate your brand and messaging thoughtfully and intentionally, ensuring your digital project is not only functional and practical but also well designed and consistent with your brand.
 Our team has over 20 years of experience solving our client’s unique digital needs. We use cutting-edge technology to deliver easy-to-use solutions that your users will enjoy. We’re there with you every step of the way, from discovery, development, launch, and support.
+Great digital experiences start with great content. Our team helps you craft a content strategy that integrates SEO, performance data, buyer journey insights, and competitive research to drive results.We focus on aligning your content with your brand’s voice, supporting your marketing goals, and boosting conversions across key pages.
 With our managed services, we set up and manage multiple environments for your solution—including overseeing backups, providing options for CMS licensing, applying security updates, and offering a single point of contact for 24/7 365 support.
 https://bizstream.com/services/
 
-Strategy & Consulting Services
-Your project’s success is dependent on choosing the right foundations. We lean on our years of experience to advise decision-makers on the best options for their project and help them land on an efficient and cost-effective solution that will maximize their ROI.
-Is your site experiencing issues? Whether your site is powered through Xperience by Kentico, Kontent, or another platform, our team can provide you with an outside perspective on your project with a site audit. With 30+ areas of examination focused on usability, performance, and best practices, you will have a clear understanding of where your project stands and a clear direction for getting to maximum performance.
-Getting an outside perspective on your problem can help to build a better solution. Our team has a wide variety of experience in solving issues across different industries. Leverage our knowledge to help build out an efficient solution.
-https://bizstream.com/services/strategy-and-consulting/
+Discovery & Roadmap
+Because every project has its own complexities, it’s critical to ensure your teams are aligned around a central vision that:
+Let’s get the journey started.
+Discovery is a methodical, pragmatic process with critical implications and real-world applications.
+The steps you take in this program become a hands-on guide—a Roadmap—that your team and partners will continually reference as you move your initiatives forward.
+Start with the why.
+When you’re ready to start, the drivers behind your project go beyond the simple project need. To ensure meaningful change, BizStream’s strategists spend time with your internal stakeholders to define:
+Gain a user-centric viewpoint.
+To create the best experience for your target audiences, we connect with them and listen to what they really want and need from you. Then we can tell you:
+Document your project’s current and future states.
+BizStream brings decades of technical digital strategy and development expertise to bear to help your IT and leadership teams understand:
+Documentation that keeps you on track, on time, and on budget.
+We’ll deliver a comprehensive package of tangible resources, including:
+For Investments & Wealth Institute, the discovery process has been a touchstone activity that has helped us pull together through a lot of change. It has been essential to give a voice to all the stakeholders in our organization, and BizStream’s management and synthesis throughout that process has kept us on track and moving forward. In addition, having a clearly defined project plan has been key to keeping our momentum strong as we navigate a complex—but ultimately rewarding—transformation of our digital presence.
+Your organization can achieve the transformative change you need.
+You just need the help of a trusted partner who’s been where you are.
+https://bizstream.com/services/discovery-and-roadmap/
 
 Branding & Identity Services
 Build a shared language that communicates your brand’s value, differentiators, and benefits to build trust, increase sales, and cement customer loyalty.
@@ -93,7 +106,7 @@ https://bizstream.com/technology/azure/
 
 Storyblok
 Storyblok is a modern headless content management system (CMS) that enables teams to create and manage content across websites, apps, and digital experiences—all from a single, flexible platform. It combines visual editing tools with structured content, making it ideal for marketers and developers alike.
-As a leading Storyblok agency, BizStream helps organizations unlock the full potential of Storyblok by designing and developing custom digital experiences that scale. From migrations and integrations to content architecture and UI development, our team of experts delivers tailored solutions that empower teams to move faster and manage content with ease.
+As a certified Storyblok partner for over 5 years, with more than 20 referenceable projects, BizStream is one of the most experienced agencies in the ecosystem. We bring together deep expertise in headless and composable technologies with over two decades of website development experience to deliver tailored digital solutions that scale. From migrations and integrations to content architecture and UI development, we help teams unlock the full potential of Storyblok, enabling them to move faster and manage content with ease.
 A new website is an opportunity to improve your customers’ digital experience and build resilience for your business. You want a content management system (CMS) that meets your immediate requirements, enables easy adoption for your users, and adapts as your business needs change.
 On your shortlist of CMS solutions should be Storyblok, a headless CMS that delivers exceptional site speed, minimal security footprint, and a flexible, intuitive system ideal for developers and business users alike.
 Storyblok enables businesses to deploy modern content experiences tailored to any digital environment—websites, applications, wearable devices, and more—all from a single instance of content creation.
@@ -582,51 +595,60 @@ BizStream helped Vermeer create a site that showcased its equipment and products
 BizStream has been our partner on multiple projects for years now. They have truly become that: a partner. We collaborate to create the best sites possible. Throughout the projects, our teams improved our communication and process, allowing for more efficient work and better releases. BizStream knows and has a great relationship with Kentico and have been willing to step in and be the go-between with Kentico when help was needed. They also went above and beyond to troubleshoot issues to keep projects moving and the site healthy post-launch.
 https://bizstream.com/project/vermeer/
 
-Why Marketers and Developers Are Turning to Headless CMS for Better User Experiences
-Content is the linchpin that connects you to your customers. In a world where people consume content on multiple devices and in many formats, ensuring a great experience is critical.
-A headless content management system (CMS) can be a powerful solution—not only for your users, but also for marketers and developers supporting content creation and development.
-By separating the back end from the front end, headless CMS can transform the way users experience your content—and the way companies approach content development.
-Read on to learn why a headless CMS might be a smart choice for organizations aiming to streamline content delivery across multiple platforms.
-The most important thing to know about a headless CMS is that it separates the creation and storage of content (back end) from the presentation and delivery (front end). Known as “decoupled” architecture, this approach can offer superior flexibility, scalability, site speed, and security.
-Unlike a traditional CMS, where content is tied to a pre-set theme, a headless CMS delivers it through Advanced Programming Interfaces (APIs).
-Key takeaway: A headless CMS stores and manages your content, while a presentation tool (website or mobile app) presents the content.
-This structure may make it easier to manage, deliver, and repurpose your content to match the omnichannel environment your customers use.
-To support the best possible delivery of content across a variety of formats, the headless approach involves creating modular content components that can be deployed to any type of front end. For example, suppose you’re creating a web page that includes:
-With a traditional CMS, you might break out a couple of these items in separate entry fields, but more likely, you’d just lay them out all together in a single content object using a What You See Is What You Get (WYSIWYG) editor.
-A headless system, such as Storyblok or similar platforms, breaks these components down even further and doesn’t mix content, layout, and design—keeping the end display more flexible:
-The CMS enables you to specify which of these pieces should link with others by adding tags and taxonomy notations to each item.
-With this information, developers can use programmatic APIs to pull the content into a variety of front ends. The results can be more adaptable and reusable than a big block of content designed for a static webpage shoehorned into other formats.
-A traditional, monolithic CMS may feel limiting depending on project goals or complexity. Its architecture can sometimes create workflow bottlenecks or reduce flexibility.
-Common challenges include:
-As a marketer, you need to get campaigns off the ground fast. A headless CMS’ centralized content repository can make it easier to create content once and publish it across multiple channels—often with less reliance on development teams.
-If you choose a headless CMS with a visual editor, like Storyblok or other similar platforms, your content creators can preview website changes in real time.
-A headless approach can also offer advantages in content strategy. Thinking about content in modular, reusable chunks helps tighten messaging and lead users toward a clear outcome.
-It encourages deeper content evaluation:
-This more granular approach can support improved taxonomy, tagging, and reuse—benefiting both users and marketers.
-Because a headless CMS separates the back end from the front end, developers can work with the technologies they prefer. In contrast, traditional CMS platforms may restrict your programming language or integration options.
-A headless CMS can empower your team to adopt best-of-breed tools that align with your business goals—whether that’s marketing automation, ecommerce, or another integration.
-Many developers work in agile environments. A headless CMS can fit well with these workflows, helping marketing and development teams work in sync.
-We can help. BizStream brings deep experience across multiple CMS platforms—from traditional solutions like Kentico to modern headless CMSs like Storyblok, Kontent.ai, and Payload. Whether you’re working with an existing platform or exploring new options, we help you assess your needs and recommend the best-fit approach for your business, team, and tech stack.
-By working with us, you’ll get:
-This post was written by Kile Lindgren, a Solution Architect at BizStream and an official Storyblok Ambassador. Learn what his Ambassador status means for our clients.
-https://bizstream.com/blog/why-marketers-and-developers-are-turning-to-headless-cms-for-better-user-experiences/
+Meet Our Six Interns Making the Most of Summer 2025
+At BizStream, we don’t take the term “intern” lightly. To us, it represents potential, growth, mentorship, and investing in the future of our industry. That’s why we’ve welcomed six incredible individuals this summer—not just to gain experience but to actively contribute to our work, our culture, and our future.
+We believe that the best way to grow is to help others grow alongside us. That belief is baked into our core value: Foster Growth in Others. Our internship program isn’t about fetching coffee or sitting on the sidelines. It’s about doing real work, receiving real feedback, and becoming an integrated part of a team that values curiosity, accountability, and learning by doing.
+We view interns as future colleagues, and that’s why we invest the time, resources, and mentorship needed to create a meaningful experience—whether it’s someone’s first taste of the tech world or a launchpad into a full-time role.
+We’re thrilled to introduce our Summer 2025 Intern Cohort, each bringing a unique perspective, passion, and drive to learn.
+Alma Mater: Western Michigan University (’20)
+Major: Computer Information Systems
+What He’s Most Excited About: Gaining real-world experience, growing his professional network, and learning new tech.
+Why We’re Lucky to Have Him: Marques brings a thoughtful, goal-oriented mindset to his role. His appreciation for balanced work environments makes him a great fit for BizStream’s culture.
+Connect on LinkedIn
+College: Grand Valley State University (recent graduate)
+Major: Computer Science
+What She’s Most Excited About: Continuing to build technical skills and learning best practices through hands-on work.
+Why We’re Lucky to Have Her: Yen had her eye on BizStream even before applying. Her enthusiasm, appreciation for team culture, and excitement about company outings (camping trip, anyone?) make her a natural BizStreamer.
+Connect on LinkedIn
+College: Michigan Tech
+Major: Cybersecurity
+What He’s Most Excited About: Exploring the full spectrum of IT—from hardware to systems.
+Why We’re Lucky to Have Him: Ryerson thrives in our “work hard, play hard” environment and is genuinely excited to be here. His hunger to learn makes him a great fit for our fast-moving IT crew.
+College: Grand Rapids Community College (sophomore in Fall 2025)
+Focus: Web and UX Design & Development
+What She’s Most Excited About: One-on-one mentoring with Dave and learning new tools like ChatGPT.
+Why We’re Lucky to Have Her: Shayna is returning for her second internship with us! Her deep appreciation for BizStream’s team-first culture and her drive to keep learning makes her an integral part of our design crew.
+Connect on LinkedIn
+College: Kendall College of Art and Design
+Major: Graphic Design
+What She’s Most Excited About: Creating impactful designs for BizStream and CaseStream that will live on after her internship.
+Why We’re Lucky to Have Her: Hannah brings creativity, curiosity, and a strong eagerness to grow. She’s been soaking up critiques, contributing to team initiatives, and embracing everything from collaborative lunches to snack-packing events.
+Connect on LinkedIn
+College: Grand Valley State University
+Major(s): Computer Science & Astrophysics
+What He’s Most Excited About: Taking on client and pro-bono work while learning how professional environments operate.
+Why We’re Lucky to Have Him: Logan’s passion for complex problem-solving and his dual focus on technical and theoretical fields bring an exciting blend of curiosity and critical thinking to the table.
+Connect on LinkedIn
+What truly sets this group apart isn’t just their academic backgrounds or internship goals—it’s their curiosity, their courage to ask questions, and their ability to bring their whole selves to the workplace.
+From design to development to IT, they’re contributing to projects that matter, learning by doing, and gaining valuable skills they’ll carry with them far beyond this summer.
+And yes, we still find time for golf outings, Wednesday lunches, and the occasional celebratory treat.
+We offer internships in web development, creative design, IT, and marketing—and we take them seriously. If you’re curious about what it’s like to intern at BizStream, check out our blog post, The BizStream Internship Program, for a behind-the-scenes look at how we hire, mentor, and challenge interns to do their best work or explore internship opportunities at BizStream here.
+https://bizstream.com/blog/meet-our-six-interns-making-the-most-of-summer-2025/
 
-Join BizStream at CSAE’s 2025 Annual Conference
-We’re thrilled to announce that BizStream is the presenting sponsor of the 2025 CSAE Annual Conference, taking place June 4–6 at the newly opened Hotel Polaris at the Air Force Academy. This three-day event is CSAE’s largest of the year—bringing together association executives and professionals for keynote sessions, workshops, networking, and innovative thinking.
-Whether you’re looking to spark fresh ideas, earn CAE credits, or discover new ways to elevate your organization, this conference is the place to be.
-Presented by Rob Bean, Senior Strategist, and Jordan Ellertson, Senior Account Strategist at BizStream, this interactive breakout will walk through a practical and proven Discovery process designed to uncover business goals, member needs, and tech requirements before jumping into your next big initiative.
-You’ll leave with a framework you can put to work immediately—whether you’re launching a new website or rethinking how your association delivers value.
-📍 Thursday, June 5 | 9:30 – 10:15 a.m.
-Learn how Discovery fuels smarter decisions and more impactful outcomes
-Get a take-home rubric to apply in your organization tomorrow
-Hear real transformation stories from associations like ASNT, IWI, and ABA
-Connect with two seasoned strategists who bring deep experience in association growth
-Rob Bean, Senior Strategist at BizStream, specializes in helping associations build better website experiences through a thoughtful application of strategy, creativity, and technology. Bean has generated great results for organizations such as CSU College of Business, Investments & Wealth Institute, the National Society of Black Engineers, The American Society for Non-Destructive Testing, and Western Research Institute.
-Jordan Ellertson, Senior Account Strategist at BizStream, is passionate about organization, details, and planning. Jordan has spent over a decade implementing complex technology solutions, from CRM implementations to website builds. Her experience in business operations and digital marketing gives her a unique perspective across a variety of business needs and industries. She brings strategic foresight, practical expertise, and a collaborative approach to every project.
-We’re honored to be part of CSAE’s mission to create meaningful connections and future-focused solutions for associations everywhere. Register to attend here.
-BizStream is a digital agency focused on brands, websites, and products. We specialize in strategy, custom design, and complex implementations that deliver results and make our customers long-term raving fans. We have extensive experience with a wide range of online tools and technologies, and we’re one of the most respected CMS partners in the world. bizstream.com
-The Colorado Society of Association Executives (CSAE) is the association of association professionals across Colorado. CSAE’s mission is to create opportunities for association professionals from across industries to succeed for their members through the collaborative and collective power of working together. csae.org
-https://bizstream.com/blog/join-bizstream-at-csaes-2025-annual-conference/
+Brian McKeiver Achieves Xperience by Kentico Marketer Certification
+We’re proud to announce that BizStream’s Co-Owner and Solution Architect, Brian McKeiver, has officially earned his Xperience by Kentico Certified Marketer certification. This achievement marks Brian’s third Kentico marketing certification—he previously earned recognition for his expertise with Kentico 9 and Kentico 11. His latest certification further solidifies his position as one of the foremost Kentico experts in the industry.
+This certification is awarded to individuals who demonstrate deep knowledge and practical experience in implementing and managing digital marketing strategies using the Xperience by Kentico platform. It’s designed for professionals who can:
+Analyze business requirements and translate them into effective campaigns
+Leverage both out-of-the-box and custom marketing features
+Execute omnichannel, customer-centric campaigns
+Integrate third-party solutions for lead scoring, personalization, A/B testing, and more
+To earn the credential, candidates must pass a rigorous exam that covers the platform’s advanced marketing capabilities, including automation, email marketing, contact segmentation, campaign definition, and web analytics.
+With more than 14 consecutive years as a Kentico MVP, Brian’s ongoing certification journey speaks to a deeper commitment—one rooted in ensuring that our clients benefit from the latest, most innovative, and most scalable digital marketing strategies available. This newest achievement underscores his comprehensive understanding of both the technical and marketing aspects of Xperience by Kentico, providing our clients with a rare advantage: a seasoned expert who knows how to translate strategy into measurable success.
+Whether you’re planning a complex site migration, building personalized marketing automation, or integrating third-party tools to drive customer engagement, you can be confident your project is in the hands of a recognized leader who’s not just certified but consistently ahead of the curve.
+Ready to elevate your digital marketing with Kentico? Let’s start your project.
+Brian McKeiver, co-owner of BizStream, is a solution architect and visionary with over 20 years of experience, co-leading the digital agency with more than 35 employees and serving hundreds of clients across North America. As a Microsoft Azure MVP, Kontent.ai MVP, and Kentico MVP, Brian is well-known in the industry for his web development, cloud integration, and digital marketing expertise. Additionally, he actively contributes to the tech community through his blog at mcbeev.com, where he provides valuable insights on Kentico, Kontent.ai, .NET, Azure, and developer best practices, as well as through his podcast, Kontent Rocks. Learn more about Brian »
+Kentico is an award-winning provider of digital experience platforms that enable businesses to drive better outcomes with fewer resources using a hybrid headless approach for multichannel digital experiences. Its digital experience platform (DXP), Xperience by Kentico, minimizes overhead by focusing on real customer needs. With a wide set of capabilities, it empowers teams to deliver better customer experiences through multiple channels faster.  Kentico offers market-leading support, SaaS or on-premises deployment, and is backed by a global network of implementation partners.  kentico.com
+https://bizstream.com/blog/brian-mckeiver-achieves-xperience-by-kentico-marketer-certification/
 
 Privacy Policy
 BizStream respects your privacy. We want to use the individual identifying information you provide to us to serve you better. “Individual identifying information” is information that enables us to identify you, such as your email address, name, title, and address. BizStream uses the individual identifying information in order to personalize your experience on our website and also to be able to selectively send you communications that may be of interest to you, either electronically or otherwise. As we strive to keep pace with new and innovative ways to serve you, we remain committed to maintaining your privacy.
@@ -1324,7 +1346,7 @@ https://bizstream.com/technology/kontent/
 
 Storyblok
 Storyblok is a modern headless content management system (CMS) that enables teams to create and manage content across websites, apps, and digital experiences—all from a single, flexible platform. It combines visual editing tools with structured content, making it ideal for marketers and developers alike.
-As a leading Storyblok agency, BizStream helps organizations unlock the full potential of Storyblok by designing and developing custom digital experiences that scale. From migrations and integrations to content architecture and UI development, our team of experts delivers tailored solutions that empower teams to move faster and manage content with ease.
+As a certified Storyblok partner for over 5 years, with more than 20 referenceable projects, BizStream is one of the most experienced agencies in the ecosystem. We bring together deep expertise in headless and composable technologies with over two decades of website development experience to deliver tailored digital solutions that scale. From migrations and integrations to content architecture and UI development, we help teams unlock the full potential of Storyblok, enabling them to move faster and manage content with ease.
 A new website is an opportunity to improve your customers’ digital experience and build resilience for your business. You want a content management system (CMS) that meets your immediate requirements, enables easy adoption for your users, and adapts as your business needs change.
 On your shortlist of CMS solutions should be Storyblok, a headless CMS that delivers exceptional site speed, minimal security footprint, and a flexible, intuitive system ideal for developers and business users alike.
 Storyblok enables businesses to deploy modern content experiences tailored to any digital environment—websites, applications, wearable devices, and more—all from a single instance of content creation.
@@ -1747,6 +1769,52 @@ Finally, working for an agency can give new developers a sense of community and 
 Working for a digital agency like BizStream can provide new developers with a wide range of benefits, including exposure to a diverse team of experts, a coordinated approach to online strategy, the opportunity to work on a variety of projects, mentorship, guidance from experienced developers, the chance to work with cutting-edge technologies, opportunities for career growth, and a sense of community and belonging. These benefits can help new developers gain valuable experience, develop professionally, and achieve their career goals while enjoying their job.
 View our Careers page for current open positions to take the first step towards joining our dynamic team!
 https://bizstream.com/blog/why-working-at-a-digital-agency-is-great-for-junior-developers/
+
+Why Marketers and Developers Are Turning to Headless CMS for Better User Experiences
+Content is the linchpin that connects you to your customers. In a world where people consume content on multiple devices and in many formats, ensuring a great experience is critical.
+A headless content management system (CMS) can be a powerful solution—not only for your users, but also for marketers and developers supporting content creation and development.
+By separating the back end from the front end, headless CMS can transform the way users experience your content—and the way companies approach content development.
+Read on to learn why a headless CMS might be a smart choice for organizations aiming to streamline content delivery across multiple platforms.
+The most important thing to know about a headless CMS is that it separates the creation and storage of content (back end) from the presentation and delivery (front end). Known as “decoupled” architecture, this approach can offer superior flexibility, scalability, site speed, and security.
+Unlike a traditional CMS, where content is tied to a pre-set theme, a headless CMS delivers it through Advanced Programming Interfaces (APIs).
+Key takeaway: A headless CMS stores and manages your content, while a presentation tool (website or mobile app) presents the content.
+This structure may make it easier to manage, deliver, and repurpose your content to match the omnichannel environment your customers use.
+To support the best possible delivery of content across a variety of formats, the headless approach involves creating modular content components that can be deployed to any type of front end. For example, suppose you’re creating a web page that includes:
+With a traditional CMS, you might break out a couple of these items in separate entry fields, but more likely, you’d just lay them out all together in a single content object using a What You See Is What You Get (WYSIWYG) editor.
+A headless system, such as Storyblok or similar platforms, breaks these components down even further and doesn’t mix content, layout, and design—keeping the end display more flexible:
+The CMS enables you to specify which of these pieces should link with others by adding tags and taxonomy notations to each item.
+With this information, developers can use programmatic APIs to pull the content into a variety of front ends. The results can be more adaptable and reusable than a big block of content designed for a static webpage shoehorned into other formats.
+A traditional, monolithic CMS may feel limiting depending on project goals or complexity. Its architecture can sometimes create workflow bottlenecks or reduce flexibility.
+Common challenges include:
+As a marketer, you need to get campaigns off the ground fast. A headless CMS’ centralized content repository can make it easier to create content once and publish it across multiple channels—often with less reliance on development teams.
+If you choose a headless CMS with a visual editor, like Storyblok or other similar platforms, your content creators can preview website changes in real time.
+A headless approach can also offer advantages in content strategy. Thinking about content in modular, reusable chunks helps tighten messaging and lead users toward a clear outcome.
+It encourages deeper content evaluation:
+This more granular approach can support improved taxonomy, tagging, and reuse—benefiting both users and marketers.
+Because a headless CMS separates the back end from the front end, developers can work with the technologies they prefer. In contrast, traditional CMS platforms may restrict your programming language or integration options.
+A headless CMS can empower your team to adopt best-of-breed tools that align with your business goals—whether that’s marketing automation, ecommerce, or another integration.
+Many developers work in agile environments. A headless CMS can fit well with these workflows, helping marketing and development teams work in sync.
+We can help. BizStream brings deep experience across multiple CMS platforms—from traditional solutions like Kentico to modern headless CMSs like Storyblok, Kontent.ai, and Payload. Whether you’re working with an existing platform or exploring new options, we help you assess your needs and recommend the best-fit approach for your business, team, and tech stack.
+By working with us, you’ll get:
+This post was written by Kile Lindgren, a Solution Architect at BizStream and an official Storyblok Ambassador. Learn what his Ambassador status means for our clients.
+https://bizstream.com/blog/why-marketers-and-developers-are-turning-to-headless-cms-for-better-user-experiences/
+
+Join BizStream at CSAE’s 2025 Annual Conference
+We’re thrilled to announce that BizStream is the presenting sponsor of the 2025 CSAE Annual Conference, taking place June 4–6 at the newly opened Hotel Polaris at the Air Force Academy. This three-day event is CSAE’s largest of the year—bringing together association executives and professionals for keynote sessions, workshops, networking, and innovative thinking.
+Whether you’re looking to spark fresh ideas, earn CAE credits, or discover new ways to elevate your organization, this conference is the place to be.
+Presented by Rob Bean, Senior Strategist, and Jordan Ellertson, Senior Account Strategist at BizStream, this interactive breakout will walk through a practical and proven Discovery process designed to uncover business goals, member needs, and tech requirements before jumping into your next big initiative.
+You’ll leave with a framework you can put to work immediately—whether you’re launching a new website or rethinking how your association delivers value.
+📍 Thursday, June 5 | 9:30 – 10:15 a.m.
+Learn how Discovery fuels smarter decisions and more impactful outcomes
+Get a take-home rubric to apply in your organization tomorrow
+Hear real transformation stories from associations like ASNT, IWI, and ABA
+Connect with two seasoned strategists who bring deep experience in association growth
+Rob Bean, Senior Strategist at BizStream, specializes in helping associations build better website experiences through a thoughtful application of strategy, creativity, and technology. Bean has generated great results for organizations such as CSU College of Business, Investments & Wealth Institute, the National Society of Black Engineers, The American Society for Non-Destructive Testing, and Western Research Institute.
+Jordan Ellertson, Senior Account Strategist at BizStream, is passionate about organization, details, and planning. Jordan has spent over a decade implementing complex technology solutions, from CRM implementations to website builds. Her experience in business operations and digital marketing gives her a unique perspective across a variety of business needs and industries. She brings strategic foresight, practical expertise, and a collaborative approach to every project.
+We’re honored to be part of CSAE’s mission to create meaningful connections and future-focused solutions for associations everywhere. Register to attend here.
+BizStream is a digital agency focused on brands, websites, and products. We specialize in strategy, custom design, and complex implementations that deliver results and make our customers long-term raving fans. We have extensive experience with a wide range of online tools and technologies, and we’re one of the most respected CMS partners in the world. bizstream.com
+The Colorado Society of Association Executives (CSAE) is the association of association professionals across Colorado. CSAE’s mission is to create opportunities for association professionals from across industries to succeed for their members through the collaborative and collective power of working together. csae.org
+https://bizstream.com/blog/join-bizstream-at-csaes-2025-annual-conference/
 
 Kile Lindgren Recognized as Storyblok Ambassador
 We’re thrilled to announce that Kile Lindgren, Solution Architect at BizStream, has been officially named a Storyblok Ambassador!
@@ -2207,46 +2275,6 @@ By using these methods, you can efficiently execute queries and handle the resul
 The updates to Xperience by Kentico represent a significant evolution in how developers can query and structure content within the platform. The shift from the traditional TreeNode structure to a more modular and flexible architecture, combined with the new querying capabilities, makes Xperience by Kentico a capable solution for modern web development needs.
 https://bizstream.com/blog/xperience-by-kentico-content-querying-updates/
 
-The Power of Effective Communication in Project Management
-“Genius is the ability to put into effect what is on your mind.” – F. Scott Fitzgerald
-Project management and communications are inseparably linked.
-In the world of project management, success is often determined by the effectiveness of communication. Picture this: you’re leading a team on a complex project, juggling deadlines and client expectations. Suddenly, a critical team member is unsure about their role, and a key stakeholder feels out of the loop. The entire project starts to unravel. What could have prevented this chaos? The answer is clear communication.
-In this blog post, we’ll explore how effective communication can significantly impact project management and share some real-world examples and practical tips for enhancing communication within your team.
-Imagine you’re building a house. The architect, builders, electricians, and plumbers must work together seamlessly. If the architect envisions a modern masterpiece while the builder thinks rustic cottage, the result will be a disaster. In project management, clear communication ensures that everyone involved is aligned with the project’s goals and expectations.
-Effective communication fosters a collaborative environment where team members feel comfortable sharing ideas and feedback.
-Projects always face unexpected challenges and changes. Consider the previous example of building a house, and imagine the project runs into geological issues. A project cannot be built successfully on a poor foundation (in this example, quite literally). If the project manager encouraged open communication, it would allow the team to quickly identify the problem and develop a new plan. This example illustrates the importance of communication in managing risks and changes.
-Effective communication is not just about internal team dynamics; it also involves engaging with stakeholders.
-I wouldn’t mow my lawn with a pair of scissors, and I wouldn’t cut my toast with a chainsaw. There always needs to be intentionality when choosing the right tool for the job. Similarly, utilizing the right communication tools can make or break a project. For instance, a remote team working across different time zones might rely on Slack for instant messaging, Zoom for video calls, and Asana for task management. Choosing the right tools for your team’s needs ensures seamless communication.
-Create an environment where team members feel comfortable sharing their thoughts and concerns. Encourage open dialogue by actively listening and valuing input from all team members. During a change management project I was involved with, a simple suggestion box led to a wealth of new ideas and improvements, proving that sometimes the quietest voices have the most impactful contributions.
-Regular meetings help keep the team aligned and provide an opportunity to address any issues or questions. However, be mindful not to over-schedule meetings. Jeff Bezos famously adopted the “two pizza rule”: never have a meeting where two pizzas wouldn’t feed the group. Ensure each meeting has a clear purpose and agenda to avoid unnecessary gatherings.
-When communicating, aim to be as clear and concise as possible. Avoid jargon and complex language that may confuse team members or stakeholders. This is particularly important within the technology industry, where audience comprehension of complex concepts may be wildly varied, even within expert teams. This can also help avoid making assumptions.
-Constructive feedback is an essential component of effective communication. Provide regular feedback to team members, acknowledging their strengths and offering guidance on areas for improvement. This also means sharing and celebrating wins publicly, particularly on projects that operate within sprints, to keep up the team morale and momentum.
-Effective communication is the cornerstone of successful project management. By prioritizing clear and open communication, project managers can align goals, foster collaboration, manage risks, and engage stakeholders more effectively. As a result, projects are more likely to be completed on time, within budget, and to the satisfaction of all parties involved.Embrace the power of communication in your project management efforts, and watch as your team’s productivity and success soar to new heights. Apply this wisdom to your projects, and success will surely follow.
-https://bizstream.com/blog/the-power-of-effective-communication-in-project-management/
-
-Communication Roles: Changing Your Approach to Fit the Situation
-Effective communication is the backbone of successful project management. Nothing can build or break confidence more than the way we communicate, both with our clients and with our teams. Understanding and mastering various communication roles and knowing when to use which strategy, can enhance team collaboration and impact overall confidence. Here, we explore five key communication roles: the Expert, the Owner, the Guide, the Consultant, and the Facilitator.
-The Expert role is crucial for moving projects forward with informed decisions. In this role, you provide your professional opinion backed by solid reasoning.
-For example, if asked, “Why would you choose to build this website using NextJS?” a succinct response might be:“We chose NextJS for its ability to provide server-side rendering, which improves page load times and enhances SEO. Additionally, its ease of integration with various APIs and extensive community support makes it a reliable choice for our web development needs.”As an Expert, your goal is to present well-founded, singular opinions that help drive the project in the right direction.
-The Owner role is about providing clear, analytical updates without delving into storytelling. This style is particularly effective for status reports. Here’s how to structure your communication as an Owner:
-State your objective: “Our objective is to complete the client’s website redesign.”
-Provide the current state: “We are currently on track to finish on time and have 70% of the designs completed.”
-Name the next steps or timetable: “The next milestone is the final design approval, which is scheduled for next Friday.”By focusing on these elements, you ensure that your communication is concise and informative, keeping everyone aligned on progress and next steps. This is a no-fluff approach. Leave the “why” out of it.
-The Guide role involves setting context and telling stories to provide clarity and direction. This is especially useful when dealing with complex or ambiguous tasks. For instance:
-State the situation: “We need to estimate these user stories before the sprint kickoff on Friday.”
-State the complication: “There are still some unknowns on several user stories.”
-Resolution: “Can the Business Analyst please work with the dev team and possibly the client to resolve these unknowns so we can complete the estimation?”
-By framing the situation this way, you help your team understand the broader context and the importance of resolving specific issues, thereby guiding them toward effective solutions. Where the Owner role avoids the use of “Why”, the guide uses “Why” or context to help explain the difficulties and nuance of a tough situation.
-Ideally, this is used outside of stand-ups, which are intended to be short and concise.
-The Consultant role is about empowering others to take action, making it ideal for client interactions. When presenting options, avoid solving the problem outright. For example:State the situation: “Our sprint kickoff is at the end of the week, and we need to share our total estimate with the client.”State the complication: “The estimated effort is higher than we estimated during the sales process.”
-Option 1: “We can look for a less complicated solution.”
-Option 2: “We could consider cutting out some less important features.”
-Option 3: “We could look for additional budget if everything is needed and no changes are possible.”
-If asked, you can then provide your recommended resolution. This approach empowers clients and team members to weigh their options and make informed decisions. It leverages the expertise of all parties but gives room for personal opinions and overall collaboration.
-The Facilitator role is essential for gaining buy-in from the wider team, especially when dealing with less appealing tasks. Consider this scenario:Situation: “We need to maintain legacy services for several of our clients.”Complication: “These services run on an old server that we need to decommission, but moving them requires updating those existing services.”Ask a question: “How do you think we should handle this situation?”By posing a question, you invite input and collaboration, which can be particularly effective in overcoming resistance and ensuring team commitment to necessary but less exciting tasks. This is also helpful when your role is identifying issues, but you personally lack the expertise on how to resolve the problem. It is similar to the consultative approach but is more hands-off in providing a solution.
-Mastering these five communication roles—Expert, Owner, Guide, Consultant, and Facilitator—can greatly enhance the effectiveness of your communication within the scope of a project. Each role serves a specific purpose and, when used appropriately, can lead to better project outcomes, stronger team collaboration, and more satisfied stakeholders. Try some of these strategies out the next time you find yourself in a situation that requires a nuanced approach to communication.
-https://bizstream.com/blog/communication-roles-changing-your-approach-to-fit-the-situation/
-
 Our Blog
 Get the latest news and updates from BizStream sent directly to your inbox.
 https://bizstream.com/blog/page/2/
@@ -2275,23 +2303,49 @@ Our Blog
 Get the latest news and updates from BizStream sent directly to your inbox.
 https://bizstream.com/blog/page/8/
 
-Kile Lindgren
-Kile helps businesses build sustainable momentum by constructing scalable technology solutions to meet the unique objectives of B2B organizations.
-https://bizstream.com/about/team/kile-lindgren
+The BizStream Internship Program
+Are you interested in applying for an internship at BizStream, or are you looking for inspiration to develop your own successful program?
+Regardless of your needs, I think you’ll find some valuable insights here to help you either take part in or run your own internship program. Today, I’m excited to share the ins and outs of the internship process here at BizStream.
+My goal is to give you a peek into the inner workings of our tried and true process for hiring and working alongside interns. If you’re considering applying for one of our internship positions, I hope to provide all the preparation you need to make that decision with confidence. We’ve learned a lot over the years, and I hope our experiences can help you avoid some of the pitfalls we’ve encountered.
+It’s very important that we discuss what an intern is and is not at BizStream.
+An intern is not:
+An intern is:
+There are a lot of internships out there. We get it. It can be overwhelming to sift through thousands of opportunities only to find a job listing at a “respectable company” where you’ll be stuck doing grunt work for the next 90 days. You end up walking out, having learned nothing except how to efficiently place orders at Starbucks. Been there. No thanks.
+At BizStream, we believe it’s our responsibility to lead and foster growth in the next generation—the future builders of cool things that make a worldly impact. That’s why landing an internship here is so challenging. We have incredibly high standards and expectations. But don’t let that discourage you. You’ve read this far, so why not keep going?
+The first thing we ask is for anyone interested in applying for our internship program to go to bizstream.com/careers/internships. From that page, scroll to the bottom and see if there is an open position for an internship within your line of profession. As of writing this, we have one developer internship slot currently open. If you select “Learn More” you will be taken to a detail page describing the internship position. If you want to apply, simply select “Apply to Position”.
+We also have an “Internship Availability” graphic on that page which can help those seeking a specific date/time for their internship to know if we have any availability.
+Once the internship form has been submitted and the candidate has uploaded the typical requests (resume, portfolio link, LinkedIn) via our form, our team gathers the applications and does a first-round vetting.
+This first round of vetting is to check for things like:
+If a potential candidate passes the initial vetting phase, we move on to the phone interview, typically a 30-minute conversation. The goal is to get the individual relaxed and talking about their passions. We want to know what they hope to gain from this internship and assess whether BizStream is the right place for them to achieve those goals.
+Note: It is crucial that expectations are set and as clear and concise as possible. Make sure you have a clear understanding of the duration, timeline, compensation, and any other school-related requirements (if any).
+If the candidate makes it past the phone interview, that’s when the real fun begins. Specific to our development interns, our team has crafted a unique and engaging set of tests using coderpad.io to give us a baseline of the applicant’s skill set. This forms the foundation for how we craft their experience at BizStream. Not to worry, though! The whole test takes roughly 2–4 hours, depending on experience level.
+I mentioned above that our internships are a notch above the rest. We don’t hire on grunts. We hire passionate individuals who want to gain a high level of experience from industry professionals. I know it sounds cliche, but you would not believe how many places get this wrong.
+Before I get into the details, it’s important to understand that no two internships are identical. We offer marketing, design, and development internship positions, and each intern comes with a certain level of experience, which dictates how far down the path they will travel.
+On day one, our interns get a crash course in the “Life at BizStream”  and a team lunch to get to know their team members. We then assign each intern a mentor for the duration of their internship. Our goal is to ensure our interns are never forgotten and feel fully integrated into our teams. They attend all of our team standups, are reviewed by their peers as an operating member of the team, and are required to show up within our designated work times.
+We curate an internship experience to be unique to the individual. For example, our most recent intern was a developer on Team Tangerine. Her first 30 days included a lot of reading from some of our favorite books (Add links to starting books), as well as solutioning, architecting, and building out her own personal project.
+If the individual crushes their personal project, their mentor may decide to transition them into working on a BizStream internal project. These projects are designed to bring significant ROI to the greater BizStream team. For a developer internship, it could be an application that automates building out SOWs, a better tracking system for our daily goals, or even a potential product we plan to ship. For marketing, maybe it’s a re-design of one of our existing websites or updating content in our space to bring it up to brand. Regardless, it’s a tremendous opportunity.
+Certain interns may even get a chance to move into billable client work. This is where the rubber meets the road in terms of skill set and actual application; dealing with real-world requirements and deadlines.
+At the end of the 90 days, we review the intern’s time with us via 360 feedback. Our team spends at least an hour doing a deep dive into their work output and overall experience. And let’s not forget, we send them off with a fun social hour/mixer.
+We have spent years crafting our internship process into what we believe is a valuable opportunity for anyone who is trying to break into our industry. It’s challenging and at times can be a bit of a push out of their comfort zone. However, our unique approach to how we so intricately weave these candidates into our BizStream family is what makes BizStream such a unique place to work.
+We offer internships in many fields, including web development, creative design, and marketing. To learn more about our internship program, check out our internship page to see what opportunities are available.
+Check out more of our internship-related blog posts: Fostering Growth and Nurturing Potential: Welcoming Our Five Newest Interns! and 4 Tips for Maximizing Your Internship Experience.
+https://bizstream.com/blog/the-bizstream-internship-program/
 
-Rob Bean
-Rob’s specialty is developing digital standouts—one relationship at a time. For more than two decades, Rob has helped global B2B organizations build their marketing practices to drive business growth.
-https://bizstream.com/about/team/rob-bean
-
-Jordan Ellertson
-Jordan is passionate about organization, details, and planning. She brings strategic foresight, practical expertise, and a collaborative approach to every project. In her free time, Jordan spends time with her husband, two daughters, and several pets. She also enjoys photography, painting, crocheting, and spending time in the Colorado wilderness.
-https://bizstream.com/about/team/jordan-ellertson
-
-We’re a digital agency focused on elevating brands, websites, and products. Our expertise and track record of award-winning work helps us accelerate growth for our clients.
-BizStream has been our partner on multiple projects for years now. They have truly become that: a partner. We collaborate to create the best sites possible.
-As audiences engage across more devices and formats, delivering a seamless experience is key. A headless CMS offers marketers and developers the flexibility to create and manage content efficiently—enhancing user experiences at every touchpoint.
-Discover how BizStream helps associations turn insights into action at the 2025 CSAE Annual Conference. Join our session on leveraging Discovery to drive digital growth and member engagement.
-https://bizstream.com/
+Brian McKeiver
+I like that BizStream is purely powered by its employees. Every minute of every day that we put into BizStream is a direct correlation to the amount of success BizStream has.
+I joined BizStream on May 5, 2002. I remember the exact day because it was right after I graduated from Grand Valley State University. I had been promised a position with a large West Michigan employer, and for one reason or another it just didn’t work out, and next thing I knew I was looking for my next opportunity.
+That same day, I met Mark, who I knew from my college days, for lunch. It was just happenstance we had lunch the same day I was suddenly without a job. He offered me a position on the spot.
+I went back to the office with Mark after lunch and he showed me the product he was building. The technology was really advanced at that time. I knew right away this was the place I wanted to be. It was the second-best decision I have ever made in my life (sorry Mark, but the best decision still is the day I decided to take my wife out on our first date).
+I was really attracted to BizStream because of the vision and possibilities Mark had for this new start-up company. I believed in BizStream so much that after 3 and a half years I became a co-owner.
+I like that BizStream is purely powered by its employees. Every minute of every day that we put into BizStream is a direct correlation to the amount of success BizStream has.
+We have a group of like-minded people here. There’s a great spirit of camaraderie. The passion for what we do shows in each team member. I’m confident that with our team, no matter what the product or project is, we can do it. When people think it can’t be done, we’ve done it.
+I love my work, especially the problem-solving. I like saving companies time and money. And, I like to build web apps. It’s what I’d do even if BizStream didn’t exist. What we do at BizStream isn’t easy, but I wouldn’t have it any other way. It’s challenging, sure, but I couldn’t be in a job that wasn’t. In addition to development, I do project management, operations, mentoring, sales, and marketing.
+It also makes me happy that we’ve put our feet down here in Allendale, and that we give back to the community with things such as the BizStream Academy — a program where we offer development training for students — and by supporting community events and non-profit agencies.
+I work a lot because I love it, but I do have a life outside of work, which is one of the great things about BizStream — the work/life balance. Outside of work, I hang out with my wife and 3 girls. I’m no stranger to Barbie and pink princess stuff. Watching them grow has been incredibly rewarding.
+When I was in high school, I was the Grand Rapids City League champion of cross country (distance running),  and at GVSU, I was the president of the Ultimate Frisbee Club. Now, I still love to watch sports, play video games, and golf when I can. Finding a nicely crafted beer is also on the top of my list of things I enjoy. I spend a lot of time writing tips and tricks about Kentico’s platforms, Kentico Xperience and Kontent.ai, on my blog at www.mcbeev.com. In 2012, Kentico recognized me as one of the few Kentico MVPs in the world. When I have a rare few minutes of downtime, I dive into reading about and exploring new technology.
+As a kid, I delivered newspapers, which taught me a lot about getting things done no matter what. People don’t care that it’s raining or snowing; they want their newspapers. I owe a lot to my parents for the way they taught me life lessons early on, especially for not letting me take a day off even when I wanted to. I worked for a local grocery store chain in just about every position, from grocery to floral, to the meat department. At the time, I didn’t realize it, but I was learning what “whatever it takes” really means.
+I was born and raised in Grand Rapids, which makes West Michigan my home, and I absolutely love it here. However, in my role as Kentico MVP, I’ve had many opportunities to experience a number of places around the US and the world. That said, I’m pretty sure that Las Vegas is the 2nd best place on earth for me. I’ve never met a Roulette table I didn’t like.
+https://bizstream.com/about/team/brian-mckeiver
 
 Elevating User Experience and Digital Strategy for a Global Accounting Leader
 BDO Global is a professional services firm providing assurance, tax, financial advisory, and consulting services to privately held and publicly traded companies and the U.S. member firm of the BDO global network.
@@ -2311,6 +2365,12 @@ BDO USA, LLP is a professional services firm providing assurance, tax, and advis
 BDO USA, LLP worked with BizStream to upgrade their previous site from Kentico 12 to Kentico 13 with .NET 6 and ASP.NET Core MVC. The new BDO.com site includes features that are personalized and tailored to the user, as well as interactive opportunities to connect with BDO throughout. The goal was to give BDO.com visitors the best possible experience through a completely new modern responsive design, intuitive navigation, powerful onsite search, personalized recommendations, and meet WCAG accessibility standards and best practices.
 BizStream was instrumental in the launch of our new website. Their deep knowledge of Kentico, combined with a genuine understanding of our goals, resulted in an extremely collaborative project from start to finish. BizStream goes above and beyond to deliver the best possible solution. We truly value and appreciate their expertise and our long-standing partnership.
 https://bizstream.com/project/bdo-usa-llp-kentico-13/
+
+We’re a digital agency focused on elevating brands, websites, and products. Our expertise and track record of award-winning work helps us accelerate growth for our clients.
+BizStream has been our partner on multiple projects for years now. They have truly become that: a partner. We collaborate to create the best sites possible.
+Discover how six talented interns are gaining hands-on experience, mentorship, and career-shaping skills through BizStream’s Summer 2025 Internship Program.
+BizStream Co-Owner Brian McKeiver earns the Xperience by Kentico Marketer Certification, showcasing his continued leadership and deep expertise in digital marketing strategy and implementation on the Kentico platform.
+https://bizstream.com/
 
 BizStream Has a New Look
 We’ve come a long way since our founding. Our previous brand no longer fits our capabilities or our future ambitions. To better align our brand experience with the direction our agency is headed, a full rebrand was necessary.
@@ -2371,22 +2431,6 @@ BizStream is a full-service digital agency focused on brands, websites, and prod
 Michigan Celebrates Small Business (MCSB) is a collaboration of trusted statewide founding organizations who offer resources for small businesses. Since 2005, Michigan Celebrates Small Business awards gala has placed a spotlight on how small businesses positively impact our communities and state. The MCSB organization is focused on supporting, promoting, and celebrating small businesses in Michigan.
 https://bizstream.com/blog/bizstream-recognized-for-astounding-impact-on-michigans-economy/
 
-Brian McKeiver
-I like that BizStream is purely powered by its employees. Every minute of every day that we put into BizStream is a direct correlation to the amount of success BizStream has.
-I joined BizStream on May 5, 2002. I remember the exact day because it was right after I graduated from Grand Valley State University. I had been promised a position with a large West Michigan employer, and for one reason or another it just didn’t work out, and next thing I knew I was looking for my next opportunity.
-That same day, I met Mark, who I knew from my college days, for lunch. It was just happenstance we had lunch the same day I was suddenly without a job. He offered me a position on the spot.
-I went back to the office with Mark after lunch and he showed me the product he was building. The technology was really advanced at that time. I knew right away this was the place I wanted to be. It was the second-best decision I have ever made in my life (sorry Mark, but the best decision still is the day I decided to take my wife out on our first date).
-I was really attracted to BizStream because of the vision and possibilities Mark had for this new start-up company. I believed in BizStream so much that after 3 and a half years I became a co-owner.
-I like that BizStream is purely powered by its employees. Every minute of every day that we put into BizStream is a direct correlation to the amount of success BizStream has.
-We have a group of like-minded people here. There’s a great spirit of camaraderie. The passion for what we do shows in each team member. I’m confident that with our team, no matter what the product or project is, we can do it. When people think it can’t be done, we’ve done it.
-I love my work, especially the problem-solving. I like saving companies time and money. And, I like to build web apps. It’s what I’d do even if BizStream didn’t exist. What we do at BizStream isn’t easy, but I wouldn’t have it any other way. It’s challenging, sure, but I couldn’t be in a job that wasn’t. In addition to development, I do project management, operations, mentoring, sales, and marketing.
-It also makes me happy that we’ve put our feet down here in Allendale, and that we give back to the community with things such as the BizStream Academy — a program where we offer development training for students — and by supporting community events and non-profit agencies.
-I work a lot because I love it, but I do have a life outside of work, which is one of the great things about BizStream — the work/life balance. Outside of work, I hang out with my wife and 3 girls. I’m no stranger to Barbie and pink princess stuff. Watching them grow has been incredibly rewarding.
-When I was in high school, I was the Grand Rapids City League champion of cross country (distance running),  and at GVSU, I was the president of the Ultimate Frisbee Club. Now, I still love to watch sports, play video games, and golf when I can. Finding a nicely crafted beer is also on the top of my list of things I enjoy. I spend a lot of time writing tips and tricks about Kentico’s platforms, Kentico Xperience and Kontent.ai, on my blog at www.mcbeev.com. In 2012, Kentico recognized me as one of the few Kentico MVPs in the world. When I have a rare few minutes of downtime, I dive into reading about and exploring new technology.
-As a kid, I delivered newspapers, which taught me a lot about getting things done no matter what. People don’t care that it’s raining or snowing; they want their newspapers. I owe a lot to my parents for the way they taught me life lessons early on, especially for not letting me take a day off even when I wanted to. I worked for a local grocery store chain in just about every position, from grocery to floral, to the meat department. At the time, I didn’t realize it, but I was learning what “whatever it takes” really means.
-I was born and raised in Grand Rapids, which makes West Michigan my home, and I absolutely love it here. However, in my role as Kentico MVP, I’ve had many opportunities to experience a number of places around the US and the world. That said, I’m pretty sure that Las Vegas is the 2nd best place on earth for me. I’ve never met a Roulette table I didn’t like.
-https://bizstream.com/about/team/brian-mckeiver
-
 About
 At BizStream, we’re serious about driving results for our clients, but we believe the journey there should be as enjoyable as the destination. Our team is a dynamic mix of curious minds, creative problem-solvers, and big-hearted collaborators who bring passion, expertise, and vibrancy to every project.
 We’re proud and humbled by the awards we’ve received and the certifications we’ve achieved.
@@ -2419,6 +2463,18 @@ https://bizstream.com/about/team/bizstream-alumni/
 Courtney Klawieter
 Courtney is a web developer and chiropractor passionate about wellness and technology. She grew up in Rockford, Michigan, and attended Aquinas College for her undergraduate degree. After graduation, Courtney earned her doctorate from Palmer College of Chiropractic. Courtney transitioned from health care to website development because she felt an innate drive to challenge herself to learn new skills and wanted to help people regardless of location. In her free time, she enjoys rugby, rock climbing, hiking, fishing, hunting, and spending time with her dog.
 https://bizstream.com/about/team/courtney-klawieter
+
+Kile Lindgren
+Kile helps businesses build sustainable momentum by constructing scalable technology solutions to meet the unique objectives of B2B organizations.
+https://bizstream.com/about/team/kile-lindgren
+
+Rob Bean
+Rob’s specialty is developing digital standouts—one relationship at a time. For more than two decades, Rob has helped global B2B organizations build their marketing practices to drive business growth.
+https://bizstream.com/about/team/rob-bean
+
+Jordan Ellertson
+Jordan is passionate about organization, details, and planning. She brings strategic foresight, practical expertise, and a collaborative approach to every project. In her free time, Jordan spends time with her husband, two daughters, and several pets. She also enjoys photography, painting, crocheting, and spending time in the Colorado wilderness.
+https://bizstream.com/about/team/jordan-ellertson
 
 5 Questions You Should Ask Yourself About Your Company’s Brand Experience
 A strong brand identity is critical for any business that wants to stand out in today’s competitive market. Your brand is not just your logo or your website; it’s the entire experience that your customers have with your company. To ensure that your brand experience is consistent, relevant, and engaging, there are five key questions that you should ask yourself.
@@ -2554,6 +2610,46 @@ Tyler Stirtz
 Tyler began his career in healthcare but quickly realized he was missing out on the creativity and logical aspect of computer programming. Shortly after that realization, Tyler decided to pursue his long-running interest in coding as a career, and he loves every second of it! Outside of BizStream, you can find Tyler backpacking, coding up a new project at home, playing video games, or exploring new breweries with friends.
 https://bizstream.com/about/team/tyler-stirtz
 
+The Power of Effective Communication in Project Management
+“Genius is the ability to put into effect what is on your mind.” – F. Scott Fitzgerald
+Project management and communications are inseparably linked.
+In the world of project management, success is often determined by the effectiveness of communication. Picture this: you’re leading a team on a complex project, juggling deadlines and client expectations. Suddenly, a critical team member is unsure about their role, and a key stakeholder feels out of the loop. The entire project starts to unravel. What could have prevented this chaos? The answer is clear communication.
+In this blog post, we’ll explore how effective communication can significantly impact project management and share some real-world examples and practical tips for enhancing communication within your team.
+Imagine you’re building a house. The architect, builders, electricians, and plumbers must work together seamlessly. If the architect envisions a modern masterpiece while the builder thinks rustic cottage, the result will be a disaster. In project management, clear communication ensures that everyone involved is aligned with the project’s goals and expectations.
+Effective communication fosters a collaborative environment where team members feel comfortable sharing ideas and feedback.
+Projects always face unexpected challenges and changes. Consider the previous example of building a house, and imagine the project runs into geological issues. A project cannot be built successfully on a poor foundation (in this example, quite literally). If the project manager encouraged open communication, it would allow the team to quickly identify the problem and develop a new plan. This example illustrates the importance of communication in managing risks and changes.
+Effective communication is not just about internal team dynamics; it also involves engaging with stakeholders.
+I wouldn’t mow my lawn with a pair of scissors, and I wouldn’t cut my toast with a chainsaw. There always needs to be intentionality when choosing the right tool for the job. Similarly, utilizing the right communication tools can make or break a project. For instance, a remote team working across different time zones might rely on Slack for instant messaging, Zoom for video calls, and Asana for task management. Choosing the right tools for your team’s needs ensures seamless communication.
+Create an environment where team members feel comfortable sharing their thoughts and concerns. Encourage open dialogue by actively listening and valuing input from all team members. During a change management project I was involved with, a simple suggestion box led to a wealth of new ideas and improvements, proving that sometimes the quietest voices have the most impactful contributions.
+Regular meetings help keep the team aligned and provide an opportunity to address any issues or questions. However, be mindful not to over-schedule meetings. Jeff Bezos famously adopted the “two pizza rule”: never have a meeting where two pizzas wouldn’t feed the group. Ensure each meeting has a clear purpose and agenda to avoid unnecessary gatherings.
+When communicating, aim to be as clear and concise as possible. Avoid jargon and complex language that may confuse team members or stakeholders. This is particularly important within the technology industry, where audience comprehension of complex concepts may be wildly varied, even within expert teams. This can also help avoid making assumptions.
+Constructive feedback is an essential component of effective communication. Provide regular feedback to team members, acknowledging their strengths and offering guidance on areas for improvement. This also means sharing and celebrating wins publicly, particularly on projects that operate within sprints, to keep up the team morale and momentum.
+Effective communication is the cornerstone of successful project management. By prioritizing clear and open communication, project managers can align goals, foster collaboration, manage risks, and engage stakeholders more effectively. As a result, projects are more likely to be completed on time, within budget, and to the satisfaction of all parties involved.Embrace the power of communication in your project management efforts, and watch as your team’s productivity and success soar to new heights. Apply this wisdom to your projects, and success will surely follow.
+https://bizstream.com/blog/the-power-of-effective-communication-in-project-management/
+
+Communication Roles: Changing Your Approach to Fit the Situation
+Effective communication is the backbone of successful project management. Nothing can build or break confidence more than the way we communicate, both with our clients and with our teams. Understanding and mastering various communication roles and knowing when to use which strategy, can enhance team collaboration and impact overall confidence. Here, we explore five key communication roles: the Expert, the Owner, the Guide, the Consultant, and the Facilitator.
+The Expert role is crucial for moving projects forward with informed decisions. In this role, you provide your professional opinion backed by solid reasoning.
+For example, if asked, “Why would you choose to build this website using NextJS?” a succinct response might be:“We chose NextJS for its ability to provide server-side rendering, which improves page load times and enhances SEO. Additionally, its ease of integration with various APIs and extensive community support makes it a reliable choice for our web development needs.”As an Expert, your goal is to present well-founded, singular opinions that help drive the project in the right direction.
+The Owner role is about providing clear, analytical updates without delving into storytelling. This style is particularly effective for status reports. Here’s how to structure your communication as an Owner:
+State your objective: “Our objective is to complete the client’s website redesign.”
+Provide the current state: “We are currently on track to finish on time and have 70% of the designs completed.”
+Name the next steps or timetable: “The next milestone is the final design approval, which is scheduled for next Friday.”By focusing on these elements, you ensure that your communication is concise and informative, keeping everyone aligned on progress and next steps. This is a no-fluff approach. Leave the “why” out of it.
+The Guide role involves setting context and telling stories to provide clarity and direction. This is especially useful when dealing with complex or ambiguous tasks. For instance:
+State the situation: “We need to estimate these user stories before the sprint kickoff on Friday.”
+State the complication: “There are still some unknowns on several user stories.”
+Resolution: “Can the Business Analyst please work with the dev team and possibly the client to resolve these unknowns so we can complete the estimation?”
+By framing the situation this way, you help your team understand the broader context and the importance of resolving specific issues, thereby guiding them toward effective solutions. Where the Owner role avoids the use of “Why”, the guide uses “Why” or context to help explain the difficulties and nuance of a tough situation.
+Ideally, this is used outside of stand-ups, which are intended to be short and concise.
+The Consultant role is about empowering others to take action, making it ideal for client interactions. When presenting options, avoid solving the problem outright. For example:State the situation: “Our sprint kickoff is at the end of the week, and we need to share our total estimate with the client.”State the complication: “The estimated effort is higher than we estimated during the sales process.”
+Option 1: “We can look for a less complicated solution.”
+Option 2: “We could consider cutting out some less important features.”
+Option 3: “We could look for additional budget if everything is needed and no changes are possible.”
+If asked, you can then provide your recommended resolution. This approach empowers clients and team members to weigh their options and make informed decisions. It leverages the expertise of all parties but gives room for personal opinions and overall collaboration.
+The Facilitator role is essential for gaining buy-in from the wider team, especially when dealing with less appealing tasks. Consider this scenario:Situation: “We need to maintain legacy services for several of our clients.”Complication: “These services run on an old server that we need to decommission, but moving them requires updating those existing services.”Ask a question: “How do you think we should handle this situation?”By posing a question, you invite input and collaboration, which can be particularly effective in overcoming resistance and ensuring team commitment to necessary but less exciting tasks. This is also helpful when your role is identifying issues, but you personally lack the expertise on how to resolve the problem. It is similar to the consultative approach but is more hands-off in providing a solution.
+Mastering these five communication roles—Expert, Owner, Guide, Consultant, and Facilitator—can greatly enhance the effectiveness of your communication within the scope of a project. Each role serves a specific purpose and, when used appropriately, can lead to better project outcomes, stronger team collaboration, and more satisfied stakeholders. Try some of these strategies out the next time you find yourself in a situation that requires a nuanced approach to communication.
+https://bizstream.com/blog/communication-roles-changing-your-approach-to-fit-the-situation/
+
 Generating Realistic Test Files for Secure and Comprehensive Application Testing
 In software development, generating test files is essential for various scenarios, especially when dealing with sensitive information. Creating realistic test data that mimics production data allows developers to thoroughly test and debug their applications in a controlled environment while ensuring compliance with data protection regulations.
 I have been working on the YouthCenter application by BizStream for a while. YouthCenter is a comprehensive juvenile case management system used by organizations such as juvenile probation, courts, and detention centers. Recently, I needed to implement a feature to facilitate file migration within the application. Using live production data was not an option due to the risk of exposing Personally Identifiable Information (PII) or other sensitive data protected under regulations like HIPAA. Instead, I generated a variety of documents, including Word files, Excel spreadsheets, PDFs, and images. This approach allowed me to test the application effectively without compromising real data, providing a reliable testing ground that closely resembled real-world usage.
@@ -2581,34 +2677,6 @@ The main program of the application serves as the entry point and coordinates th
 In a loop that runs for the specified number of files, the program randomly decides whether to create a new folder or use an existing one for each file. It selects a random file generator from the array and generates a file with a random name and appropriate extension in the chosen directory. The program ensures asynchronous operations complete before proceeding, providing an efficient and organized way to generate a diverse set of test files. This setup simulates real-world file handling scenarios, enhancing the robustness and comprehensiveness of application testing.File Path: Program.cs
 Creating an application to generate various types of test files (such as Word documents, Excel spreadsheets, CSV files, text files, PDF files, and images) ensures that developers can produce realistic and diverse data sets without using sensitive production data. This process is particularly useful for testing features like file processing, uploads, and migrations, allowing for comprehensive testing while maintaining data privacy and security. The application is organized into key components: a base file generator class, specific file generators for each file type, and utility classes. The main program coordinates the file generation process by prompting the user for the number of files to generate and leveraging these file generators to create content. By dynamically deciding whether to create new directories or use existing ones, the program effectively simulates real-world file organization. This setup enhances testing reliability, helping developers identify and fix potential issues, ultimately improving the application’s robustness and performance in production environments.
 https://bizstream.com/blog/generating-realistic-test-files-for-secure-and-comprehensive-application-testing/
-
-The BizStream Internship Program
-Are you interested in applying for an internship at BizStream, or are you looking for inspiration to develop your own successful program?
-Regardless of your needs, I think you’ll find some valuable insights here to help you either take part in or run your own internship program. Today, I’m excited to share the ins and outs of the internship process here at BizStream.
-My goal is to give you a peek into the inner workings of our tried and true process for hiring and working alongside interns. If you’re considering applying for one of our internship positions, I hope to provide all the preparation you need to make that decision with confidence. We’ve learned a lot over the years, and I hope our experiences can help you avoid some of the pitfalls we’ve encountered.
-It’s very important that we discuss what an intern is and is not at BizStream.
-An intern is not:
-An intern is:
-There are a lot of internships out there. We get it. It can be overwhelming to sift through thousands of opportunities only to find a job listing at a “respectable company” where you’ll be stuck doing grunt work for the next 90 days. You end up walking out, having learned nothing except how to efficiently place orders at Starbucks. Been there. No thanks.
-At BizStream, we believe it’s our responsibility to lead and foster growth in the next generation—the future builders of cool things that make a worldly impact. That’s why landing an internship here is so challenging. We have incredibly high standards and expectations. But don’t let that discourage you. You’ve read this far, so why not keep going?
-The first thing we ask is for anyone interested in applying for our internship program to go to bizstream.com/careers/internships. From that page, scroll to the bottom and see if there is an open position for an internship within your line of profession. As of writing this, we have one developer internship slot currently open. If you select “Learn More” you will be taken to a detail page describing the internship position. If you want to apply, simply select “Apply to Position”.
-We also have an “Internship Availability” graphic on that page which can help those seeking a specific date/time for their internship to know if we have any availability.
-Once the internship form has been submitted and the candidate has uploaded the typical requests (resume, portfolio link, LinkedIn) via our form, our team gathers the applications and does a first-round vetting.
-This first round of vetting is to check for things like:
-If a potential candidate passes the initial vetting phase, we move on to the phone interview, typically a 30-minute conversation. The goal is to get the individual relaxed and talking about their passions. We want to know what they hope to gain from this internship and assess whether BizStream is the right place for them to achieve those goals.
-Note: It is crucial that expectations are set and as clear and concise as possible. Make sure you have a clear understanding of the duration, timeline, compensation, and any other school-related requirements (if any).
-If the candidate makes it past the phone interview, that’s when the real fun begins. Specific to our development interns, our team has crafted a unique and engaging set of tests using coderpad.io to give us a baseline of the applicant’s skill set. This forms the foundation for how we craft their experience at BizStream. Not to worry, though! The whole test takes roughly 2–4 hours, depending on experience level.
-I mentioned above that our internships are a notch above the rest. We don’t hire on grunts. We hire passionate individuals who want to gain a high level of experience from industry professionals. I know it sounds cliche, but you would not believe how many places get this wrong.
-Before I get into the details, it’s important to understand that no two internships are identical. We offer marketing, design, and development internship positions, and each intern comes with a certain level of experience, which dictates how far down the path they will travel.
-On day one, our interns get a crash course in the “Life at BizStream”  and a team lunch to get to know their team members. We then assign each intern a mentor for the duration of their internship. Our goal is to ensure our interns are never forgotten and feel fully integrated into our teams. They attend all of our team standups, are reviewed by their peers as an operating member of the team, and are required to show up within our designated work times.
-We curate an internship experience to be unique to the individual. For example, our most recent intern was a developer on Team Tangerine. Her first 30 days included a lot of reading from some of our favorite books (Add links to starting books), as well as solutioning, architecting, and building out her own personal project.
-If the individual crushes their personal project, their mentor may decide to transition them into working on a BizStream internal project. These projects are designed to bring significant ROI to the greater BizStream team. For a developer internship, it could be an application that automates building out SOWs, a better tracking system for our daily goals, or even a potential product we plan to ship. For marketing, maybe it’s a re-design of one of our existing websites or updating content in our space to bring it up to brand. Regardless, it’s a tremendous opportunity.
-Certain interns may even get a chance to move into billable client work. This is where the rubber meets the road in terms of skill set and actual application; dealing with real-world requirements and deadlines.
-At the end of the 90 days, we review the intern’s time with us via 360 feedback. Our team spends at least an hour doing a deep dive into their work output and overall experience. And let’s not forget, we send them off with a fun social hour/mixer.
-We have spent years crafting our internship process into what we believe is a valuable opportunity for anyone who is trying to break into our industry. It’s challenging and at times can be a bit of a push out of their comfort zone. However, our unique approach to how we so intricately weave these candidates into our BizStream family is what makes BizStream such a unique place to work.
-We offer internships in many fields, including web development, creative design, and marketing. To learn more about our internship program, check out our internship page to see what opportunities are available.
-Check out more of our internship-related blog posts: Fostering Growth and Nurturing Potential: Welcoming Our Five Newest Interns! and 4 Tips for Maximizing Your Internship Experience.
-https://bizstream.com/blog/the-bizstream-internship-program/
 
 Transforming User Engagement: Advanced Search Functionality in Healthcare
 Robust search functionality on a healthcare website ensures patients, caregivers, and healthcare professionals can access the necessary information quickly. In an industry where timely access to accurate information can significantly impact outcomes, an intuitive search tool enhances user experience and builds trust in your website as a reliable resource.
@@ -5796,7 +5864,7 @@ https://bizstream.com/about/team/mike-webb
 
 Email Protection
 The website from which you got to this page is protected by Cloudflare. Email addresses on that page have been hidden in order to keep them from being accessed by malicious bots. You must enable Javascript in your browser in order to decode the e-mail address.
-https://bizstream.com/cdn-cgi/l/email-protection#94f6f7fbf9e4e7e0fbfad4f6fdeee7e0e6f1f5f9baf7fbf9
+https://bizstream.com/cdn-cgi/l/email-protection#ccaeafa3a1bcbfb8a3a28caea5b6bfb8bea9ada1e2afa3a1
 
 Do More with Kontent.ai
 BizStream is a Premium Partner of Kontent.ai that offers strategic guidance and expert advice to ensure you select the ideal Headless CMS technology tailored to your business goals.
@@ -6043,7 +6111,469 @@ We want to know what works, what didn’t, or what could be tweaked to make the 
 BizStream does not have all the right answers. Our team meets regularly to discuss what works what doesn’t. We have gone through several iterations to get the process to where it is now. Not all things described here will work for all companies, but I think it’s a good starting point to evaluate if you could be doing a better job as a team, department or company.
 https://bizstream.com/blog/june-2017/your-first-day-on-the-job-at-bizstream
 
-Amanda Hodges
-Amanda works part-time as BizStream’s bookkeeper and HR manager. She also supports the organization by performing various office tasks. Working part-time allows Amanda to spend time with her three kids and participate in their numerous extracurricular activities. When she has free time, Amanda enjoys going to the gym, hiking, and reading.
-https://bizstream.com/about/team/amanda-hodges
+Pages and Urls
+[We’re a digital agency focused on elevating brands, websites, and products. Our expertise and track record of award-winning work helps us accelerate growth for our clients.](https://bizstream.com)
+[Projects](https://bizstream.com/projects/)
+[Our Services](https://bizstream.com/services/)
+[Discovery & Roadmap](https://bizstream.com/services/discovery-and-roadmap/)
+[Branding & Identity Services](https://bizstream.com/services/branding-and-identity/)
+[Visual Design](https://bizstream.com/services/visual-design/)
+[Web Development Services](https://bizstream.com/services/web-development/)
+[Continuous Support Services](https://bizstream.com/services/continuous-support/)
+[Technology Partners](https://bizstream.com/technology/)
+[Kentico](https://bizstream.com/technology/kentico/)
+[Kontent.ai](https://bizstream.com/technology/kontent-ai/)
+[Microsoft Azure](https://bizstream.com/technology/azure/)
+[Storyblok](https://bizstream.com/technology/storyblok/)
+[Web Accelerator for Storyblok](https://bizstream.com/technology/web-accelerator-for-storyblok/)
+[Components and Features](https://bizstream.com/technology/web-accelerator-for-storyblok/components-and-features/)
+[Advanced Search Solutions](https://bizstream.com/technology/web-accelerator-for-storyblok/advanced-search-solutions/)
+[Web Accessibility](https://bizstream.com/technology/web-accelerator-for-storyblok/web-accessibility/)
+[Association Starter Site](https://bizstream.com/technology/web-accelerator-for-storyblok/association-starter-site/)
+[Conference Website Solution](https://bizstream.com/technology/web-accelerator-for-storyblok/conference-website-solution/)
+[Proof of Concept Websites](https://bizstream.com/technology/web-accelerator-for-storyblok/proof-of-concept-websites/)
+[Payload](https://bizstream.com/technology/payload/)
+[WordPress](https://bizstream.com/technology/wordpress/)
+[Figma](https://bizstream.com/technology/figma/)
+[Progress Sitefinity](https://bizstream.com/technology/sitefinity/)
+[Siteimprove](https://bizstream.com/technology/siteimprove/)
+[Ultra Commerce](https://bizstream.com/technology/ultra-commerce/)
+[About](https://bizstream.com/about/)
+[Our Team](https://bizstream.com/about/team/)
+[Our Process](https://bizstream.com/about/our-process/)
+[Qualifications & Awards](https://bizstream.com/about/qualifications-awards/)
+[Clients](https://bizstream.com/about/clients/)
+[Community Involvement](https://bizstream.com/about/community/)
+[Our History](https://bizstream.com/about/history/)
+[Our Products](https://bizstream.com/about/products/)
+[Careers](https://bizstream.com/careers/)
+[Internships](https://bizstream.com/careers/internships/)
+[Our Blog](https://bizstream.com/blog/)
+[Contact Us](https://bizstream.com/contact/)
+[Expanding eCommerce and Dealer Integration for a Global Outdoor Equipment Manufacturer](https://bizstream.com/project/ariens/)
+[Optimizing Global Search for a Manufacturing Leader in Industrial Equipment](https://bizstream.com/project/vermeer/)
+[Meet Our Six Interns Making the Most of Summer 2025](https://bizstream.com/blog/meet-our-six-interns-making-the-most-of-summer-2025/)
+[Brian McKeiver Achieves Xperience by Kentico Marketer Certification](https://bizstream.com/blog/brian-mckeiver-achieves-xperience-by-kentico-marketer-certification/)
+[Privacy Policy](https://bizstream.com/privacy-policy/)
+[Enhancing Personalized Experiences for a Leading Accounting and Advisory Firm](https://bizstream.com/project/bdo-usa-personalized-experiences/)
+[Building a More Bingeable Member Website](https://bizstream.com/project/xtremeag/)
+[Transforming UX for a Multilingual Media Enterprise](https://bizstream.com/project/crunchyroll/)
+[Expanding eCommerce for a Manufacturing Leader in Outdoor Equipment](https://bizstream.com/project/gravely/)
+[Transforming the Online Experience Across Three Dynamic Websites](https://bizstream.com/project/american-society-for-nondestructive-testing/)
+[Enriching Member Experience, Elevating Association Value](https://bizstream.com/project/investments-and-wealth-institute/)
+[Ensuring Association Adaptability with a Modern Website CMS](https://bizstream.com/project/big-i-illinois/)
+[Transforming Healthcare Search and Performance with a Modernized Digital Experience](https://bizstream.com/project/prevea-health/)
+[Automating Document Generation for a Prominent Financial Services Firm](https://bizstream.com/project/ima-financial-group-inc/)
+[Unifying Six Websites into One Seamless Digital Platform for a Global Emergency Medical Supplier](https://bizstream.com/project/ferno/)
+[Revitalizing a Brand and Website to Cultivate Growth and Customer Engagement](https://bizstream.com/project/countryside-greenhouse/)
+[Enhancing Search, Site Management, and Scalability for a Leading Healthcare Provider](https://bizstream.com/project/prairie-cardiovascular/)
+[Future-Proofing a Leading Investment Bank’s Website for Performance and Scalability](https://bizstream.com/project/bdo-capital-advisors-llc/)
+[Optimizing Digital Strategy and User Experience for a Top Accounting Firm](https://bizstream.com/project/moss-adams/)
+[Modernizing Digital Experiences for a Leading Healthcare System](https://bizstream.com/project/hospital-sisters-health-system/)
+[Building Smarter Search and a Seamless Ordering Experience for a Manufacturing Parts Supplier](https://bizstream.com/project/henrys-parts-and-equipment/)
+[Enhancing Scalability and Content Strategy for a Renowned Scholarly Publisher](https://bizstream.com/project/duke-university-press/)
+[Rebranding for a Leading-Edge Relaunch](https://bizstream.com/project/infinityqs-website-rebrand/)
+[Modernizing Digital Experience and Search Functionality for a Fiber-First Telecom Company](https://bizstream.com/project/altafiber/)
+[Building a Foundation for Website Success](https://bizstream.com/project/rio-tinto-start/)
+[Unifying Brand Experience and Performance for a Leading Water Screening Manufacturer](https://bizstream.com/project/hydrolox/)
+[Website Rejuvenation](https://bizstream.com/project/us-borax-website-rejuvenation/)
+[Enhancing Performance and Content Management for a Food Manufacturing Safety Expert](https://bizstream.com/project/commercial-food-sanitation/)
+[Enhancing Search, Content Management, and User Engagement for a Global Nonprofit Leader](https://bizstream.com/project/the-bridgespan-group/)
+[Building a Custom Business Dashboard to Improve Project Visibility and Team Performance](https://bizstream.com/project/bizstream-team-dashboard/)
+[Enhancing Financial Workflow and Transaction Management for a Regional Bank](https://bizstream.com/project/grand-river-bank/)
+[Building a Cohesive Brand and Website to Empower Woodworking Entrepreneurs](https://bizstream.com/project/woodpreneur/)
+[Enhancing Digital Presence for an IT and Network Infrastructure Provider](https://bizstream.com/project/pangen-solutions/)
+[Modernizing a Brand to Reflect Our Growth, Expanded Services, and Future Vision](https://bizstream.com/project/bizstream-rebrand/)
+[Centralizing Website Content Management with Storyblok](https://bizstream.com/project/automox/)
+[Enhancing Digital Storytelling for a Global Architectural Lighting Brand](https://bizstream.com/project/lucifer-lighting-company/)
+[Storyblok Modernizes Ecommerce Website](https://bizstream.com/project/western-research-institute-ecommerce/)
+[Transforming Digital Ordering with a Mobile-First Approach for a Foodservice Industry Leader](https://bizstream.com/project/van-eerden-foodservice/)
+[Building a Multi-Brand, Consumer-First eCommerce Platform for a Furniture Industry Leader](https://bizstream.com/project/sauder-woodworking-co/)
+[Optimizing Content Management, Search, and User Engagement for a Global Hospitality Brand](https://bizstream.com/project/kimball-hospitality/)
+[Turning Data Overload into a Seamless Digital Experience for a Life Science Organization](https://bizstream.com/project/american-society-for-microbiology/)
+[Unifying Four Business Units into One Seamless Digital Experience for a Leading Benefits Provider](https://bizstream.com/project/trustmark-benefits/)
+[Supporting Effective Website Storytelling](https://bizstream.com/project/csu-college-of-business/)
+[Building a Better, Faster Website](https://bizstream.com/project/activate-renewables/)
+[Refreshing Brand Identity and Website Design for a Financial Services Firm Under New Leadership](https://bizstream.com/project/breakwater/)
+[Crafting a Bold Brand Identity for an Entrepreneurial Thought Leader](https://bizstream.com/project/hustle-for-good/)
+[Enhancing Search and Lead Generation for a National Wellness Leader](https://bizstream.com/project/healthfitness/)
+[Revamping eCommerce for a Playful and Nutritious Snack Brand](https://bizstream.com/project/zee-zees/)
+[Reimagining School Spirit: A Bold New Identity for Portland Public Schools’ Raider Bird](https://bizstream.com/project/portland-raider-bird/)
+[Enhancing Search, Speed, and Usability for a Premium Window & Door Brand](https://bizstream.com/project/kolbe-windows-doors/)
+[Streamlining Content Editing and Website Updates](https://bizstream.com/project/desri/)
+[Uniting a Public Website and Member Portal for a Leading Building Materials Cooperative](https://bizstream.com/project/lmc/)
+[Empowering Employers with a Secure and HIPAA-Compliant COVID-19 Symptom Tracking Solution](https://bizstream.com/project/symreport/)
+[Crafting a Distinctive Brand Identity for a Custom Woodworking Artisan](https://bizstream.com/project/ameer-navidi-designs/)
+[Unifying Brand Cohesion with Digital Autonomy for an IT Solutions Leader](https://bizstream.com/project/bdo-digital/)
+[Crafting Dynamic Logos for a Youth Tennis and Tutoring Program](https://bizstream.com/project/todd-martin-youth-leadership/)
+[Building Unity Across Integrated Brands](https://bizstream.com/project/lynxx-networks-building-unity/)
+[Modernizing Data Management and UX for an Industry-Leading Fluid Testing Provider](https://bizstream.com/project/petroleum-technologies-group/)
+[Visualizing Solar Impact with a Real-Time Dashboard](https://bizstream.com/project/bizstream-solar-dashboard/)
+[Crafting a Bold Brand Identity for a Game-Changing Sports Recruitment Platform](https://bizstream.com/project/virtual-combine/)
+[Empowering Over 85 Schools with a Scalable, Multi-Site Digital Platform](https://bizstream.com/project/national-heritage-academies/)
+[Optimizing Online Community Engagement with UX/IA Improvements](https://bizstream.com/project/freightliner-atbs/)
+[Uniting Former Competitors with a Lead-Generation Website](https://bizstream.com/project/togetherwork/)
+[Scooping Up a Fresh Visual Identity for a Nostalgic Ice Cream Parlor](https://bizstream.com/project/creemee-ice-cream-parlor/)
+[Revitalizing Branding and Packaging for a Local Favorite in Gourmet Pizza and Treats](https://bizstream.com/project/portland-party-store/)
+[Product-Led Success](https://bizstream.com/project/infinityqs-product-led-success/)
+[Brand Revitalization: Refreshed Website to Support Account-based Marketing Efforts](https://bizstream.com/project/intelisecure-brand-revitalization-for-targeted-outreach/)
+[Revamping a Legacy Brand’s Website to Inspire DIYers and Drive Engagement](https://bizstream.com/project/olympic/)
+[Elevating User Experience and Digital Strategy for a Global Accounting Leader](https://bizstream.com/project/bdo-usa/)
+[Persona Research for Game-Changing Audience Understanding](https://bizstream.com/project/national-society-of-black-engineers-nsbe/)
+[Branding & Identity Services](https://bizstream.com/services/branding)
+[Kentico](https://bizstream.com/technology/kentico-xperience/)
+[Kontent.ai](https://bizstream.com/technology/kontent/)
+[Storyblok](https://bizstream.com/technology/storyblok)
+[Web Accelerator for Storyblok](https://bizstream.com/technology/web-accelerator-for-storyblok)
+[Kentico 11, Kentico 12, and Kentico 13 Upgrades](https://bizstream.com/kentico-11-kentico-12-and-kentico-13-upgrades/)
+[BizStream Gains Kontent.ai Partner Content Modeling Competency](https://bizstream.com/blog/bizstream-gains-kontent-ai-partner-content-modeling-competency/)
+[Contact Us](https://bizstream.com/contact)
+[BizStream’s Journey to Embracing DEI](https://bizstream.com/blog/bizstreams-journey-to-embracing-dei/)
+[Our History](https://bizstream.com/history/)
+[Mark Schmidt](https://bizstream.com/about/team/mark-schmidt/)
+[Brian McKeiver](https://bizstream.com/about/team/brian-mckeiver/)
+[Cory VandenBout](https://bizstream.com/about/team/cory-vandenbout/)
+[Dave Valko](https://bizstream.com/about/team/dave-valko/)
+[Mike Kren](https://bizstream.com/about/team/mike-kren/)
+[Josh Trench](https://bizstream.com/about/team/josh-trench/)
+[Michelle Lentz](https://bizstream.com/about/team/michelle-lentz/)
+[Tim Stauffer](https://bizstream.com/about/team/tim-stauffer/)
+[Dustin Christians](https://bizstream.com/about/team/dustin-christians/)
+[Blair Compston](https://bizstream.com/about/team/blair-compston/)
+[Amanda Hodges](https://bizstream.com/about/team/amanda-hodges/)
+[Chris Hamm](https://bizstream.com/about/team/chris-hamm/)
+[Josh Rubino](https://bizstream.com/about/team/josh-rubino/)
+[Caleb Compston](https://bizstream.com/about/team/caleb-compston/)
+[Ben Buurstra](https://bizstream.com/about/team/ben-buurstra/)
+[Mike Webb](https://bizstream.com/about/team/mike-webb/)
+[Tyler Pfohl](https://bizstream.com/about/team/tyler-pfohl/)
+[Tyler Stirtz](https://bizstream.com/about/team/tyler-stirtz/)
+[Nick Kooman](https://bizstream.com/about/team/nick-kooman/)
+[Rex Rainey](https://bizstream.com/about/team/rex-rainey/)
+[Sean Lakies](https://bizstream.com/about/team/sean-lakies/)
+[Parker Ovadek](https://bizstream.com/about/team/parker-ovadek/)
+[Ian Hilgendorf](https://bizstream.com/about/team/ian-hilgendorf/)
+[Drew Veach](https://bizstream.com/about/team/drew-veach/)
+[Brandon Dekker](https://bizstream.com/about/team/brandon-dekker/)
+[Will Dixon](https://bizstream.com/about/team/will-dixon/)
+[Spencer Haven](https://bizstream.com/about/team/spencer-haven/)
+[Tucker Winright](https://bizstream.com/about/team/tucker-winright/)
+[Courtney Klawieter](https://bizstream.com/about/team/courtney-klawieter/)
+[Brad Grace](https://bizstream.com/about/team/brad-grace/)
+[Lou Marzorati](https://bizstream.com/about/team/lou-marzorati/)
+[Christian Stam](https://bizstream.com/about/team/christian-stam/)
+[Steve Schaner](https://bizstream.com/about/team/steve-schaner/)
+[Cole Foderaro](https://bizstream.com/about/team/cole-foderaro/)
+[Jordan Ellertson](https://bizstream.com/about/team/jordan-ellertson/)
+[Kile Lindgren](https://bizstream.com/about/team/kile-lindgren/)
+[Rob Bean](https://bizstream.com/about/team/rob-bean/)
+[BizStream Recognized on Inc. 5000 List for Second Time](https://bizstream.com/blog/bizstream-recognized-on-inc-5000-list-for-second-time/)
+[BizStream Receives Michigan 50 Distinguished Alumni Award](https://bizstream.com/blog/bizstream-receives-michigan-50-distinguished-alumni-award/)
+[BizStream Expands Strategic and Digital Capabilities with Acquisition](https://bizstream.com/blog/bizstream-expands-strategic-and-digital-capabilities-with-acquisition/)
+[BizStream Is a GREAT Place to Work, but It’s NOT for Everyone](https://bizstream.com/blog/bizstream-is-a-great-place-to-work-but-its-not-for-everyone/)
+[4 Tips for Maximizing Your Internship Experience](https://bizstream.com/blog/4-tips-for-maximizing-your-internship-experience/)
+[Why Working at a Digital Agency is Great for Junior Developers](https://bizstream.com/blog/why-working-at-a-digital-agency-is-great-for-junior-developers/)
+[Why Marketers and Developers Are Turning to Headless CMS for Better User Experiences](https://bizstream.com/blog/why-marketers-and-developers-are-turning-to-headless-cms-for-better-user-experiences/)
+[Join BizStream at CSAE’s 2025 Annual Conference](https://bizstream.com/blog/join-bizstream-at-csaes-2025-annual-conference/)
+[Kile Lindgren Recognized as Storyblok Ambassador](https://bizstream.com/blog/kile-lindgren-recognized-as-storyblok-ambassador/)
+[Rise Above the Noise: Tell Your Members a Better Value Story](https://bizstream.com/blog/rise-above-the-noise-tell-your-members-a-better-value-story/)
+[Helping Associations Build Inclusive Digital Experiences: Join BizStream at CSAE’s Upcoming Webinar](https://bizstream.com/blog/helping-associations-build-inclusive-digital-experiences-join-bizstream-at-csaes-upcoming-webinar/)
+[Breadth vs. Depth: Which Learning Path Should You Take?](https://bizstream.com/blog/breadth-vs-depth-which-learning-path-should-you-take/)
+[Unlock AI for Your Business: Drew Veach to Host CCF Enterprise Workshop Series](https://bizstream.com/blog/unlock-ai-for-your-business-drew-veach-to-host-ccf-enterprise-workshop-series/)
+[BizStream at Merge 2025: Blending Product Thinking with Software Modernization](https://bizstream.com/blog/bizstream-at-merge-2025-blending-product-thinking-with-software-modernization/)
+[2 Trends All Member-Based Organizations Need to Know](https://bizstream.com/blog/2-trends-all-member-based-organizations-need-to-know/)
+[BizStream Earns Kentico’s Upgrade Expert Badge](https://bizstream.com/blog/bizstream-earns-kenticos-upgrade-expert-badge/)
+[Stir Trek 2025: Catch Brian McKeiver’s Talk on Building Your Own Copilot](https://bizstream.com/blog/stir-trek-2025-catch-brian-mckeivers-talk-on-building-your-own-copilot/)
+[Brian McKeiver Among the First to Earn Xperience by Kentico Content Modeling Certification](https://bizstream.com/blog/brian-mckeiver-among-the-first-to-earn-xperience-by-kentico-content-modeling-certification/)
+[Brian McKeiver Speaking at AAM Summit 2025](https://bizstream.com/blog/brian-mckeiver-speaking-at-aam-summit-2025/)
+[Xperience by Kentico’s Taxonomies: What’s New & Why It Matters](https://bizstream.com/blog/xperience-by-kenticos-taxonomies-whats-new-why-it-matters/)
+[Join BizStream and Kentico at Swaay.Health Live 2025](https://bizstream.com/blog/join-bizstream-and-kentico-at-swaay-health-live-2025/)
+[Join Brian McKeiver at the Midwest Collegiate Computing Conference](https://bizstream.com/blog/join-brian-mckeiver-at-the-midwest-collegiate-computing-conference/)
+[How to Connect with—and Win—Customers: Build Better Buyer Personas](https://bizstream.com/blog/how-to-connect-with-and-win-customers-build-better-buyer-personas/)
+[Join Brian McKeiver at GVSU’s Innovation Day: Celebrating 40 Years of Computing](https://bizstream.com/blog/join-brian-mckeiver-at-gvsus-innovation-day-celebrating-40-years-of-computing/)
+[Brian McKeiver Speaking at CodeMash 2025](https://bizstream.com/blog/brian-mckeiver-speaking-at-codemash-2025/)
+[Enhance Kentico 13 Search Index with Azure AI Search Semantic Ranker](https://bizstream.com/blog/enhance-kentico-13-search-index-with-azure-ai-search-semantic-ranker/)
+[Six BizStream Team Members Earn Xperience by Kentico Sales Certification](https://bizstream.com/blog/six-bizstream-team-members-earn-xperience-by-kentico-sales-certification/)
+[Simple Guide for Creating an Azure AI Search Index in Xperience by Kentico](https://bizstream.com/blog/simple-guide-for-creating-an-azure-ai-search-index-in-xperience-by-kentico/)
+[Breaking the 10x Developer Hype: Your Path to Rockstar Status](https://bizstream.com/blog/breaking-the-10x-developer-hype-your-path-to-rockstar-status/)
+[From .bak to .bacpac: Managing Azure Migrations with Non-Standard Backups](https://bizstream.com/blog/from-bak-to-bacpac-managing-azure-migrations-with-non-standard-backups/)
+[Using Page Builder With Custom Routing in Xperience by Kentico](https://bizstream.com/blog/using-page-builder-with-custom-routing-in-xperience-by-kentico/)
+[BizStream to host Grand Rapids MarTech Summit at Tech Week Grand Rapids 2024](https://bizstream.com/blog/bizstream-to-host-grand-rapids-martech-summit-2024-at-tech-week-grand-rapids-2024/)
+[Xperience by Kentico Content Querying Updates](https://bizstream.com/blog/xperience-by-kentico-content-querying-updates/)
+[Our Blog](https://bizstream.com/blog/page/2/)
+[Our Blog](https://bizstream.com/blog/page/3/)
+[Our Blog](https://bizstream.com/blog/page/4/)
+[Our Blog](https://bizstream.com/blog/page/5/)
+[Our Blog](https://bizstream.com/blog/page/6/)
+[Our Blog](https://bizstream.com/blog/page/7/)
+[Our Blog](https://bizstream.com/blog/page/8/)
+[The BizStream Internship Program](https://bizstream.com/blog/the-bizstream-internship-program/)
+[Brian McKeiver](https://bizstream.com/about/team/brian-mckeiver)
+[Elevating User Experience and Digital Strategy for a Global Accounting Leader](https://bizstream.com/projects/bdo-usa)
+[Expanding eCommerce and Dealer Integration for a Global Outdoor Equipment Manufacturer](https://bizstream.com/projects/ariens/)
+[Enhancing Personalized Experiences for a Leading Accounting and Advisory Firm](https://bizstream.com/project/bdo-usa-llp-kentico-13/)
+[We’re a digital agency focused on elevating brands, websites, and products. Our expertise and track record of award-winning work helps us accelerate growth for our clients.](https://bizstream.com/)
+[BizStream Has a New Look](https://bizstream.com/blog/bizstream-has-a-new-look/)
+[Unifying Four Business Units into One Seamless Digital Experience for a Leading Benefits Provider](https://bizstream.com/projects/trustmark-benefits/)
+[Mark Schmidt](https://bizstream.com/about/team/mark-schmidt)
+[Rex Rainey](https://bizstream.com/about/team/rex-rainey)
+[Revitalizing Branding and Packaging for a Local Favorite in Gourmet Pizza and Treats](https://bizstream.com/projects/portland-party-store/)
+[BizStream Recognized for Astounding Impact on Michigan’s Economy](https://bizstream.com/blog/bizstream-recognized-for-astounding-impact-on-michigans-economy/)
+[About](https://bizstream.com/about)
+[Careers](https://bizstream.com/careers)
+[You found a BizStream Alum!](https://bizstream.com/about/team/bizstream-alumni/)
+[Courtney Klawieter](https://bizstream.com/about/team/courtney-klawieter)
+[Kile Lindgren](https://bizstream.com/about/team/kile-lindgren)
+[Rob Bean](https://bizstream.com/about/team/rob-bean)
+[Jordan Ellertson](https://bizstream.com/about/team/jordan-ellertson)
+[5 Questions You Should Ask Yourself About Your Company’s Brand Experience](https://bizstream.com/blog/5-questions-you-should-ask-yourself-about-your-companys-brand-experience)
+[Drew Veach](https://bizstream.com/about/team/drew-veach)
+[Why Every Developer Should Learn Vim](https://bizstream.com/blog/why-every-developer-should-learn-vim)
+[Ben Buurstra](https://bizstream.com/about/team/ben-buurstra)
+[Dave Valko](https://bizstream.com/about/team/dave-valko)
+[Brian McKeiver](https://bizstream.com/about-team/brian-mckeiver)
+[Christian Stam](https://bizstream.com/about/team/christian-stam)
+[Kentico](https://bizstream.com/technology/kentico)
+[Sean Lakies](https://bizstream.com/about/team/sean-lakies)
+[Chris Hamm](https://bizstream.com/about/team/chris-hamm)
+[Spencer Haven](https://bizstream.com/about/team/spencer-haven)
+[Ian Hilgendorf](https://bizstream.com/about/team/ian-hilgendorf)
+[Josh Trench](https://bizstream.com/about/team/josh-trench)
+[Parker Ovadek](https://bizstream.com/about/team/parker-ovadek)
+[Will Dixon](https://bizstream.com/about/team/will-dixon)
+[Tyler Stirtz](https://bizstream.com/about/team/tyler-stirtz)
+[The Power of Effective Communication in Project Management](https://bizstream.com/blog/the-power-of-effective-communication-in-project-management/)
+[Communication Roles: Changing Your Approach to Fit the Situation](https://bizstream.com/blog/communication-roles-changing-your-approach-to-fit-the-situation/)
+[Generating Realistic Test Files for Secure and Comprehensive Application Testing](https://bizstream.com/blog/generating-realistic-test-files-for-secure-and-comprehensive-application-testing/)
+[Transforming User Engagement: Advanced Search Functionality in Healthcare](https://bizstream.com/blog/transforming-user-engagement-advanced-search-functionality-in-healthcare/)
+[Xperience by Kentico: A Breath of Fresh Air](https://bizstream.com/blog/xperience-by-kentico-a-breath-of-fresh-air/)
+[Brian McKeiver Speaking at Momentum Developer Conference](https://bizstream.com/blog/brian-mckeiver-speaking-at-momentum-developer-conference/)
+[Five Takeaways from Config 2024](https://bizstream.com/blog/five-takeaways-from-config-2024/)
+[How I Learned to Foster Growth in a Company of Brilliant Minds](https://bizstream.com/blog/how-i-learned-to-foster-growth-in-a-company-of-brilliant-minds/)
+[Tucker Winright Achieves Kentico Xperience 13 Certification](https://bizstream.com/blog/tucker-winright-achieves-kentico-xperience-13-certification/)
+[Brian McKeiver Achieves Dual Recognition as Microsoft MVP in Cloud and AI](https://bizstream.com/blog/brian-mckeiver-achieves-dual-recognition-as-microsoft-mvp-in-cloud-and-ai/)
+[Parker Ovadek Earns Kontent.ai Developer Certification](https://bizstream.com/blog/parker-ovadek-earns-kontent-ai-developer-certification/)
+[Brian McKeiver Speaking at DevUp 2024](https://bizstream.com/blog/brian-mckeiver-speaking-at-devup-2024/)
+[Brian McKeiver Speaking at Beer City Code 2024](https://bizstream.com/blog/brian-mckeiver-speaking-at-beer-city-code-2024/)
+[Visit BizStream & Kontent.ai at Digital Summit Minneapolis 2024](https://bizstream.com/blog/visit-bizstream-amp-kontent-ai-at-digital-summit-minneapolis-2024/)
+[Nick Kooman Achieves Kentico Xperience 13 Certification](https://bizstream.com/blog/nick-kooman-achieves-kentico-xperience-13-certification/)
+[Brand Refinement: Small Changes, Big Impact](https://bizstream.com/blog/brand-refinement-small-changes-big-impact/)
+[Growing a Better Brand](https://bizstream.com/blog/growing-a-better-brand/)
+[BizStream Acknowledged Among West Michigan’s 2024 Best and Brightest Companies to Work For](https://bizstream.com/blog/bizstream-acknowledged-among-west-michigans-2024-best-and-brightest-companies-to-work-for/)
+[Brian McKeiver Speaking at THAT Conference 2024](https://bizstream.com/blog/brian-mckeiver-speaking-at-that-conference-2024/)
+[How to Integrate .NET 8 Blazor Server Components with Kentico Xperience](https://bizstream.com/blog/how-to-integrate-net-8-blazor-server-components-with-kentico-xperience/)
+[3 Under-utilized Kentico Marketing Features](https://bizstream.com/blog/3-under-utilized-kentico-marketing-features/)
+[BizStream Recognized Among the Inc. Magazines 2024 Best Workplaces](https://bizstream.com/blog/bizstream-recognized-among-the-inc-magazines-2024-best-workplaces/)
+[Brian McKeiver Speaking at DigiMarCon Great Lakes](https://bizstream.com/blog/brian-mckeiver-speaking-at-digimarcon-great-lakes/)
+[Fostering Growth and Nurturing Potential: Welcoming Our Five Newest Interns!](https://bizstream.com/blog/fostering-growth-and-nurturing-potential-welcoming-our-five-newest-interns/)
+[BizStream Business Analysts Earn Kontent.ai Content Modeling Certification](https://bizstream.com/blog/bizstream-business-analysts-earn-kontent-ai-content-modeling-certification/)
+[Brian McKeiver Speaking at iJS 2024](https://bizstream.com/blog/brian-mckeiver-speaking-at-ijs-2024/)
+[Brian McKeiver Speaking at Stir Trek 2024](https://bizstream.com/blog/brian-mckeiver-speaking-at-stir-trek-2024/)
+[Keeping a Pulse on Your Projects: A Guide to Evaluating Health and Profitability in Web Development](https://bizstream.com/blog/keeping-a-pulse-on-your-projects-a-guide-to-evaluating-health-and-profitability-in-web-development/)
+[Rex Rainey Speaking at Swaay.Health Live 2024](https://bizstream.com/blog/rex-rainey-speaking-at-swaay-health-live-2024/)
+[How to Copy Google Drive Files Using Apps Script](https://bizstream.com/blog/how-to-copy-google-drive-files-using-apps-script/)
+[Brian McKeiver Speaking at Michigan Technology Conference 2024](https://bizstream.com/blog/brian-mckeiver-speaking-at-michigan-technology-conference-2024/)
+[Why Every Developer Should Learn Vim](https://bizstream.com/blog/why-every-developer-should-learn-vim/)
+[BizStream Wins Kentico 2023 Site of the Year Award for Hospital Sisters Health System!](https://bizstream.com/blog/bizstream-wins-kentico-2023-site-of-the-year-award/)
+[The Complete Idiot’s Guide To Kentico Content Personalization](https://bizstream.com/blog/the-complete-idiots-guide-to-kentico-content-personalization/)
+[Pair Programming Unplugged](https://bizstream.com/blog/pair-programming-unplugged/)
+[Composing Navigation and Site Structure in Kontent.ai using Web Spotlight](https://bizstream.com/blog/composing-navigation-and-site-structure-in-kontent-ai-using-web-spotlight/)
+[Exploring Vue 3’s Composition API and Performance Improvements](https://bizstream.com/blog/exploring-vue-3s-composition-api-and-performance-improvements/)
+[BizStream Recognized as a 2023 Inclusive Workplace](https://bizstream.com/blog/bizstream-recognized-as-a-2023-inclusive-workplace/)
+[Choosing the Right Software Tools: How Much JavaScript Do We Really Need?](https://bizstream.com/blog/how-much-javascript-do-we-really-need/)
+[Brian McKeiver Announced as a 2024 Kentico MVP](https://bizstream.com/blog/brian-mckeiver-announced-as-a-2024-kentico-mvp/)
+[Unleashing Digital Creativity: How Headless CMSs Revolutionize App Development](https://bizstream.com/blog/unleashing-digital-creativity-how-headless-cmss-revolutionize-app-development/)
+[Integrating Branding into UX/UI: Crafting Cohesive Digital Experiences](https://bizstream.com/blog/integrating-branding-into-ux-ui/)
+[Beyond Business: BizStream’s 2023 Community Outreach Efforts](https://bizstream.com/blog/beyond-business-bizstreams-2023-community-outreach-efforts/)
+[5 Reasons to Choose Brand Refinement Over a Complete Rebrand](https://bizstream.com/blog/5-reasons-to-choose-brand-refinement-over-a-complete-rebrand/)
+[Zero Trust: The Next Big Thing or Just the Latest Buzzword?](https://bizstream.com/blog/zero-trust-the-next-big-thing-or-just-the-latest-buzzword/)
+[Join Us for CMS Kickoff 2024](https://bizstream.com/blog/cms-kickoff-2024/)
+[Courtney Klawieter Earns Kentico Xperience 13 Certification](https://bizstream.com/blog/courtney-klawieter-earns-kentico-xperience-13-certification/)
+[4 Lessons Project Managers Can Gain from Adventure Racing](https://bizstream.com/blog/4-lessons-project-managers-can-gain-from-adventure-racing/)
+[Visit BizStream & Kontent.ai at Digital Summit Dallas 2023](https://bizstream.com/blog/visit-bizstream-kontent-ai-at-digital-summit-dallas-2023/)
+[Brian McKeiver Speaking at Michigan DevFest 2023](https://bizstream.com/blog/brian-mckeiver-speaking-at-michigan-devfest-2023/)
+[Sean Lakies Achieves Kontent.ai Developer Certification with BizStream](https://bizstream.com/blog/sean-lakies-achieves-kontent-ai-certification-with-bizstream/)
+[Beyond CustomModules: Naming Conventions for Clear, Maintainable Code](https://bizstream.com/blog/beyond-custommodules-naming-conventions-for-clear-maintainable-code/)
+[3 New CSS Features You Can Use In Production Right Now](https://bizstream.com/blog/3-new-css-features-you-can-use-in-production-right-now/)
+[Decoding Proposals: Why the Highest Bid Might Be the Best for Your Project](https://bizstream.com/blog/decoding-proposals-why-the-highest-bid-might-be-the-best-for-your-project/)
+[Making Kentico 12 to 13 Content Migrations Easier](https://bizstream.com/blog/making-kentico-12-to-13-content-migrations-easier/)
+[4 Time Management Strategies for Project Managers](https://bizstream.com/blog/4-time-management-strategies-for-project-managers/)
+[How BizStream Elevates Developer Growth with Engineering Ladders](https://bizstream.com/blog/how-bizstream-elevates-developer-growth-with-engineering-ladders/)
+[Michelle Lentz Achieves Digital Marketing Professional Certification](https://bizstream.com/blog/michelle-lentz-achieves-digital-marketing-professional-certification/)
+[Tech Week Grand Rapids 2023 with BizStream](https://bizstream.com/blog/tech-week-grand-rapids-2023-with-bizstream/)
+[The Impact of Inclusive Language on Tech’s Diversity Gap](https://bizstream.com/blog/the-impact-of-inclusive-language-on-techs-diversity-gap/)
+[Understanding the Role of a Business Analyst: Identifying the True Problem](https://bizstream.com/blog/understanding-the-role-of-a-business-analyst/)
+[From Office to Outdoors: BizStream’s Summer of Playing Hard](https://bizstream.com/blog/from-office-to-outdoors-bizstreams-summer-of-playing-hard/)
+[From Chaos to Control: How to Stay Productive in a Sea of Tasks and Deadlines](https://bizstream.com/blog/from-chaos-to-control-how-to-stay-productive-in-a-sea-of-tasks-and-deadlines/)
+[BizStream’s Nick Kooman Named Kontent.ai Technology MVP](https://bizstream.com/blog/bizstreams-nick-kooman-named-kontent-ai-technology-mvp/)
+[AI at the Writer’s Desk: What Works and What Doesn’t](https://bizstream.com/blog/ai-at-the-writers-desk/)
+[Meet Us in Nashville for Kentico Connection 2023](https://bizstream.com/blog/meet-us-in-nashville-for-kentico-connection-2023/)
+[Website Design for Mobile: The Big and Small of It](https://bizstream.com/blog/website-design-for-mobile-the-big-and-small-of-it/)
+[Brian McKeiver Renewed as Microsoft Azure MVP](https://bizstream.com/blog/brian-mckeiver-renewed-as-microsoft-azure-mvp/)
+[Brian McKeiver Recognized as Kontent.ai Strategy MVP](https://bizstream.com/blog/brian-mckeiver-recognized-as-kontent-ai-strategy-mvp/)
+[Creating an Inclusive Web Experience: 7 Tips for Website Accessibility](https://bizstream.com/blog/creating-an-inclusive-web-experience-7-tips-for-website-accessibility/)
+[Rex Rainey Earns AIGA Professional Designer Certification](https://bizstream.com/blog/rex-rainey-earns-aiga-professional-designer-certification/)
+[BizStream Experts Take the Stage at Beer City Code 2023](https://bizstream.com/blog/bizstream-experts-take-the-stage-at-beer-city-code-2023/)
+[Creating a Custom Form Component for a Page Builder Widget in Kentico 13](https://bizstream.com/blog/creating-a-custom-form-component-for-a-page-builder-widget-in-kentico-13/)
+[BizStream Ranks Among Highest-Scoring Businesses on Inc. Magazine’s Annual List of Best Workplaces for 2023](https://bizstream.com/blog/bizstream-ranks-on-inc-magazines-annual-list-of-best-workplaces-for-2023/)
+[Visit BizStream & Kentico at the 2023 Advanced Manufacturing Expo](https://bizstream.com/blog/visit-bizstream-and-kentico-at-the-2023-advanced-manufacturing-expo/)
+[The Benefits of Going Headless with Storyblok](https://bizstream.com/blog/the-benefits-of-going-headless-with-storyblok/)
+[AI in Juvenile Justice Software](https://bizstream.com/blog/ai-in-juvenile-justice-software/)
+[5 Benefits of Automated Testing in Web Development](https://bizstream.com/blog/5-benefits-of-automated-testing-in-web-development/)
+[Kamden Bolhuis Earns Kentico Xperience Developer Certification](https://bizstream.com/blog/kamden-bolhuis-earns-kentico-xperience-developer-certification/)
+[BizStream’s Experience With a Compressed Workweek](https://bizstream.com/blog/bizstreams-experience-with-a-compressed-workweek/)
+[BizStream Named a 2023 Best and Brightest Winner](https://bizstream.com/blog/bizstream-named-a-2023-best-and-brightest-winner/)
+[Will Dixon Earns Kentico Xperience Developer Certification](https://bizstream.com/blog/will-dixon-earns-kentico-xperience-developer-certification/)
+[Kentico 12 Hotfix 12.0.101 Email Sending Issues: Quick Fix for Non-TLS/SSL Connections](https://bizstream.com/blog/kentico-12-hotfix-email-sending-issues-quick-fix/)
+[5 Questions You Should Ask Yourself About Your Company’s Brand Experience](https://bizstream.com/blog/5-questions-you-should-ask-yourself-about-your-companys-brand-experience/)
+[Join the IM Tech Meetup for a Deep Dive into ChatGPT and AI](https://bizstream.com/blog/im-tech-meetup-deep-dive-into-chatgpt-and-ai/)
+[Maximizing Your Kentico Site’s UX With Fallback Redirects](https://bizstream.com/blog/maximizing-your-kentico-sites-ux-with-fallback-redirects/)
+[Drew Veach Earns Kontent.ai Business Qualification](https://bizstream.com/blog/drew-veach-earns-kontent-ai-business-qualification/)
+[Brian McKeiver Named Kontent.ai MVP for 2023](https://bizstream.com/blog/brian-mckeiver-named-kontent-ai-mvp-for-2023/)
+[3 Tips to Get the Most Out of Your Project Discovery](https://bizstream.com/blog/3-tips-for-your-project-discovery/)
+[BizStream and BDO USA, LLP Win Another Kentico Site of the Month](https://bizstream.com/blog/bizstream-and-bdo-win-kentico-award/)
+[A Code First Approach to Kentico Smart Search Settings: Stopping Ambiguous Errors](https://bizstream.com/blog/a-code-first-approach-to-kentico-smart-search/)
+[Meet Our Nine New Team Members!](https://bizstream.com/blog/meet-our-nine-new-team-members/)
+[Brian McKeiver Announced as a 2023 Kentico MVP](https://bizstream.com/blog/brian-mckeiver-announced-as-a-2023-kentico-mvp/)
+[Why Developers Owe Their Jobs to Philosophers](https://bizstream.com/blog/why-developers-owe-their-jobs-to-philosophers/)
+[Four Things Parenting Can Teach You About Testing in the World of Development](https://bizstream.com/blog/four-things-parenting-can-teach-you-about-testing-in-the-world-of-development/)
+[Building Carousels With Swiper](https://bizstream.com/blog/building-carousels-with-swiper/)
+[BizStream Named an Inclusive Workplace](https://bizstream.com/blog/bizstream-named-an-inclusive-workplace/)
+[Sean Lakies Earns Azure Developer Associate Certification](https://bizstream.com/blog/sean-lakies-earns-azure-developer-associate-certification/)
+[BizStream Takes New York at Kontent.ai Horizons](https://bizstream.com/blog/bizstream-takes-new-york-at-kontent-ai-horizons/)
+[Rex Rainey Earns Google UX Design Certification](https://bizstream.com/blog/rex-rainey-earns-google-ux-design-certification/)
+[How to Simplify Form Field Validations in Kentico](https://bizstream.com/blog/how-to-simplify-form-field-validations-in-kentico/)
+[BizStream Honored as a Michigan’s Best and Brightest Elite for Cultivating Wellness](https://bizstream.com/blog/bizstream-honored-as-a-michigans-best-and-brightest-elite-for-cultivating-wellness/)
+[Four Ways Working in the Office Positively Affects Company Culture](https://bizstream.com/blog/four-ways-working-in-the-office-positively-affects-company-culture/)
+[Why and How to Design for Accessibility](https://bizstream.com/blog/why-and-how-to-design-for-accessibility/)
+[Join BizStream at Kontent.ai Horizons!](https://bizstream.com/blog/join-bizstream-at-kontent-ai-horizons/)
+[Essential Web Dev Accessibility Resources](https://bizstream.com/blog/essential-web-dev-accessibility-resources/)
+[Question Everything](https://bizstream.com/blog/question-everything/)
+[Brian McKeiver Speaking at Microsoft Ignite 2022](https://bizstream.com/blog/brian-mckeiver-speaking-at-microsoft-ignite-2022/)
+[Figma + Adobe and the Future of UX Design Tools](https://bizstream.com/blog/figma-adobe-and-the-future-of-ux-design-tools/)
+[BizStream Announced as a 2022 Michigan’s Best and Brightest in Wellness Winner](https://bizstream.com/blog/bizstream-announced-as-a-2022-michigans-best-and-brightest-in-wellness-winner/)
+[Kentico Page Builder Section: One to Rule Them All (Variable Section)](https://bizstream.com/blog/kentico-page-builder-section-one-to-rule-them-all-variable-section/)
+[Timer Triggered Azure Functions in C# with .NET 6](https://bizstream.com/blog/timer-triggered-azure-functions-in-c-with-net-6/)
+[Brian McKeiver Speaking at Atlanta Developers’ Conference](https://bizstream.com/blog/brian-mckeiver-speaking-at-atlanta-developers-conference/)
+[BizStream Celebrated 21 Years With a Carnival-Themed Birthday Bash!](https://bizstream.com/blog/bizstream-celebrated-21-years-with-a-carnival-themed-birthday-bash/)
+[BizStream Named One of Crain’s Detroit’s 2022 Cool Places to Work](https://bizstream.com/blog/bizstream-named-one-of-crains-detroits-2022-cool-places-to-work/)
+[Creating Kontent.ai Custom Elements](https://bizstream.com/blog/kontent-ai-custom-elements/)
+[How to Secure Your Kentico Xperience Site With Content Security Policy](https://bizstream.com/blog/how-to-secure-your-kentico-xperience-site-with-content-security-policy/)
+[Brian McKeiver Speaking at Beer City Code](https://bizstream.com/blog/brian-mckeiver-speaking-at-beer-city-code/)
+[3 Skills Every Junior Developer Needs to Succeed](https://bizstream.com/blog/3-skills-every-junior-developer-needs-to-succeed/)
+[Balancing Our Proven Processes With Customer Needs](https://bizstream.com/blog/balancing-our-proven-processes-with-customer-needs/)
+[Brian McKeiver Speaking at THAT Conference](https://bizstream.com/blog/brian-mckeiver-speaking-at-that-conference/)
+[Say Goodbye to Universal Analytics, Say Hello to Google Analytics 4](https://bizstream.com/blog/say-goodbye-to-universal-analytics-say-hello-to-google-analytics-4/)
+[Boost Your Productivity With a Custom Application Switcher](https://bizstream.com/blog/boost-your-productivity-with-a-custom-application-switcher-2/)
+[Brian McKeiver Speaking at Global Azure 2022](https://bizstream.com/blog/brian-mckeiver-speaking-at-global-azure-2022/)
+[Building Your Brand Online](https://bizstream.com/blog/building-your-brand-online/)
+[How We Handle Project Deployments](https://bizstream.com/blog/how-we-handle-project-deployments/)
+[Simplifying User Stories and Acceptance Criteria With Templates and Automation](https://bizstream.com/blog/simplifying-user-stories-and-acceptance-criteria-with-templates-and-automation/)
+[Brian McKeiver Announced as a 2022 Kentico Xperience MVP](https://bizstream.com/blog/brian-mckeiver-announced-as-a-2022-kentico-xperience-mvp/)
+[Five Reasons I Love Working at BizStream: A Developer’s Perspective](https://bizstream.com/blog/five-reasons-i-love-working-at-bizstream-a-developers-perspective/)
+[My Transition From Childhood Development to Software Development](https://bizstream.com/blog/my-transition-from-childhood-development-to-software-development/)
+[Integrating ASP.NET Core and Vue.js](https://bizstream.com/blog/integrating-asp-net-core-and-vue-js/)
+[Positivity and its Impact on Work Culture](https://bizstream.com/blog/positivity-and-its-impact-on-work-culture/)
+[How to Set up Windows Authentication With .NET 5](https://bizstream.com/blog/how-to-set-up-windows-authentication-with-net-5/)
+[Brian McKeiver Recognized as a Microsoft Azure MVP](https://bizstream.com/blog/brian-mckeiver-recognized-as-a-microsoft-azure-mvp/)
+[Keeping Xperience by Kentico Environments in Sync](https://bizstream.com/blog/keeping-xperience-by-kentico-environments-in-sync/)
+[Localization in GatsbyJS with Kontent.ai](https://bizstream.com/blog/localization-in-gatsbyjs-with-kontent-ai/)
+[How BizStream Ensures Delivery of Quality Software](https://bizstream.com/blog/how-bizstream-ensures-delivery-of-quality-software/)
+[BizStream Named 2021 Michigan Best and Brightest in Wellness Elite Winner!](https://bizstream.com/blog/bizstream-named-2021-michigan-best-and-brightest-in-elite-wellness-winner/)
+[BizStream Named 2021 Michigan Best and Brightest in Elite Wellness Winner!](https://bizstream.com/blog/bizstream-named-2021-best-and-brightest/)
+[Custom Task Conditions in Azure Pipelines](https://bizstream.com/blog/custom-task-conditions-in-azure-pipelines/)
+[BizStream Earns Highest Kontent.ai Partnership Status](https://bizstream.com/blog/bizstream-earns-highest-kontent-ai-partnership-status/)
+[BizStream Earns Highest Kontent.ai Partnership Status](https://bizstream.com/blog/bizstream-earns-highest-kontent-ai-partnership-status-2/)
+[Part III: Using the BizStream Kentico Xperience StatusCodePages Packages](https://bizstream.com/blog/part-3-using-the-bizstream-kentico-xperience-statuscodepages-packages/)
+[Part II: Implementing Kentico Xperience StatusCodePages Middleware](https://bizstream.com/blog/part-2-implementing-kentico-xperience-statuscodepages-middleware/)
+[Part I: An Introduction to ASP.NET StatusCodePages](https://bizstream.com/blog/part-1-an-introduction-to-asp-net-statuscodepages/)
+[BizStream Earns Best and Brightest Companies to Work For in the Nation Award for Fourth Year in a Row](https://bizstream.com/blog/bizstream-best-brightest-companies-nation-2021/)
+[BizStream Is Growing Its Design, UX, and Branding Services](https://bizstream.com/blog/bizstream-is-growing-its-design-ux-and-branding-services/)
+[Four Dos and Don’ts of Website Discovery](https://bizstream.com/blog/four-dos-and-donts-of-website-discovery/)
+[Creating a reCAPTCHA v3 Custom Form Component in Xperience MVC](https://bizstream.com/blog/creating-a-recaptcha-v3-custom-form-component-in-xperience-mvc/)
+[BizStream Named Crain’s 2021 Cool Place to Work in Michigan](https://bizstream.com/blog/bizstream-named-crains-2021-cool-place-to-work-in-michigan/)
+[Allendale Tech Company Now Running on Solar Power](https://bizstream.com/blog/allendale-tech-company-now-running-on-solar-power/)
+[Enhancing Page Builder Widgets With Custom Web Components in Kentico Xperience](https://bizstream.com/blog/enhancing-page-builder-widgets-with-custom-web-components-in-kentico-xperience/)
+[How to Onboard New Team Members in a Virtual Workplace](https://bizstream.com/blog/how-to-onboard-new-team-members-in-a-virtual-workplace/)
+[The Scoop on WCAG 3.0](https://bizstream.com/blog/the-scoop-on-wcag-3/)
+[BizStream Recognized as One of West Michigan’s Best and Brightest Companies to Work For](https://bizstream.com/blog/bizstream-recognized-as-west-michigan-best-and-brightest-company/)
+[Want New Members? Make Sure Your Website Does This.](https://bizstream.com/blog/want-new-members-make-sure-your-website-does-this/)
+[The Mental Health Day: You Owe It to Yourself](https://bizstream.com/blog/the-mental-health-day-you-owe-it-to-yourself/)
+[Kentico Xperience Page Builder: Complex Sections & Widgets](https://bizstream.com/blog/kentico-xperience-page-builder-complex-sections-widgets/)
+[Learning Cypress Automation With Cypress Studio](https://bizstream.com/blog/learning-cypress-automation-with-cypress-studio/)
+[4 Ways to Take Control of Your Metadata and Increase Your Social Media Presence](https://bizstream.com/blog/4-ways-to-take-control-of-your-metadata-and-increase-your-social-media-presence/)
+[Design Like a Developer](https://bizstream.com/blog/design-like-a-developer/)
+[8 Tips for Maintaining Sanity During Difficult Times](https://bizstream.com/blog/8-tips-for-maintaining-sanity-during-difficult-times/)
+[Personalizing Content Via Personas in Kentico Xperience](https://bizstream.com/blog/personalizing-content-via-personas-in-kentico-xperience/)
+[What it Means to Care as a Developer and Why You Should Want to](https://bizstream.com/blog/what-it-means-to-care-as-a-developer-and-why-you-should-want-to/)
+[A Quick and Dirty Guide to Placing Trades on Forex.com via Python](https://bizstream.com/blog/a-quick-and-dirty-guide-to-placing-trades-on-forex-com-via-python/)
+[10 Reasons You Should be Using Kentico Xperience 13 as Your DXP](https://bizstream.com/blog/10-reasons-you-should-use-xperience-13-as-your-dxp/)
+[Brian McKeiver Chosen as 2021 Kontent.ai MVP](https://bizstream.com/blog/brian-mckeiver-chosen-as-2021-kontent-ai-mvp/)
+[Brian McKeiver Announced as a 2021 Kentico MVP](https://bizstream.com/blog/brian-mckeiver-announced-as-a-2021-kentico-mvp/)
+[We’re a Kentico Managed Cloud Hosting Partner!](https://bizstream.com/blog/were-a-kentico-managed-cloud-hosting-partner/)
+[BizStream Named National Best and Brightest in Wellness by the National Association for Business Resources](https://bizstream.com/blog/bizstream-named-best-and-brightest-in-wellness/)
+[Brian McKeiver Earns Kentico Xperience 12 Developer Certification](https://bizstream.com/blog/brian-mckeiver-earns-kentico-xperience-12-dev-cert/)
+[BizStream Founder Earns Kentico Xperience 12 Developer Certification](https://bizstream.com/blog/bizstream-founder-kentico-xperience-12-dev-certification/)
+[Brian McKeiver Announced as a Kontent.ai MVP](https://bizstream.com/blog/brian-mckeiver-announced-as-a-kontent-ai-mvp/)
+[Defining Personas to Enhance Your Kentico Xperience Site](https://bizstream.com/blog/defining-personas-to-enhance-your-kentico-xperience-site/)
+[Brian McKeiver Re-Certified as Kontent.ai Developer](https://bizstream.com/blog/brian-mckeiver-re-certified-as-kontent-ai-dev/)
+[IIS Performance Tips and Scripts](https://bizstream.com/blog/iis-performance-tips-and-scripts/)
+[How to Set up a Raspberry Pi VI: Set up Release Pipeline to Raspberry Pi](https://bizstream.com/blog/how-to-set-up-a-raspberry-pi-vi-set-up-release-pipeline-to-raspberry-pi/)
+[How to Set up a Raspberry Pi IV: Creating a .NET Core Website on Your Pi](https://bizstream.com/blog/how-to-set-up-a-raspberry-pi-iv-creating-a-net-core-website-on-your-pi/)
+[How to Set Up a Raspberry Pi V: Set Up Build to Raspberry Pi Using Azure DevOps](https://bizstream.com/blog/set-up-build-to-raspberry-pi-using-azure-devops/)
+[How to Set up a Raspberry Pi III: Troubleshooting Issues](https://bizstream.com/blog/how-to-set-up-a-raspberry-pi-iii-troubleshooting-issues/)
+[How to Set up a Raspberry Pi II: Enabling SSH on Raspberry Pi](https://bizstream.com/blog/how-to-set-up-a-raspberry-pi-ii-enabling-ssh-on-raspberry-pi/)
+[How to Set up a Raspberry Pi I: Getting Started](https://bizstream.com/blog/how-to-set-up-a-raspberry-pi-getting-started/)
+[.NET Core 3.1 with Kontent.ai – Part 1: Clean Architecture Design](https://bizstream.com/blog/net-core-3-1-with-kontent-ai-part-1-clean-architecture-design/)
+[.NET Core 3.1 with Kontent.ai – Part 2: Clean Architecture Implementation](https://bizstream.com/blog/net-core-3-1-with-kontent-ai-part-2-clean-architecture-implementation/)
+[Improve Entity Framework Query Performance With Dapper](https://bizstream.com/blog/improve-entity-framework-query-performance-with-dapper/)
+[Cache Busting with AspNetCore TagHelpers](https://bizstream.com/blog/cache-busting-with-aspnetcore-taghelpers/)
+[Angular Click Elsewhere Directive](https://bizstream.com/blog/angular-click-elsewhere-directive/)
+[Your First Day on the Job at BizStream](https://bizstream.com/blog/your-first-day-on-the-job-at-bizstream/)
+[4 Entity Framework EDMX Tips to Help You Out of a Jam](https://bizstream.com/blog/4-entity-framework-edmx-tips-to-help-you-out-of-a-jam/)
+[BizStream Goes Solar](https://bizstream.com/blog/bizstream-goes-solar/)
+[The Easy Way to Use SvcUtil.exe With a Large XML Schema](https://bizstream.com/blog/the-easy-way-to-use-svcutil-exe-with-a-large-xml-schema/)
+[Building a Cohesive Brand and Website to Empower Woodworking Entrepreneurs](https://bizstream.com/projects/woodpreneur/)
+[Modernizing a Brand to Reflect Our Growth, Expanded Services, and Future Vision](https://bizstream.com/projects/bizstream-rebrand/)
+[Crafting a Distinctive Brand Identity for a Custom Woodworking Artisan](https://bizstream.com/projects/ameer-navidi-designs/)
+[Scooping Up a Fresh Visual Identity for a Nostalgic Ice Cream Parlor](https://bizstream.com/projects/creemee-ice-cream-parlor/)
+[Branding & Identity Services](https://bizstream.com/services/branding/)
+[Brandon Dekker](https://bizstream.com/about/team/brandon-dekker)
+[Transforming Healthcare Search and Performance with a Modernized Digital Experience](https://bizstream.com/project/prevea-health)
+[Nick Kooman](https://bizstream.com/about/team/nick-kooman)
+[Tim Stauffer](https://bizstream.com/about/team/tim-stauffer)
+[Mike Kren](https://bizstream.com/about/team/mike-kren)
+[Tyler Pfohl](https://bizstream.com/about/team/tyler-pfohl)
+[Tucker Winright](https://bizstream.com/about/team/Tucker-Winright)
+[Michelle Lentz](https://bizstream.com/about/team/michelle-lentz)
+[Mike Webb](https://bizstream.com/about/team/mike-webb)
+[Email Protection](https://bizstream.com/cdn-cgi/l/email-protection#ccaeafa3a1bcbfb8a3a28caea5b6bfb8bea9ada1e2afa3a1)
+[Do More with Kontent.ai](https://bizstream.com/do-more-with-kontent-ai/)
+[Enhancing Search and Lead Generation for a National Wellness Leader](https://bizstream.com/project/healthfitness)
+[Revamping eCommerce for a Playful and Nutritious Snack Brand](https://bizstream.com/project/zee-zees)
+[Enhancing Performance and Content Management for a Food Manufacturing Safety Expert](https://bizstream.com/projects/commercial-food-sanitation/)
+[Enhancing Personalized Experiences for a Leading Accounting and Advisory Firm](https://bizstream.com/projects/bdo-usa-llp-kentico-13/)
+[Optimizing Global Search for a Manufacturing Leader in Industrial Equipment](https://bizstream.com/projects/vermeer/)
+[Expanding eCommerce for a Manufacturing Leader in Outdoor Equipment](https://bizstream.com/projects/gravely/)
+[Building a Multi-Brand, Consumer-First eCommerce Platform for a Furniture Industry Leader](https://bizstream.com/projects/sauder-woodworking-co/)
+[Kamden Bolhuis Earns Kentico Xperience Developer Certification](https://bizstream.com/about/team/kamden-bolhuis/)
+[Kontent.ai](https://bizstream.com/technology/kontent-ai)
+[Elevating User Experience and Digital Strategy for a Global Accounting Leader](https://bizstream.com/projects/bdo-usa/)
+[Qualifications & Awards](https://bizstream.com/about/qualifications-awards)
+[Tucker Winright](https://bizstream.com/about/team/tucker-winright)
+[NaN](https://bizstream.com/wp-content/uploads/2022/10/2022-10-07_16-02-40_389-scaled.webp)
+[NaN](https://bizstream.com/wp-content/uploads/2022/10/2022-10-07_16-36-56_596-scaled.webp)
+[NaN](https://bizstream.com/wp-content/uploads/2022/10/Image-from-iOS-2-scaled.webp)
+[Brian McKeiver](https://bizstream.com/about/brian-mckeiver)
+[Mark Schmidt](https://bizstream.com/about/mark-schmidt)
+[Cory VandenBout](https://bizstream.com/about/team/cory-vandenbout)
+[Caleb Compston](https://bizstream.com/about/team/caleb-compston)
+[Dustin Christians](https://bizstream.com/about/team/dustin-christians)
+[Part I: An Introduction to ASP.NET StatusCodePages](https://bizstream.com/blog/part-1-an-introduction-to-asp-net-statuscodepages)
+[Part I: An Introduction to ASP.NET StatusCodePages](https://bizstream.com/blog/pt-1-an-introduction-to-asp-net-satuscodepages/)
+[Careers](https://bizstream.com/about/careers)
+[Your First Day on the Job at BizStream](https://bizstream.com/blog/june-2017/your-first-day-on-the-job-at-bizstream)
+[Amanda Hodges](https://bizstream.com/about/team/amanda-hodges)
+
+https://bizstream.com
 

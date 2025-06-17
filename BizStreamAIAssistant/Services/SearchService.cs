@@ -26,17 +26,17 @@ namespace BizStreamAIAssistant.Services
                 new AzureKeyCredential(_azureAISearchSettings.ApiKey));
         }
 
-        public async Task<List<string>> SearchAsync(string userQuery, float[] userQueryEmbedding)
+        public async Task<List<string>> SearchAsync(string userQuery, float[] userQueryEmbedding, int KNearestNeighborsCount = 3, int retrievedDataNum= 3)
         {
             var vectorQuery = new VectorizedQuery(userQueryEmbedding)
             {
                 Fields = {"embedding"}, // Must match the vector field in index
-                KNearestNeighborsCount = 5
+                KNearestNeighborsCount = KNearestNeighborsCount
             };
 
             var searchOptions = new SearchOptions
             {
-                Size = 5,
+                Size = retrievedDataNum,
                 QueryType = SearchQueryType.Semantic,
                 VectorSearch = new VectorSearchOptions
                 {

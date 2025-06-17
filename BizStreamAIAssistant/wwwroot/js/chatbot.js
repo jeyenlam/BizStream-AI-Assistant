@@ -150,6 +150,7 @@ function init() {
         const match = message.match(referencesTextMatch);
 
         // Strip the reference block out of the visible message
+        const fullMessage = message;
         message = message.replace(referencesTextMatch, "").trim();
 
         let parsedReferences = [];
@@ -177,7 +178,7 @@ function init() {
         if (optionsDisabled) return;
         messages.push({
             role: "assistant",
-            content: message,
+            content: fullMessage,
             references: parsedReferences
         });
 
@@ -258,6 +259,7 @@ function init() {
         // Replace page titles and raw URLs from references first
         references.forEach(ref => {
             const { pageTitle, url } = ref;
+            console.log(pageTitle);
 
             if (pageTitle && formattedText.includes(pageTitle)) {
                 console.log(`Linking page title: ${pageTitle} to URL: ${url}`);
