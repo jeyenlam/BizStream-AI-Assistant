@@ -47,47 +47,49 @@ namespace BizStreamAIAssistant.Services
             string textResponse = await CallAzureOpenAI(messages);
             Console.WriteLine($"\no4-mini: {textResponse}");
 
+            string? fallbackQuery = null;
+            List<string>? topChunks = null;
+            float[]? embedding = null;
+
             int maxAttempts = 3;
             for (int attempt = 1; attempt <= maxAttempts; attempt++)
             {
                 var ragMatch = Regex.Match(textResponse, @"^RetrieveDataUsingRAG\(""(?<query>[^""]+)""\)$");
-                bool isRagCall = ragMatch.Success;
+                if (!ragMatch.Success) break;
 
-                if (!isRagCall) break;
+                fallbackQuery = ragMatch.Groups["query"].Value;
 
-                string fallbackQuery = ragMatch.Groups["query"].Value;
-                var embedding = await _textEmbeddingService.GenerateEmbeddingAsync(fallbackQuery);
-                var topChunks = await _searchService.SearchAsync(fallbackQuery, embedding, attempt * 5, attempt * 5);
-
-                if (topChunks.Count == 0)
+                if (embedding == null)
                 {
-                    Console.WriteLine("No relevant chunks found.");
-                    break;
+                    embedding = await _textEmbeddingService.GenerateEmbeddingAsync(fallbackQuery);
+                    Console.WriteLine("Embedding Generated.");
                 }
+
+                var chunkCount = Math.Min(5 * (int)Math.Pow(2, attempt - 1), 40);
+                topChunks = await _searchService.SearchAsync(fallbackQuery, embedding, chunkCount, chunkCount);
+                Console.WriteLine($"\n{topChunks.Count} Chunks Found.");
 
                 string topChunksText = string.Join("\n\n", topChunks);
 
-                // Replace old system prompt with new one including retrieved data
-                messages.RemoveAt(0);
+                messages.RemoveAt(0); // remove old system message
                 var updatedPrompt = GenerateSystemPrompt(fallbackQuery, topChunksText);
+                Console.WriteLine("Prompt Updated.");
                 messages.Insert(0, updatedPrompt);
 
-                // Remove prior fallback calls to avoid confusion
                 messages.RemoveAll(m => m.Role == "assistant" && m.Content!.StartsWith("RetrieveDataUsingRAG"));
-
                 textResponse = await CallAzureOpenAI(messages);
                 Console.WriteLine($"o4-mini + RAG attempt {attempt}: {textResponse}");
             }
 
-            // Final fallback
             if (Regex.IsMatch(textResponse, @"^RetrieveDataUsingRAG\(""[^""]+""\)$"))
             {
-                return "Sorry, I couldn't find any information related to that at the moment. 😅";
+                textResponse = "Sorry, I couldn't find any information related to that at the moment. 😅";
+                Console.WriteLine($"Fallback response: {textResponse}");
             }
 
             return textResponse;
         }
-
+        
         private async Task<string> CallAzureOpenAI(List<Message> messages)
         {
             var payload = new { messages };
@@ -128,20 +130,13 @@ namespace BizStreamAIAssistant.Services
                 ────────────────────────
                 WHEN TO CALL THE TOOL
                 ────────────────────────
-                Return the single line **exactly** as shown:
+                Return the following **exact line with no changes**:
 
                     RetrieveDataUsingRAG("{{userQuery}}")
 
-                …but only when **both** are true:
-                1. The user asked an informational / knowledge-seeking question **and**  
-                2. `-- Retrieved Context --` is `null` or clearly irrelevant.
-
-                • If retrieved context *is* present, and relevant info found, answer normally (do **not** call the tool).
-                IMPORTANT: If `-- Retrieved Context --` is present, but does not contain useful info for the user's question:
-                → DO NOT call RetrieveDataUsingRAG again.
-                → DO NOT repeat the same query.
-                → Politely say you don’t have that information right now.
-                → NEVER fall into a loop of repeating the fallback.
+                • Do not add emojis, punctuation, newlines, or anything else after it.
+                • It must be on its own line — no leading or trailing text.
+                • This line will be parsed by code — it must match exactly or the system will break.
 
                 In case you call the tool, check the user's query first, if the query is vague, ambiguous, or refers to something earlier in the chat 
                 (e.g., “them”, “that”, “it”, “those”), try to **resolve** it using the previous assistant/user messages.
@@ -192,9 +187,9 @@ namespace BizStreamAIAssistant.Services
                 ────────────────────────
                 If the user asks “Where did you get that?” / “References?” / similar:  
                 → Start your reply in a friendly, conversational tone:
-                e.g., “Oh! I got that from the BizStream Careers page 😊” or
+                e.g., “I got that from the BizStream Careers page 😊” or
                         “Sure! That came from a blog post titled "How I Learned to Foster Growth.”
-                →Then, at the **end**, include the full References block as usual.
+                → Then, at the **end**, include the full References block as usual.
                 → Do **not** omit the block — even if you mentioned the link earlier.
 
 

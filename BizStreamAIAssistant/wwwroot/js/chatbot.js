@@ -5,6 +5,7 @@ function init() {
     const queryInput = document.getElementById("queryInput");
     const messageContainer = document.getElementById("messageContainer");
     const chatbotButton = document.getElementById("chatbotButton");
+    const hoverPrompt = document.getElementById("hoverPrompt");
     const messages = [];
     var botMessageId = 0;
     var userMessageId = 0;
@@ -23,7 +24,7 @@ function init() {
         spinOnce: "spin-once-animation",
         slideUp: "slide-up-animation"
     };
-
+    
     welcomeMessage();
 
     document.addEventListener("click", (e) => {
@@ -75,7 +76,7 @@ function init() {
     });
 
     queryInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" && queryInput.value.trim()) {
+        if (e.key === "Enter" && queryInput.value.trim() && !e.shiftKey) {
             e.preventDefault();
             handleMessageSubmit();
         }
@@ -85,6 +86,10 @@ function init() {
         form.classList.toggle(CLASSES.hidden);
         form.classList.toggle(CLASSES.slideUp);
         chatbotButton.classList.toggle(CLASSES.spinOnce);
+        hoverPrompt.classList.toggle('group-hover:block');
+        setTimeout(() => {
+            chatbotButton.classList.toggle(CLASSES.spinOnce);
+        },1000);
     }
 
     async function handleMessageSubmit(userMessage) {
@@ -137,15 +142,17 @@ function init() {
 
     function sanitizeJson(str) {
         return str
-            .replace(/[“”]/g, '"')   // curly double → straight
-            .replace(/[‘’]/g, "'")   // curly single → straight
-            .replace(/{{/g, '{')     // double braces → single
-            .replace(/}}/g, '}');
+            .replace(/[“”]/g, '"')        // curly double → straight
+            .replace(/[‘’]/g, "'")        // curly single → straight
+            .replace(/{{/g, '{')          // double braces → single
+            .replace(/}}/g, '}')          
+            .replace(/\s\s+/g, ' ')       // collapse extra spaces
+            .trim();                      // trim edges
     }
 
     function addBotMessage(message, optionsDisabled = false) {
         const referencesTextMatch =
-            /References:\s*\n(?<json>\[\s*[\s\S]+?\])/;   // named capture "json"
+            /References:\s*\n(?<json>\[\s*[\s\S]+?\])/;
 
         const match = message.match(referencesTextMatch);
 
@@ -156,12 +163,10 @@ function init() {
         let parsedReferences = [];
         if (match?.groups?.json) {
             try {
-            const rawJson = sanitizeJson(match.groups.json);
-            parsedReferences = JSON.parse(rawJson);
+                const rawJson = sanitizeJson(match.groups.json);
+                parsedReferences = JSON.parse(rawJson);
             } catch (err) {
-            console.error("Failed to parse references JSON:", err, match.groups.json);
-            // Optional: keep a note in the message so users know refs exist
-            // message += "\n\n(⚠️ References present but couldn’t be parsed.)";
+                console.error("Failed to parse references JSON:", err, match.groups.json);
             }
         }
 
@@ -262,7 +267,7 @@ function init() {
             console.log(pageTitle);
 
             if (pageTitle && formattedText.includes(pageTitle)) {
-                console.log(`Linking page title: ${pageTitle} to URL: ${url}`);
+                // console.log(`Linking page title: ${pageTitle} to URL: ${url}`);
                 const linkedTitle = `<a href="${url}" target="_blank" rel="noopener noreferrer" class="font-semibold">${pageTitle}</a>`;
                 formattedText = formattedText.replaceAll(pageTitle, linkedTitle);
             }
