@@ -4,13 +4,13 @@ BZSAI is a personal project developed during my internship at BizStream. It’s 
 ## Table of Contents
 - [Intro](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#bzsai)
 - [Demo](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#demo)
-- [Features](https://github.com/jeyenlam/Readsify?tab=readme-ov-file#features)
+- [Features](https://github.com/jeyenlam//BizStream-AI-Assistant?tab=readme-ov-file#features)
 - [Project Structure](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#project-structure)
 - [Architecture](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#architecture)
 - [Built With](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#built-with)
 - [Prerequisites](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#prerequisites)  
 - [How to Run](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#how-to-run)
-- [License](https://github.com/jeyenlam/Readsify?tab=readme-ov-file#license)
+- [License](https://github.com/jeyenlam//BizStream-AI-Assistant?tab=readme-ov-file#license)
   
 ## Demo
 
