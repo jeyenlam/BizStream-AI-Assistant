@@ -10,7 +10,6 @@ BZSAI is a personal project developed during my internship at BizStream. It’s 
 - [Built With](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#built-with)
 - [Prerequisites](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#prerequisites)  
 - [How to Run](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#how-to-run)
-- [Potential Improvements](https://github.com/jeyenlam/BizStream-AI-Assistant?tab=readme-ov-file#potential-improvements)
 - [License](https://github.com/jeyenlam/Readsify?tab=readme-ov-file#license)
   
 ## Demo
@@ -107,11 +106,6 @@ dotnet watch
 azurite
 func start
 ```
-
-## Potential Improvements
-1. **Metadata Incorporation**: Incorporate metadata into text embeddings (e.g., tags, author, date, category) to improve the precision and relevance of retrieved content.
-2. **Query Classification**: Implement query categorization (e.g., Blog, About, FAQ) to better match user intent with the appropriate content type, improving retrieval accuracy and user experience.
-
 ## License
 ```
 ```
