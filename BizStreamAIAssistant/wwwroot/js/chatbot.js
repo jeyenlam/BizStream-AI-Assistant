@@ -52,8 +52,6 @@ function init() {
 
         navigator.clipboard.writeText(messageText)
             .then(() => {
-                console.log("Message copied to clipboard");
-
                 const copyElement = copyButton.querySelector(".copy");
                 if (!copyElement) return;
 
@@ -67,7 +65,6 @@ function init() {
                 console.error("Failed to copy message: ", err);
             });
     });
-
 
     chatbotButton.addEventListener("click", toggleChatbot);
     form.addEventListener("submit", (e) => {
@@ -119,7 +116,6 @@ function init() {
     
             const data = await response.json();
 
-            // console.log("Response from server:", data);
             removeTextLoading();
             addBotMessage(data.text || "No response from server");
         } catch (error) {
@@ -142,21 +138,18 @@ function init() {
 
     function sanitizeJson(str) {
         return str
-            .replace(/[“”]/g, '"')        // curly double → straight
-            .replace(/[‘’]/g, "'")        // curly single → straight
-            .replace(/{{/g, '{')          // double braces → single
+            .replace(/[“”]/g, '"')
+            .replace(/[‘’]/g, "'")
+            .replace(/{{/g, '{')
             .replace(/}}/g, '}')          
-            .replace(/\s\s+/g, ' ')       // collapse extra spaces
-            .trim();                      // trim edges
+            .replace(/\s\s+/g, ' ')
+            .trim();
     }
 
     function addBotMessage(message, optionsDisabled = false) {
-        const referencesTextMatch =
-            /References:\s*\n(?<json>\[\s*[\s\S]+?\])/;
-
+        const referencesTextMatch = /References:\s*\n(?<json>\[\s*[\s\S]+?\])/;
         const match = message.match(referencesTextMatch);
 
-        // Strip the reference block out of the visible message
         const fullMessage = message;
         message = message.replace(referencesTextMatch, "").trim();
 
@@ -186,9 +179,6 @@ function init() {
             content: fullMessage,
             references: parsedReferences
         });
-
-        console.log(parsedReferences);
-        console.log(messages);
     }
 
     function addMessageToUI({ text, references, templateId, cloneClass, textSelector, messageId, optionsDisabled }) {
@@ -210,7 +200,6 @@ function init() {
             return;
         }
 
-        // Add messageID to all elements for tracking
         clone.classList.add(messageId);
         clone.querySelectorAll("*").forEach(node => {
             if (node.classList) {
@@ -220,7 +209,6 @@ function init() {
 
         scrollToBottom();
     }
-
 
     function renderTextLoading() {
         const template = document.getElementById(TEMPLATE_IDS.loading);
@@ -252,33 +240,20 @@ function init() {
     }
 
     function formatText(text, references) {
+        let formattedText = linkifyText(text);
+
         if (!Array.isArray(references)) {
             references = [];
         }
 
-        let formattedText = text;
-
-        formattedText = linkifyText(formattedText);
-        // console.log(`After linkify: ${formattedText}`);
-
-        // Replace page titles and raw URLs from references first
         references.forEach(ref => {
-            const { pageTitle, url } = ref;
-            console.log(pageTitle);
-
-            if (pageTitle && formattedText.includes(pageTitle)) {
-                // console.log(`Linking page title: ${pageTitle} to URL: ${url}`);
-                const linkedTitle = `<a href="${url}" target="_blank" rel="noopener noreferrer" class="font-semibold">${pageTitle}</a>`;
-                formattedText = formattedText.replaceAll(pageTitle, linkedTitle);
+            if (ref.pageTitle && formattedText.includes(ref.pageTitle)) {
+                const linkedTitle = `<a href="${ref.url}" target="_blank" rel="noopener noreferrer" class="font-semibold">${ref.pageTitle}</a>`;
+                formattedText = formattedText.replaceAll(ref.pageTitle, linkedTitle);
             }
-            // console.log(`After linking page title: ${formattedText}`);
         });
 
-        // Replace newlines with <br/>
         formattedText = formattedText.replace(/\n/g, "<br/>");
-
-        // Linkify any *other* plain URLs that weren’t part of references
-
 
         return formattedText;
     }

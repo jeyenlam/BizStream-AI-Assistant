@@ -48,13 +48,13 @@ namespace BizStreamAIAssistant.Services
                 },
                 Select = {"*"}
             };
+
             var response = await _searchClient.SearchAsync<SearchDocument>(userQuery, searchOptions);
 
             var topChunks = new List<string>();
             await foreach (var result in response.Value.GetResultsAsync())
             {
                 var doc = result.Document;
-
                 string json = JsonSerializer.Serialize(doc, new JsonSerializerOptions
                 {
                     WriteIndented = true,

@@ -1,6 +1,6 @@
-/* ./src/styles/tailwind.css */
-
-/* ! tailwindcss v3.3.0 | MIT License | https://tailwindcss.com */
+/*
+! tailwindcss v3.3.0 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -536,8 +536,8 @@ video {
   right: 0px;
 }
 
-.right-3 {
-  right: 0.75rem;
+.right-2 {
+  right: 0.5rem;
 }
 
 .top-\[102\%\] {
@@ -546,10 +546,6 @@ video {
 
 .top-full {
   top: 100%;
-}
-
-.right-2 {
-  right: 0.5rem;
 }
 
 .m-1 {
@@ -572,10 +568,6 @@ video {
   display: none;
 }
 
-.h-0 {
-  height: 0px;
-}
-
 .h-8 {
   height: 2rem;
 }
@@ -590,10 +582,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.w-0 {
-  width: 0px;
 }
 
 .w-10 {
@@ -616,28 +604,16 @@ video {
   width: 26rem;
 }
 
-.w-\[75\%\] {
-  width: 75%;
+.w-\[85\%\] {
+  width: 85%;
 }
 
 .w-full {
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
-}
-
-.w-\[85\%\] {
-  width: 85%;
-}
-
 .max-w-\[50\%\] {
   max-width: 50%;
-}
-
-.max-w-\[75\%\] {
-  max-width: 75%;
 }
 
 .max-w-\[85\%\] {
@@ -688,10 +664,6 @@ video {
   justify-content: center;
 }
 
-.justify-items-end {
-  justify-items: end;
-}
-
 .gap-1 {
   gap: 0.25rem;
 }
@@ -730,18 +702,6 @@ video {
 
 .border-2 {
   border-width: 2px;
-}
-
-.border-l-\[4px\] {
-  border-left-width: 4px;
-}
-
-.border-r-\[4px\] {
-  border-right-width: 4px;
-}
-
-.border-t-\[4px\] {
-  border-top-width: 4px;
 }
 
 .border-l-\[6px\] {
@@ -833,11 +793,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -909,8 +864,6 @@ video {
   font-size: small;
 }
 
-/* For Chrome, Edge, Safari */
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -934,11 +887,10 @@ textarea {
 }
 
 .dot-style {
-  height: 0.25rem;
-  width: 0.25rem;
+  width: 4px;
+  height: 4px;
   border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: #ffffff;
 }
 
 .spin-once-animation {
@@ -946,15 +898,6 @@ textarea {
   animation: spin .3s linear forwards;
   /* 1s duration, run once */
 }
-
-/* @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-} */
 
 @keyframes spin {
   0%  {
@@ -1023,10 +966,6 @@ textarea {
   100% {
     opacity: 0;
   }
-}
-
-.first-letter\:justify-end::first-letter {
-  justify-content: flex-end;
 }
 
 .hover\:scale-105:hover {

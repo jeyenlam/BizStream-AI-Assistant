@@ -45,7 +45,6 @@ namespace BizStreamAIAssistant.Services
             messages.Insert(0, systemPrompt);
 
             string textResponse = await CallAzureOpenAI(messages);
-            Console.WriteLine($"\no4-mini: {textResponse}");
 
             string? fallbackQuery = null;
             List<string>? topChunks = null;
@@ -57,39 +56,32 @@ namespace BizStreamAIAssistant.Services
                 var ragMatch = Regex.Match(textResponse, @"^RetrieveDataUsingRAG\(""(?<query>[^""]+)""\)$");
                 if (!ragMatch.Success) break;
 
-                fallbackQuery = ragMatch.Groups["query"].Value;
-
-                if (embedding == null)
+                if (embedding == null || fallbackQuery == null)
                 {
+                    fallbackQuery = ragMatch.Groups["query"].Value;
                     embedding = await _textEmbeddingService.GenerateEmbeddingAsync(fallbackQuery);
-                    Console.WriteLine("Embedding Generated.");
                 }
 
                 var chunkCount = Math.Min(5 * (int)Math.Pow(2, attempt - 1), 40);
                 topChunks = await _searchService.SearchAsync(fallbackQuery, embedding, chunkCount, chunkCount);
-                Console.WriteLine($"\n{topChunks.Count} Chunks Found.");
-
                 string topChunksText = string.Join("\n\n", topChunks);
 
-                messages.RemoveAt(0); // remove old system message
+                messages.RemoveAt(0);
                 var updatedPrompt = GenerateSystemPrompt(fallbackQuery, topChunksText);
-                Console.WriteLine("Prompt Updated.");
                 messages.Insert(0, updatedPrompt);
 
                 messages.RemoveAll(m => m.Role == "assistant" && m.Content!.StartsWith("RetrieveDataUsingRAG"));
                 textResponse = await CallAzureOpenAI(messages);
-                Console.WriteLine($"o4-mini + RAG attempt {attempt}: {textResponse}");
             }
 
             if (Regex.IsMatch(textResponse, @"^RetrieveDataUsingRAG\(""[^""]+""\)$"))
             {
                 textResponse = "Sorry, I couldn't find any information related to that at the moment. 😅";
-                Console.WriteLine($"Fallback response: {textResponse}");
             }
 
             return textResponse;
         }
-        
+
         private async Task<string> CallAzureOpenAI(List<Message> messages)
         {
             var payload = new { messages };
